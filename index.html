@@ -8,6 +8,52 @@
     <meta name="description"
         content="Erleben Sie die kulinarische Reise des East Menu in Salzburg. Traditionelle asiatische Aromen treffen auf moderne Einflüsse. Fine Dining & Asian Fusion in der Getreidegasse.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Page Specific Language Switcher ── */
+        .lang-bar {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+            display: flex;
+            gap: 0.8rem;
+            z-index: 2600;
+            /* Above nav but subtle */
+        }
+
+        .lang-btn {
+            font-family: var(--font-accent);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(5px);
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .lang-btn:hover:not(.active) {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        @media (max-width: 768px) {
+            .lang-bar {
+                right: 70px;
+                top: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body class="js-enabled">
@@ -42,6 +88,12 @@
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
+
+            <!-- Language Switcher -->
+            <div class="lang-bar">
+                <button class="lang-btn active" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </div>
     </nav>
 
@@ -360,6 +412,24 @@
 
     <script src="transition.js"></script>
     <script src="main.js"></script>
+    <script>
+        // Simple UI Toggle for Home Page Switcher
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Store preference for persistence with the menu page
+                localStorage.setItem('eastmenu_lang', btn.dataset.lang);
+            });
+        });
+
+        // Initialize from storage if present
+        const savedLang = localStorage.getItem('eastmenu_lang') || 'de';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.dataset.lang === savedLang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>

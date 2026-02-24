@@ -222,29 +222,38 @@
         .lang-bar {
             display: flex;
             justify-content: flex-end;
-            gap: 0.5rem;
-            padding: 0.6rem 2rem 0;
+            gap: 0.8rem;
+            padding: 1.5rem 2rem 0;
+            position: relative;
+            z-index: 100;
         }
 
         .lang-btn {
             font-family: var(--font-accent);
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            background: none;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            color: rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.5);
             cursor: pointer;
-            padding: 0.3rem 0.7rem;
+            padding: 0.4rem 1rem;
             border-radius: 50px;
-            transition: all 0.3s;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .lang-btn.active,
-        .lang-btn:hover {
-            background: var(--color-black);
-            color: white;
-            border-color: var(--color-black);
+        .lang-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(227, 196, 158, 0.2);
+        }
+
+        .lang-btn:hover:not(.active) {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         /* ── Menu Sections ── */
