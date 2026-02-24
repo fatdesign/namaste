@@ -17,7 +17,8 @@
             "en": ""
           },
           "price": "12,9",
-          "isSoldOut": false,
+          "isSoldOut": true,
+          "isVegan": true,
           "spiciness": "3",
           "allergens": [
             "A",
