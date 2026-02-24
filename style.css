@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;600&family=Tenor+Sans&display=swap');
+
+:root {
+    /* Brand Colors - Luxury Theme (White, Beige, Black) */
+    --color-white: #FFFFFF;
+    --color-beige-light: #FDF8F1;
+    --color-beige-dark: #BFA782;
+    /* Muted Gold/Sand accent */
+    --color-black: #111111;
+    --color-gray: #444444;
+
+    /* Palette mapping */
+    --bg-primary: var(--color-white);
+    --bg-secondary: var(--color-beige-light);
+    --text-primary: var(--color-black);
+    --text-secondary: var(--color-gray);
+    --accent: var(--color-beige-dark);
+
+    /* Typography - Elegant & Creative */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-accent: 'Tenor Sans', sans-serif;
+
+    /* Spacing & Layout */
+    --container-max: 1400px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Transitions & Effects */
+    --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-medium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Boss-Level Atmospheric Layer */
+#atmosphere-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    /* Extremely subtle */
+}
+
+/* Variable Focus Utility */
+.variable-focus {
+    filter: blur(10px);
+    transition: filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: filter;
+}
+
+.variable-focus.in-focus {
+    filter: blur(0px);
+}
+
+/* Unfolding Transition Concept */
+.unfold-reveal {
+    clip-path: inset(100% 0 0 0);
+    /* Closed bottom-to-top */
+    transition: clip-path 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.js-enabled .active .unfold-reveal {
+    clip-path: inset(0 0 0 0);
+    /* Fully unfolded */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+.luxury-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+    margin: var(--spacing-sm) auto 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-medium);
+}
+
+/* Layout Utilities */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Luxury Elements */
+.btn-luxury {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    border: 1px solid var(--color-black);
+    background: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-medium);
+}
+
+.btn-luxury:hover {
+    background: transparent;
+    color: var(--color-black);
+}
+
+.btn-shiny {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shiny::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(30deg);
+    transition: none;
+    animation: shine 3s infinite;
+    filter: blur(5px);
+}
+
+@keyframes shine {
+    0% {
+        left: -60%;
+    }
+
+    20% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+/* Boss-Level Editorial Utilities */
+.editorial-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-bg-luxury {
+    position: absolute;
+    font-family: var(--font-heading);
+    font-size: clamp(8rem, 20vw, 25rem);
+    color: var(--color-black);
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.luxury-line {
+    width: 1px;
+    height: 0;
+    background: var(--accent);
+    transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-enabled .active .luxury-line {
+    height: 150px;
+}
+
+/* Horizontal Luxury Line Variation */
+.luxury-line-h {
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-enabled .active .luxury-line-h {
+    width: 80px;
+}
+
+.philosophy-section p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-enabled .philosophy-section.active p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.js-enabled .philosophy-section.active p:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.js-enabled .philosophy-section.active p:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.js-enabled .philosophy-section.active p:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.js-enabled .philosophy-section.active p:nth-child(5) {
+    transition-delay: 0.8s;
+}
+
+.js-enabled .philosophy-section.active p:nth-child(6) {
+    transition-delay: 1.0s;
+}
+
+.reveal-mask {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.js-enabled .active .reveal-mask {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Stagger Timings */
+.stagger-1 {
+    transition-delay: 0.2s;
+}
+
+.stagger-2 {
+    transition-delay: 0.4s;
+}
+
+.stagger-3 {
+    transition-delay: 0.6s;
+}
+
+.stagger-4 {
+    transition-delay: 0.8s;
+}
+
+.seal-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    letter-spacing: 0.5em;
+    /* Start expanded */
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-enabled .active .seal-reveal {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.15em;
+    /* Contract to normal */
+}
+
+.img-luxury {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.reveal-on-scroll {
+    opacity: 1;
+    /* Visible by default */
+    transform: none;
+    transition: var(--transition-slow);
+}
+
+/* Only hide and animate if JS is confirmed to be working */
+.js-enabled .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.js-enabled .reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 0;
+    z-index: 2500;
+    transition: var(--transition-medium);
+    background: #000;
+    /* Boss-Level Black */
+}
+
+nav.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 0.8rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 65px;
+    /* Dominant Boutique presence */
+    width: auto;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo:hover img {
+    transform: scale(1.03);
+}
+
+/* Architectural Glide Nav */
+.nav-links {
+    position: relative;
+    display: flex;
+    gap: 3.5rem;
+    /* Breathable spacing */
+    align-items: center;
+}
+
+.nav-link-boss {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    /* Extreme luxury tracking */
+    padding: 0.8rem 0;
+    display: flex;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+/* Character Level Control */
+.nav-link-boss .char {
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, color 0.4s ease;
+}
+
+/* The Glide Underline */
+.nav-underline-glide {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 1px;
+    background: var(--accent);
+    /* Brand Gold */
+    width: 0;
+    pointer-events: none;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), width 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+    opacity: 0;
+}
+
+.nav-links:hover .nav-underline-glide {
+    opacity: 1;
+}
+
+/* Enforcing Sharpness for Heritage Section */
+.reveal-mask {
+    filter: none !important;
+    /* Force purge of any blur */
+}
+
+.btn-reserve {
+    background: var(--color-white) !important;
+    color: #E63946 !important;
+    /* Elegant Red */
+    border-color: var(--color-white) !important;
+}
+
+.btn-reserve:hover {
+    background: transparent !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-white) !important;
+}
+
+/* Marquee Gallery Base */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-primary);
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    width: fit-content;
+    animation: marquee-scroll 50s linear infinite;
+}
+
+.marquee-item {
+    flex: 0 0 auto;
+    width: 35vw;
+    /* Large & Bold */
+    height: 70vh;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marquee-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* Never cropped */
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee-item:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-black);
+    transition: var(--transition-medium);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+/* --- Mobile Navigation System --- */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    /* Above overlay */
+}
+
+.burger-line {
+    width: 30px;
+    height: 2px;
+    background: var(--color-white);
+    transition: var(--transition-medium);
+    transform-origin: 1px;
+}
+
+/* Hamburger Animation States */
+.mobile-menu-toggle.active .burger-line:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .burger-line:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(15px);
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    clip-path: circle(0px at top right);
+}
+
+/* Expansion Animation for overlay */
+.mobile-nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    clip-path: circle(150vh at top right);
+    transition: opacity 0.5s ease, clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-overlay.open .mobile-nav-content {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.mobile-nav-link {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- End Mobile Navigation System --- */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .desktop-reserve {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .section-padding {
+        padding: var(--spacing-lg) 0;
+    }
+
+    #contact .section-title {
+        text-align: center !important;
+    }
+
+    #contact .reveal-on-scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .perspective-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-auto-rows: 20vh !important;
+        gap: 0.5rem !important;
+        padding: 3rem 1rem !important;
+    }
+
+    .perspective-item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .perspective-item:nth-child(even) {
+        grid-row: span 2 !important;
+    }
+
+    .perspective-item::after {
+        display: none;
+        /* Hide large numbers on mobile */
+    }
+
+    .marquee-item {
+        width: 85vw;
+        height: 60vh;
+        padding: 0 10px;
+    }
+
+    .swipe-caption {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .food-track {
+        flex-direction: row;
+        width: max-content;
+        height: 100%;
+        animation: food-scroll-horizontal 20s linear infinite;
+    }
+
+    .food-item {
+        height: 100%;
+        width: 250px;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    @keyframes food-scroll-horizontal {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* Edge-to-Edge Chaotic Art Gallery */
+.perspective-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 15vh;
+    gap: 1rem;
+    /* More efficient interlock */
+    width: 100%;
+    padding: 6rem 1vw;
+}
+
+.perspective-item {
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), border-radius 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.perspective-item:hover {
+    z-index: 10;
+}
+
+/* Gallery Entrance Animation */
+@keyframes itemReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.js-enabled .reveal-on-scroll .perspective-item {
+    opacity: 0;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item {
+    animation: itemReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(9) {
+    animation-delay: 0.55s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(10) {
+    animation-delay: 0.7s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(11) {
+    animation-delay: 0.8s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(12) {
+    animation-delay: 0.65s;
+}
+
+.js-enabled .reveal-on-scroll.active .perspective-item:nth-child(13) {
+    animation-delay: 0.75s;
+}
+
+
+/* Radical Art Shapes (8-Value Blobs & Clipping Synergy) */
+.perspective-item:nth-child(1) {
+    border-radius: 68% 32% 43% 57% / 41% 30% 70% 59%;
+}
+
+.perspective-item:nth-child(2) {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.perspective-item:nth-child(3) {
+    border-radius: 81% 19% 81% 19% / 19% 81% 19% 81%;
+}
+
+.perspective-item:nth-child(4) {
+    border-radius: 17% 83% 17% 83% / 83% 17% 83% 17%;
+}
+
+.perspective-item:nth-child(5) {
+    border-radius: 73% 27% 30% 70% / 70% 30% 70% 30%;
+}
+
+.perspective-item:nth-child(6) {
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+
+.perspective-item:nth-child(7) {
+    border-radius: 20px 140px 20px 140px;
+}
+
+.perspective-item:nth-child(8) {
+    border-radius: 140px 20px 140px 20px;
+}
+
+.perspective-item:nth-child(9) {
+    border-radius: 100px 100px 100px 100px;
+}
+
+.perspective-item:nth-child(10) {
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+}
+
+.perspective-item:nth-child(11) {
+    border-radius: 0 150px 0 0;
+}
+
+.perspective-item:nth-child(12) {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+}
+
+.perspective-item:nth-child(13) {
+    border-radius: 50% 50% 50% 50%;
+}
+
+/* Soft Hover Morph back to rounded classic */
+.perspective-item:hover {
+    border-radius: 1.5rem !important;
+}
+
+.perspective-item img {
+    width: 120%;
+    /* Extra room for parallax drift */
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    position: absolute;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+    will-change: transform;
+}
+
+/* Organic Expansion & Internal Drift */
+.perspective-item {
+    --mx: 0px;
+    --my: 0px;
+}
+
+.perspective-item img {
+    transform: translate(var(--mx), var(--my)) scale(1.0);
+}
+
+.perspective-item:hover img {
+    filter: brightness(1.1);
+    transform: translate(var(--mx), var(--my)) scale(1.08);
+}
+
+/* Numerical Index Overlay */
+.perspective-item::after {
+    content: attr(data-index);
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--color-white);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    z-index: 5;
+    font-weight: 300;
+}
+
+.perspective-item:hover::after {
+    opacity: 0.15;
+    /* Subtle ghost index */
+    transform: translateY(0);
+}
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Swipeable Full-Section Gallery */
+/* Swipeable Gallery Refinement */
+#food-swipe {
+    padding-top: var(--spacing-lg);
+    background: var(--bg-primary);
+}
+
+.swipe-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 75vh;
+    background: var(--bg-primary);
+    width: 100%;
+    padding: 0 15vw;
+    gap: 100px;
+    /* Extravagant spacing */
+}
+
+.swipe-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.swipe-item {
+    flex: 0 0 auto;
+    height: 100%;
+    scroll-snap-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swipe-item img {
+    height: 70%;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-medium);
+}
+
+.swipe-caption {
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    /* Refined Boss-Level size */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-black);
+    opacity: 0.8;
+}
+
+/* Extravagant Navigation */
+.swipe-nav-extravagant {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.nav-btn-luxury {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid var(--color-black);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-medium);
+    outline: none;
+}
+
+.nav-btn-luxury svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-black);
+    transition: var(--transition-medium);
+}
+
+.nav-btn-luxury:hover {
+    background: var(--color-black);
+}
+
+.nav-btn-luxury:hover svg {
+    fill: var(--color-white);
+}
+
+.swipe-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+}
+
+/* ── Elegant Cinematic Page Transition ── */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-black);
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), visibility 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.page-transition.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.transition-logo {
+    height: 60px;
+    width: auto;
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    transition: opacity 0.8s ease, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.page-transition.active .transition-logo {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition-delay: 0.3s;
+}
+
+/* ── Creative Philosophy Section ── */
+.philosophy-creative {
+    position: relative;
+    padding: 10rem 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.philosophy-creative .text-bg-luxury {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25vw;
+    opacity: 0.03;
+    writing-mode: unset;
+}
+
+.creative-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.image-composition {
+    position: relative;
+}
+
+.main-image-wrap {
+    width: 80%;
+    margin-left: auto;
+    clip-path: inset(0 0 0 0);
+}
+
+.iris-reveal {
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-enabled .active .iris-reveal {
+    clip-path: circle(71% at 50% 50%);
+}
+
+.philosophy-creative .luxury-line-h {
+    width: 60px;
+}
+
+.vertical-label {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+@media (max-width: 991px) {
+    .creative-grid {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+
+    .main-image-wrap {
+        width: 100%;
+    }
+}

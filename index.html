@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alley 28 | Asian Bistro & Fine Dining Graz</title>
+    <meta name="description"
+        content="Erleben Sie authentische asiatische Küche in einem edlen Ambiente. Alley 28 in der Sporgasse Graz - Guotie, Baozi und kulinarische Handwerkskunst.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="js-enabled">
+    <!-- Extravagant Page Transition Overlay -->
+    <div class="page-transition active">
+        <img src="logo/alley-logo.png" alt="Alley 28" class="transition-logo">
+    </div>
+
+    <!-- Boss-Level Atmospheric Layer -->
+    <canvas id="atmosphere-layer"></canvas>
+
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo/alley-logo.png" alt="Alley 28 Logo" style="height: 40px; width: auto;">
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="nav-links">
+                <a href="#about" class="nav-link-boss">Konzept</a>
+                <a href="#menu" class="nav-link-boss">Highlights</a>
+                <a href="#gallery" class="nav-link-boss">Impressionen</a>
+                <a href="#contact" class="nav-link-boss">Kontakt</a>
+                <a href="speisekarte.html" class="nav-link-boss">Menü</a>
+                <span class="nav-underline-glide"></span>
+            </div>
+            <a href="#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny"
+                style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Reservieren</a>
+
+            <!-- Mobile Burger Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu öffnen">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Fullscreen Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <a href="#about" class="mobile-nav-link">Konzept</a>
+            <a href="#menu" class="mobile-nav-link">Highlights</a>
+            <a href="#gallery" class="mobile-nav-link">Impressionen</a>
+            <a href="#contact" class="mobile-nav-link">Kontakt</a>
+            <a href="speisekarte.html" class="mobile-nav-link">Menü</a>
+            <div>
+                <a href="#contact" class="btn-luxury btn-reserve btn-shiny"
+                    style="padding: 1rem 2.5rem; width: 100%; text-align: center;">Reservieren</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="flex-center"
+            style="height: 100vh; position: relative; overflow: hidden; background: #000;">
+            <div id="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                <img src="image/alley 12.png" alt="Alley 28 Ambience" class="img-luxury" style="opacity: 0.6;">
+            </div>
+            <div class="container"
+                style="position: relative; z-index: 2; text-align: center; color: var(--color-white);">
+                <span class="reveal-on-scroll"
+                    style="display: block; font-family: var(--font-accent); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 1rem;">Asian
+                    Bistro & Fine Dining</span>
+                <h1 class="luxury-heading reveal-on-scroll" style="color: #fff;">Culinary Artistry in Graz</h1>
+                <div class="reveal-on-scroll" style="margin-top: 2rem;">
+                    <a href="#menu" class="btn-luxury" style="border-color: #fff; color: #fff;">Entdecken</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Marquee Gallery Section -->
+        <section id="marquee-gallery" class="reveal-on-scroll marquee-container">
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <img src="image/food 1.png" alt="Culinary Masterpiece 1">
+                    <div class="swipe-caption">Bao-Buns</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 2.png" alt="Culinary Masterpiece 2">
+                    <div class="swipe-caption">Wontons in Chili-Öl</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 3.png" alt="Culinary Masterpiece 3">
+                    <div class="swipe-caption">Silken Dim Sum</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 4.png" alt="Culinary Masterpiece 4">
+                    <div class="swipe-caption">Matcha-Momente</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 5.png" alt="Culinary Masterpiece 5">
+                    <div class="swipe-caption">Gebraten, gefaltet</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 6.png" alt="Culinary Masterpiece 6">
+                    <div class="swipe-caption">Bao-Buns</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 7.png" alt="Culinary Masterpiece 7">
+                    <div class="swipe-caption">Umami Ritual</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 8.png" alt="Culinary Masterpiece 8">
+                    <div class="swipe-caption">Balance & Harmony</div>
+                </div>
+                <!-- Duplicates for Seamless Loop -->
+                <div class="marquee-item">
+                    <img src="image/food 1.png" alt="Culinary Masterpiece 1">
+                    <div class="swipe-caption">Bao-Buns</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 2.png" alt="Culinary Masterpiece 2">
+                    <div class="swipe-caption">Wontons in Chili-Öl</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 3.png" alt="Culinary Masterpiece 3">
+                    <div class="swipe-caption">Silken Dim Sum</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 4.png" alt="Culinary Masterpiece 4">
+                    <div class="swipe-caption">Matcha-Momente</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 5.png" alt="Culinary Masterpiece 5">
+                    <div class="swipe-caption">Gebraten, gefaltet</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 6.png" alt="Culinary Masterpiece 6">
+                    <div class="swipe-caption">Bao-Buns</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 7.png" alt="Culinary Masterpiece 7">
+                    <div class="swipe-caption">Umami Ritual</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 8.png" alt="Culinary Masterpiece 8">
+                    <div class="swipe-caption">Balance & Harmony</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Concept Section (Boss-Level Editorial Depth) -->
+        <section id="about" class="section-padding editorial-container" style="background: var(--bg-primary);">
+            <div class="text-bg-luxury" style="top: 10%; right: -5%;">Heritage</div>
+
+            <div class="container">
+                <div class="grid-2-col" style="align-items: center;">
+
+                    <div class="reveal-on-scroll">
+                        <div class="luxury-line stagger-1" style="margin-bottom: var(--spacing-md);"></div>
+                        <h2 class="section-title seal-reveal stagger-2"
+                            style="text-align: left; margin-bottom: var(--spacing-md);">
+                            Tradition <br>neu gedacht.
+                        </h2>
+                        <p class="stagger-3 seal-reveal" style="max-width: 500px; color: var(--text-secondary);">
+                            In der Alley 28 verbinden wir das kulinarische Erbe Asiens mit modernem Handwerk. Jedes Dim
+                            Sum, jede Bowl ist ein Zeugnis unserer Leidenschaft für authentische Aromen und erstklassige
+                            Zutaten.
+                        </p>
+                        <div class="stagger-4 seal-reveal" style="margin-top: var(--spacing-lg);">
+                            <a href="#gallery" class="btn-luxury">Impressionen ansehen</a>
+                        </div>
+                    </div>
+
+                    <div class="reveal-on-scroll" style="position: relative; z-index: 10;">
+                        <div class="reveal-mask" style="aspect-ratio: 4/5;">
+                            <img src="image/alley 1.png" alt="Interior Alley 28" class="img-luxury"
+                                style="height: 100%;">
+                        </div>
+                        <!-- Depth overlay element -->
+                        <div class="stagger-4"
+                            style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; border: 1px solid var(--accent); z-index: -1;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Highlight Section -->
+        <section id="menu" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Kulinarische Highlights</h2>
+                <div class="highlights-grid">
+                    <!-- Item 1 -->
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <img src="image/alley 3.png" alt="Guotie" class="img-luxury">
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Guotie</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Die Kunst der gebratenen
+                            Teigtaschen. Außen knusprig, innen saftig – ein Klassiker neu interpretiert.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <img src="image/alley 5.png" alt="Baozi" class="img-luxury">
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Baozi</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Gedämpfte Luftigkeit. Unsere
+                            handgefalteten Baozi sind gefüllt mit erlesenen Kreationen.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
+                            <img src="image/alley 7.png" alt="Asian Bowls" class="img-luxury">
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Signature Bowls</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Frische trifft Balance. Harmonisch
+                            abgestimmte Bowls für ein exquisites Geschmackserlebnis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section (Creative Boutique Layout) -->
+        <section id="philosophy" class="philosophy-creative">
+            <div class="text-bg-luxury">Passion</div>
+            <div class="container">
+                <div class="creative-grid">
+
+                    <div class="image-composition reveal-on-scroll">
+                        <div class="vertical-label stagger-1">Est. 2024</div>
+                        <div class="main-image-wrap stagger-2">
+                            <div class="iris-reveal" style="aspect-ratio: 4/5;">
+                                <img src="image/alley 9.png" alt="Culinary Art" class="img-luxury"
+                                    style="height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal-on-scroll" style="order: 1;">
+                        <div class="luxury-line-h stagger-1" style="margin-bottom: var(--spacing-md);"></div>
+                        <h2 class="luxury-heading stagger-2"
+                            style="color: #fff; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; margin-bottom: 3rem; text-align: left;">
+                            Leidenschaft <br><span style="color: var(--accent);">statt</span> Rezeptur.
+                        </h2>
+                        <div class="philosophy-content stagger-3" style="max-width: 450px;">
+                            <p
+                                style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 2rem; line-height: 1.3;">
+                                „Asiatische Küche ist für uns keine Formel, sondern ein Gefühl.“
+                            </p>
+                            <p style="color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; line-height: 1.8;">
+                                Ob du nach knackigen Dumplings, fluffigen Bao-Buns oder knusprigem Bing mit Frische-Kick
+                                suchst... <br>
+                                Vielleicht zieht es dich auch zum Matcha – ob pur zelebriert oder als cremigen Latte
+                                genossen.
+                            </p>
+                            <p style="color: rgba(255,255,255,0.6); margin-bottom: 3rem; line-height: 1.8;">
+                                Bei uns findest du mehr als Essen: Eine kulinarische Liebeserklärung an Aromen, die
+                                verbinden.
+                            </p>
+
+                            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                                <div style="width: 30px; height: 1px; background: var(--accent);"></div>
+                                <p
+                                    style="font-family: var(--font-accent); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; color: var(--accent);">
+                                    Team Alley28
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Chaotic Art Gallery - Full Suite) -->
+        <section id="gallery" class="reveal-on-scroll" style="overflow: hidden;">
+            <div class="perspective-grid">
+                <div class="perspective-item" data-index="01" style="grid-column: span 3; grid-row: span 4;">
+                    <img src="image/alley 13.png" alt="Alley 28 Interior">
+                </div>
+                <div class="perspective-item" data-index="02" style="grid-column: span 1; grid-row: span 2;">
+                    <img src="image/alley 1.png" alt="Detail 1">
+                </div>
+                <div class="perspective-item" data-index="03" style="grid-column: span 2; grid-row: span 3;">
+                    <img src="image/alley 2.png" alt="Detail 2">
+                </div>
+                <div class="perspective-item" data-index="04" style="grid-column: span 1; grid-row: span 2;">
+                    <img src="image/alley 3.png" alt="Atmosphere">
+                </div>
+                <div class="perspective-item" data-index="05" style="grid-column: span 2; grid-row: span 4;">
+                    <img src="image/alley 4.png" alt="Detail 4">
+                </div>
+                <div class="perspective-item" data-index="06" style="grid-column: span 3; grid-row: span 3;">
+                    <img src="image/alley 5.png" alt="Detail 5">
+                </div>
+                <div class="perspective-item" data-index="07" style="grid-column: span 1; grid-row: span 2;">
+                    <img src="image/alley 6.png" alt="Culinary Art">
+                </div>
+                <div class="perspective-item" data-index="08" style="grid-column: span 2; grid-row: span 2;">
+                    <img src="image/alley 7.png" alt="Detail 7">
+                </div>
+                <div class="perspective-item" data-index="09" style="grid-column: span 4; grid-row: span 2;">
+                    <img src="image/alley 8.png" alt="Detail 8">
+                </div>
+                <div class="perspective-item" data-index="10" style="grid-column: span 2; grid-row: span 3;">
+                    <img src="image/alley 9.png" alt="Detail 9">
+                </div>
+                <div class="perspective-item" data-index="11" style="grid-column: span 1; grid-row: span 2;">
+                    <img src="image/alley 10.png" alt="Detail 10">
+                </div>
+                <div class="perspective-item" data-index="12" style="grid-column: span 3; grid-row: span 3;">
+                    <img src="image/alley 11.png" alt="Detail 11">
+                </div>
+                <div class="perspective-item" data-index="13" style="grid-column: span 2; grid-row: span 2;">
+                    <img src="image/alley 12.png" alt="Detail 12">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Info -->
+        <section id="contact" class="section-padding">
+            <div class="container flex-center" style="flex-direction: column; text-align: center;">
+                <div class="reveal-on-scroll">
+                    <h2 class="section-title">Besuchen Sie uns</h2>
+                    <div style="margin-top: 2rem;">
+                        <h4
+                            style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
+                            Adresse</h4>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-black);">Sporgasse
+                            28<br>8010 Graz, Österreich</p>
+
+                        <h4
+                            style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
+                            Kontakt</h4>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-black);">Tel: +43 1 234
+                            56 78<br>Email: info@alley28.at</p>
+
+                        <h4
+                            style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
+                            Öffnungszeiten</h4>
+                        <p style="font-size: 1.1rem; color: var(--color-black);">Mo - Sa: 11:30 - 21:30<br>So &
+                            Feiertage: Geschlossen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="padding: var(--spacing-md) 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.8rem; color: var(--text-secondary);">
+        <div class="container">
+            <p>&copy; 2026 Alley 28. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="transition.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

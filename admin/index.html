@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin · ALLEY 28 Speisekarte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="../settings.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen active">
+        <div class="login-card glass">
+            <div class="login-logo">⛩</div>
+            <h1 class="brand-title" data-hydrate="restaurantName">ALLEY 28</h1>
+            <p class="panel-label">Admin-Login</p>
+            <form id="login-form">
+                <input type="password" id="password" placeholder="Passwort eingeben" required autofocus>
+                <button type="submit" class="btn btn-primary">Anmelden</button>
+            </form>
+            <p id="login-error" class="error-msg hidden">Falsches Passwort!</p>
+            <a href="../speisekarte.html" class="back-link">← Speisekarte ansehen</a>
+        </div>
+    </div>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboard-screen" class="screen">
+        <header class="admin-header glass">
+            <div class="admin-container header-top">
+                <div class="admin-brand-wrap">
+                    <span class="admin-ikon">⛩</span>
+                    <h1 class="admin-brand" data-hydrate="restaurantName">ALLEY 28</h1>
+                </div>
+                <div class="header-actions">
+                    <span id="save-status" class="save-status"></span>
+                    <a href="../speisekarte.html" target="_blank" class="btn btn-ghost">👁 Vorschau</a>
+                    <button id="save-btn" class="btn btn-primary">💾 Speichern</button>
+                    <button id="logout-btn" class="btn btn-ghost">Abmelden</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-container dashboard-main">
+            <section class="admin-controls">
+                <div class="controls-left">
+                    <h2 class="dash-title">Speisekarte verwalten</h2>
+                    <p class="dash-sub">Gerichte hinzufügen, bearbeiten oder als ausverkauft markieren.</p>
+                </div>
+                <button id="add-category-btn" class="btn btn-secondary">+ Neue Kategorie</button>
+            </section>
+
+            <div id="categories-container" class="categories-list">
+                <!-- Rendered dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Item Modal -->
+    <div id="item-modal" class="modal-overlay hidden">
+        <div class="modal-content glass">
+            <h3 id="modal-title">Gericht hinzufügen</h3>
+            <form id="item-form">
+                <input type="hidden" id="item-cat-id">
+                <input type="hidden" id="item-index">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name (DE) *</label>
+                        <input type="text" id="item-name-de" required placeholder="z.B. Tonkotsu Ramen">
+                    </div>
+                    <div class="form-group">
+                        <label>Name (EN)</label>
+                        <input type="text" id="item-name-en" placeholder="e.g. Tonkotsu Ramen">
+                    </div>
+                    <div class="form-group">
+                        <label>Preis (€) *</label>
+                        <input type="text" id="item-price" placeholder="18.90" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="check-label">
+                            <input type="checkbox" id="item-available">
+                            <span>Als <strong>AUSVERKAUFT</strong> markieren</span>
+                        </label>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Beschreibung (DE)</label>
+                        <textarea id="item-desc-de" rows="2"
+                            placeholder="Schweineknochenbrühe · Chashu · Nori"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Beschreibung (EN)</label>
+                        <textarea id="item-desc-en" rows="2" placeholder="Pork bone broth · Chashu · Nori"></textarea>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="modal-cancel" class="btn btn-ghost">Abbrechen</button>
+                    <button type="submit" class="btn btn-primary">Übernehmen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Category Modal -->
+    <div id="cat-modal" class="modal-overlay hidden">
+        <div class="modal-content glass" style="max-width:480px">
+            <h3>Kategorie verwalten</h3>
+            <form id="cat-form">
+                <div class="form-grid" style="grid-template-columns:1fr">
+                    <div class="form-group">
+                        <label>Kategorie Name (DE) *</label>
+                        <input type="text" id="cat-name-de" required placeholder="z.B. VORSPEISEN">
+                    </div>
+                    <div class="form-group">
+                        <label>Kategorie Name (EN)</label>
+                        <input type="text" id="cat-name-en" placeholder="e.g. STARTERS">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="cat-modal-cancel" class="btn btn-ghost">Abbrechen</button>
+                    <button type="submit" class="btn btn-primary">Speichern</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

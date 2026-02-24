@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speisekarte | Alley 28 – Asian Bistro & Fine Dining Graz</title>
+    <meta name="description"
+        content="Entdecken Sie die Speisekarte des Alley 28 in Graz. Authentische asiatische Küche – Guotie, Baozi, Dim Sum, Ramen und vieles mehr.">
+    <script src="settings.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Speisekarte Page ── */
+        .menu-page-hero {
+            background: var(--color-black);
+            padding: 9rem 0 4.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-page-hero::after {
+            content: 'SPEISEKARTE';
+            position: absolute;
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 14vw, 11rem);
+            color: rgba(255, 255, 255, 0.03);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+            letter-spacing: 0.2em;
+        }
+
+        .menu-page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: var(--color-white);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-page-hero p {
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            letter-spacing: 0.4em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-accent);
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 1;
+            margin-top: 1.5rem;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        /* ── Category Ribbon ── */
+        .cat-ribbon-wrap {
+            position: sticky;
+            top: 72px;
+            z-index: 90;
+            background: var(--bg-primary);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .cat-ribbon {
+            display: flex;
+            gap: 0;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            width: max-content;
+        }
+
+        .cat-ribbon li a {
+            display: block;
+            font-family: var(--font-accent);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.45);
+            padding: 1rem 1.5rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .cat-ribbon li a:hover,
+        .cat-ribbon li a.active {
+            color: var(--color-black);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── Lang Switcher ── */
+        .lang-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            padding: 0.6rem 2rem 0;
+        }
+
+        .lang-btn {
+            font-family: var(--font-accent);
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background: none;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: var(--color-black);
+            color: white;
+            border-color: var(--color-black);
+        }
+
+        /* ── Menu Sections ── */
+        .menu-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem 8rem;
+        }
+
+        .menu-section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 130px;
+        }
+
+        .menu-section-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .cat-number {
+            font-family: var(--font-accent);
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-transform: uppercase;
+            background: rgba(191, 167, 130, 0.12);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .menu-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+            font-weight: 300;
+            color: var(--color-black);
+            letter-spacing: 0.04em;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.25rem 4rem;
+        }
+
+        @media(max-width:680px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .menu-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-item.is-sold-out {
+            opacity: 0.35;
+        }
+
+        .menu-item-info {
+            flex: 1;
+        }
+
+        .item-name {
+            font-family: var(--font-accent);
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-black);
+            font-weight: 600;
+        }
+
+        .sold-out-badge {
+            display: inline-block;
+            font-size: 0.55rem;
+            letter-spacing: 0.1em;
+            background: #e53e3e;
+            color: white;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            margin-left: 8px;
+        }
+
+        .item-desc {
+            font-size: 0.78rem;
+            color: rgba(0, 0, 0, 0.4);
+            line-height: 1.5;
+            font-style: italic;
+            margin-top: 0.2rem;
+        }
+
+        .item-price {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--color-black);
+            white-space: nowrap;
+        }
+
+        /* ── Section Divider ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0 3rem;
+            color: rgba(0, 0, 0, 0.18);
+        }
+
+        .section-divider .line {
+            flex: 1;
+            height: 1px;
+            background: currentColor;
+        }
+
+        .section-divider .icon {
+            font-size: 1.1rem;
+            opacity: 0.5;
+        }
+
+        /* ── Editorial Intermissions ── */
+        .menu-intermission {
+            width: 100vw;
+            height: 35vh;
+            margin-left: calc(-50vw + 50%);
+            /* Full viewport width breakout */
+            margin-top: 4rem;
+            margin-bottom: 5rem;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-black);
+        }
+
+        .menu-intermission img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 25vh);
+            /* guarantees enough overflow for parallax */
+            object-fit: cover;
+            opacity: 0.6;
+            filter: blur(3px);
+            z-index: 0;
+            will-change: transform;
+        }
+
+        @media(max-width: 768px) {
+            .menu-intermission {
+                height: 20vh;
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .menu-intermission-text {
+            position: relative;
+            z-index: 1;
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 4rem);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        /* ── Footer allergen ── */
+        .allergen-note {
+            text-align: center;
+            font-size: 0.72rem;
+            color: rgba(0, 0, 0, 0.3);
+            padding: 2rem 2rem 4rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Extravagant Page Transition Overlay -->
+    <div class="page-transition active">
+        <img src="logo/alley-logo.png" alt="Alley 28" class="transition-logo">
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo/alley-logo.png" alt="Alley 28 Logo" style="height: 40px; width: auto;">
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link-boss">Konzept</a>
+                <a href="index.html#menu" class="nav-link-boss">Highlights</a>
+                <a href="index.html#gallery" class="nav-link-boss">Impressionen</a>
+                <a href="index.html#contact" class="nav-link-boss">Kontakt</a>
+                <a href="speisekarte.html" class="nav-link-boss" style="color: var(--accent);">Menü</a>
+                <span class="nav-underline-glide"></span>
+            </div>
+            <a href="index.html#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny"
+                style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Reservieren</a>
+
+            <!-- Mobile Burger Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu öffnen">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Fullscreen Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <a href="index.html#about" class="mobile-nav-link">Konzept</a>
+            <a href="index.html#menu" class="mobile-nav-link">Highlights</a>
+            <a href="index.html#gallery" class="mobile-nav-link">Impressionen</a>
+            <a href="index.html#contact" class="mobile-nav-link">Kontakt</a>
+            <a href="speisekarte.html" class="mobile-nav-link" style="color: var(--accent);">Menü</a>
+            <div>
+                <a href="index.html#contact" class="btn-luxury btn-reserve btn-shiny"
+                    style="padding: 1rem 2.5rem; width: 100%; text-align: center;">Reservieren</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="menu-page-hero">
+        <p>Alley 28 · Sporgasse 28 · Graz</p>
+        <h1>Unsere Speisekarte</h1>
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </section>
+
+    <!-- Lang Switcher -->
+    <div class="lang-bar">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Sticky Category Ribbon -->
+    <div class="cat-ribbon-wrap">
+        <ul id="category-list" class="cat-ribbon"></ul>
+    </div>
+
+    <!-- Menu App -->
+    <main>
+        <div id="menu-app" class="menu-wrapper">
+            <p style="text-align:center;padding:4rem;color:#aaa;">Speisekarte wird geladen…</p>
+        </div>
+    </main>
+
+    <!-- Allergen Note -->
+    <footer>
+        <div class="allergen-note">
+            Alle Preise in Euro inkl. MwSt. &middot; Allergene auf Anfrage beim Servicepersonal.<br>
+            Speisekarte kann saisonalen Änderungen unterliegen. &middot; <strong>Stand: 2026</strong>
+        </div>
+    </footer>
+
+    <script src="settings.js"></script>
+
+    <!-- ── Inline Menu Fallback (works on file://) ── -->
+    <script>
+        const MENU_INLINE = { "categories": [{ "id": "vorspeisen", "name": { "de": "VORSPEISEN", "en": "STARTERS" }, "items": [{ "name": { "de": "Edamame", "en": "Edamame" }, "desc": { "de": "Gedämpfte Sojabohnen · Meersalz · Sesam", "en": "Steamed soybeans · Sea salt · Sesame" }, "price": "5.50" }, { "name": { "de": "Miso Suppe", "en": "Miso Soup" }, "desc": { "de": "Dashi · Tofu · Wakame · Frühlingszwiebel", "en": "Dashi · Tofu · Wakame · Spring onion" }, "price": "5.90" }, { "name": { "de": "Spring Rolls (3 Stk.)", "en": "Spring Rolls (3 pcs.)" }, "desc": { "de": "Knuspriges Gemüse · Glasnudeln · Süß-sauer Dip", "en": "Crispy vegetables · Glass noodles · Sweet & sour dip" }, "price": "8.50" }, { "name": { "de": "Garnelen Tempura (4 Stk.)", "en": "Prawn Tempura (4 pcs.)" }, "desc": { "de": "Black Tiger Garnelen · Ponzu · Wasabi-Mayo", "en": "Black Tiger prawns · Ponzu · Wasabi mayo" }, "price": "13.90" }, { "name": { "de": "Tom Kha Suppe", "en": "Tom Kha Soup" }, "desc": { "de": "Kokosmilch · Galgant · Zitronengras · Champignons", "en": "Coconut milk · Galangal · Lemongrass · Mushrooms" }, "price": "9.50" }, { "name": { "de": "Beef Tataki", "en": "Beef Tataki" }, "desc": { "de": "Kurz gebratenes Rind · Yuzu Ponzu · Microgreens", "en": "Seared beef · Yuzu ponzu · Microgreens" }, "price": "16.90" }] }, { "id": "dumplings", "name": { "de": "DIM SUM & DUMPLINGS", "en": "DIM SUM & DUMPLINGS" }, "items": [{ "name": { "de": "Guotie (6 Stk.)", "en": "Guotie (6 pcs.)" }, "desc": { "de": "Pan-fried · Schwein & Kohl · Ingwer-Soja Dip", "en": "Pan-fried · Pork & cabbage · Ginger-soy dip" }, "price": "12.90" }, { "name": { "de": "Baozi (3 Stk.)", "en": "Baozi (3 pcs.)" }, "desc": { "de": "Gedämpfte Hefeteigtaschen · Cha Siu · Hoisin", "en": "Steamed buns · Char siu · Hoisin" }, "price": "11.50" }, { "name": { "de": "Har Gow (4 Stk.)", "en": "Har Gow (4 pcs.)" }, "desc": { "de": "Garnelen-Dumplings · Zitronengras · Chili-Öl", "en": "Prawn dumplings · Lemongrass · Chili oil" }, "price": "13.50" }, { "name": { "de": "Siu Mai (4 Stk.)", "en": "Siu Mai (4 pcs.)" }, "desc": { "de": "Schwein & Garnelen · Bambussprossen · Soja", "en": "Pork & prawn · Bamboo shoots · Soy" }, "price": "12.90" }, { "name": { "de": "Veggie Dumplings (5 Stk.)", "en": "Veggie Dumplings (5 pcs.)" }, "desc": { "de": "Tofu · Shiitake · Edamame · Sesam-Soja Dip", "en": "Tofu · Shiitake · Edamame · Sesame-soy dip" }, "price": "11.50" }, { "name": { "de": "Xiao Long Bao (4 Stk.)", "en": "Xiao Long Bao (4 pcs.)" }, "desc": { "de": "Suppenknödel · Schweinebrät · Ingwer-Essig", "en": "Soup dumplings · Pork filling · Ginger vinegar" }, "price": "14.90" }] }, { "id": "bowls-ramen", "name": { "de": "BOWLS & RAMEN", "en": "BOWLS & RAMEN" }, "items": [{ "name": { "de": "Tonkotsu Ramen", "en": "Tonkotsu Ramen" }, "desc": { "de": "Schweineknochenbrühe · Chashu · Wachtelei · Nori · Bambus", "en": "Pork bone broth · Chashu · Quail egg · Nori · Bamboo" }, "price": "18.90" }, { "name": { "de": "Miso Ramen", "en": "Miso Ramen" }, "desc": { "de": "Shiro Miso Brühe · Tofu · Mais · Wakame · Frühlingszwiebel", "en": "Shiro miso broth · Tofu · Corn · Wakame · Spring onion" }, "price": "17.50" }, { "name": { "de": "Spicy Tantanmen", "en": "Spicy Tantanmen" }, "desc": { "de": "Sesambrühe · Schweinhack · Chili · Tahini · Ramen-Ei", "en": "Sesame broth · Pork mince · Chili · Tahini · Ramen egg" }, "price": "19.50" }, { "name": { "de": "Alley 28 Signature Bowl", "en": "Alley 28 Signature Bowl" }, "desc": { "de": "Reis · Beef Bulgogi · Kimchi · Gurke · Sesam-Dressing", "en": "Rice · Beef bulgogi · Kimchi · Cucumber · Sesame dressing" }, "price": "21.90" }, { "name": { "de": "Chicken Teriyaki Bowl", "en": "Chicken Teriyaki Bowl" }, "desc": { "de": "Japanischer Reis · Gegrilltes Hähnchen · Teriyaki · Edamame", "en": "Japanese rice · Grilled chicken · Teriyaki · Edamame" }, "price": "18.90" }, { "name": { "de": "Veggie Buddha Bowl", "en": "Veggie Buddha Bowl" }, "desc": { "de": "Quinoa-Reis · Avocado · Karotte · Tofu · Miso-Tahini", "en": "Quinoa rice · Avocado · Carrot · Tofu · Miso tahini" }, "price": "16.90" }] }, { "id": "wok", "name": { "de": "WOK GERICHTE", "en": "WOK DISHES" }, "items": [{ "name": { "de": "Pad Thai Klassik", "en": "Pad Thai Classic" }, "desc": { "de": "Reisnudeln · Garnelen · Erdnüsse · Tamarinde · Limette", "en": "Rice noodles · Prawns · Peanuts · Tamarind · Lime" }, "price": "17.50" }, { "name": { "de": "Rindfleisch mit Austernsauce", "en": "Beef with Oyster Sauce" }, "desc": { "de": "Streifen · Chinakohl · Shiitake · Ingwer · Jasminreis", "en": "Strips · Chinese cabbage · Shiitake · Ginger · Jasmine rice" }, "price": "22.90" }, { "name": { "de": "Gebratener Reis Spezial", "en": "Fried Rice Special" }, "desc": { "de": "Ei · Gemüse · Krabben · Soja · Frühlingszwiebel", "en": "Egg · Vegetables · Crab · Soy · Spring onion" }, "price": "15.90" }, { "name": { "de": "Kung Pao Hühnchen", "en": "Kung Pao Chicken" }, "desc": { "de": "Zucchini · Paprika · Erdnüsse · Sichuan-Pfeffer", "en": "Zucchini · Bell pepper · Peanuts · Sichuan pepper" }, "price": "19.90" }, { "name": { "de": "Garnelen Thai Green Curry", "en": "Prawn Thai Green Curry" }, "desc": { "de": "Kokosmilch · Thai-Basilikum · Aubergine · Jasminreis", "en": "Coconut milk · Thai basil · Aubergine · Jasmine rice" }, "price": "23.50" }, { "name": { "de": "Glasnudeln mit Gemüse", "en": "Glass Noodles with Vegetables" }, "desc": { "de": "Tofu · Shiitake · Paprika · Sojasprossen · Sesam", "en": "Tofu · Shiitake · Bell pepper · Bean sprouts · Sesame" }, "price": "15.50" }] }, { "id": "sushi", "name": { "de": "SUSHI", "en": "SUSHI" }, "items": [{ "name": { "de": "Sake Nigiri (2 Stk.)", "en": "Sake Nigiri (2 pcs.)" }, "desc": { "de": "Lachs · Sushi-Reis · Wasabi", "en": "Salmon · Sushi rice · Wasabi" }, "price": "7.50" }, { "name": { "de": "Ebi Nigiri (2 Stk.)", "en": "Ebi Nigiri (2 pcs.)" }, "desc": { "de": "Garnelen · Sushi-Reis · Wasabi", "en": "Prawn · Sushi rice · Wasabi" }, "price": "7.90" }, { "name": { "de": "Alley Roll (8 Stk.)", "en": "Alley Roll (8 pcs.)" }, "desc": { "de": "Lachs · Avocado · Cream Cheese · Sesam · Teriyaki", "en": "Salmon · Avocado · Cream cheese · Sesame · Teriyaki" }, "price": "16.90" }, { "name": { "de": "Spicy Tuna Roll (8 Stk.)", "en": "Spicy Tuna Roll (8 pcs.)" }, "desc": { "de": "Thunfisch · Chili-Mayo · Gurke · Sesam", "en": "Tuna · Chili mayo · Cucumber · Sesame" }, "price": "15.90" }, { "name": { "de": "Veggie Maki (8 Stk.)", "en": "Veggie Maki (8 pcs.)" }, "desc": { "de": "Avocado · Gurke · Karotte · Sesam", "en": "Avocado · Cucumber · Carrot · Sesame" }, "price": "11.50" }, { "name": { "de": "Omakase Platte (18 Stk.)", "en": "Omakase Plate (18 pcs.)" }, "desc": { "de": "Chef's Auswahl – Nigiri & Maki Mix", "en": "Chef's selection – Nigiri & Maki mix" }, "price": "38.00" }] }, { "id": "vegetarisch", "name": { "de": "VEGETARISCH & VEGAN", "en": "VEGETARIAN & VEGAN" }, "items": [{ "name": { "de": "Agedashi Tofu", "en": "Agedashi Tofu" }, "desc": { "de": "Frittierter Tofu · Dashi · Daikon · Katsuobushi", "en": "Fried tofu · Dashi · Daikon · Bonito flakes" }, "price": "12.90" }, { "name": { "de": "Mapo Tofu", "en": "Mapo Tofu" }, "desc": { "de": "Seidentofu · Sichuan · Chili-Öl · Jasminreis", "en": "Silken tofu · Sichuan · Chili oil · Jasmine rice" }, "price": "14.50" }, { "name": { "de": "Gemüse Tempura", "en": "Vegetable Tempura" }, "desc": { "de": "Süßkartoffel · Zucchini · Shiso · Tsuyu-Dip", "en": "Sweet potato · Zucchini · Shiso · Tsuyu dip" }, "price": "13.90" }, { "name": { "de": "Avocado-Mango Salat", "en": "Avocado-Mango Salad" }, "desc": { "de": "Avocado · Mango · Sesam · Yuzu Vinaigrette · Koriander", "en": "Avocado · Mango · Sesame · Yuzu vinaigrette · Coriander" }, "price": "12.50" }] }, { "id": "beilagen", "name": { "de": "BEILAGEN", "en": "SIDES" }, "items": [{ "name": { "de": "Jasminreis", "en": "Jasmine Rice" }, "price": "3.50" }, { "name": { "de": "Gebratener Reis", "en": "Fried Rice" }, "price": "4.50" }, { "name": { "de": "Sesam-Wokgemüse", "en": "Sesame Wok Vegetables" }, "price": "5.50" }, { "name": { "de": "Kimchi", "en": "Kimchi" }, "desc": { "de": "Hausgemacht · scharf", "en": "Homemade · spicy" }, "price": "4.00" }, { "name": { "de": "Edamame", "en": "Edamame" }, "price": "5.50" }, { "name": { "de": "Ramen-Ei", "en": "Ramen Egg" }, "desc": { "de": "Sous-vide · Soja mariniert", "en": "Sous-vide · Soy marinated" }, "price": "2.50" }] }, { "id": "desserts", "name": { "de": "DESSERTS", "en": "DESSERTS" }, "items": [{ "name": { "de": "Matcha Tiramisu", "en": "Matcha Tiramisu" }, "desc": { "de": "Japanischer Matcha · Mascarpone · Biskuit", "en": "Japanese matcha · Mascarpone · Biscuit" }, "price": "8.50" }, { "name": { "de": "Mango Sticky Rice", "en": "Mango Sticky Rice" }, "desc": { "de": "Klebreis · Frische Mango · Kokosmilch · Sesam", "en": "Glutinous rice · Fresh mango · Coconut milk · Sesame" }, "price": "7.90" }, { "name": { "de": "Schwarzes Sesam Eis", "en": "Black Sesame Ice Cream" }, "desc": { "de": "Hausgemacht · Sesam-Pralinée · Mochi", "en": "Homemade · Sesame praline · Mochi" }, "price": "7.50" }, { "name": { "de": "Dorayaki", "en": "Dorayaki" }, "desc": { "de": "Japanische Pfannkuchen · Anko-Füllung · Sahne", "en": "Japanese pancakes · Anko filling · Cream" }, "price": "6.90" }] }, { "id": "getraenke", "name": { "de": "GETRÄNKE", "en": "DRINKS" }, "items": [{ "name": { "de": "Jasmin-Tee (Kanne)", "en": "Jasmine Tea (Pot)" }, "desc": { "de": "Bio · Heiß oder kalt", "en": "Organic · Hot or cold" }, "price": "4.50" }, { "name": { "de": "Matcha Latte", "en": "Matcha Latte" }, "desc": { "de": "Ceremonial Grade · Oat Milk", "en": "Ceremonial grade · Oat milk" }, "price": "5.90" }, { "name": { "de": "Yuzu Lemonade", "en": "Yuzu Lemonade" }, "desc": { "de": "Frischer Yuzu · Ingwer · Sprudelwasser", "en": "Fresh yuzu · Ginger · Sparkling water" }, "price": "5.50" }, { "name": { "de": "Lychee Soda", "en": "Lychee Soda" }, "desc": { "de": "Lychee Sirup · Zitrone · Minze", "en": "Lychee syrup · Lemon · Mint" }, "price": "4.90" }, { "name": { "de": "Asahi Bier 0,33l", "en": "Asahi Beer 0.33l" }, "price": "4.90" }, { "name": { "de": "Sake – Junmai Ginjo 0,18l", "en": "Sake – Junmai Ginjo 0.18l" }, "desc": { "de": "Warm oder kalt", "en": "Warm or cold" }, "price": "7.90" }, { "name": { "de": "Mineralwasser 0,5l", "en": "Mineral Water 0.5l" }, "desc": { "de": "Still oder prickelnd", "en": "Still or sparkling" }, "price": "3.50" }, { "name": { "de": "Softdrinks 0,5l", "en": "Soft Drinks 0.5l" }, "desc": { "de": "Cola · Zero · Fanta · Orange", "en": "Cola · Zero · Fanta · Orange" }, "price": "3.90" }] }] };
+    </script>
+
+    <script>
+        // ── Load & Render ──────────────────────────────────────────
+        const storageKey = (typeof SETTINGS !== 'undefined') ? SETTINGS.storageKey : 'alley28_lang';
+        let currentLang = localStorage.getItem(storageKey) || 'de';
+        let menuData;
+
+        const menuApp = document.getElementById('menu-app');
+        const categoryList = document.getElementById('category-list');
+
+        const ICONS = ['🥟', '🍜', '🍣', '🥢', '🍱', '🌿', '🥗', '🍡', '🍵'];
+
+        async function init() {
+            // Try fetch first (works when hosted on a server)
+            // Falls back instantly to the inline data (works on file://)
+            try {
+                const res = await fetch(`./menu.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (!res.ok) throw new Error('not ok');
+                menuData = await res.json();
+            } catch (e) {
+                // Local fallback – use inline embedded data
+                menuData = MENU_INLINE;
+            }
+            renderMenu(currentLang);
+        }
+
+        function renderMenu(lang) {
+            menuApp.innerHTML = '';
+            categoryList.innerHTML = '';
+
+            menuData.categories.forEach((cat, idx) => {
+                const catName = cat.name[lang] || cat.name['de'];
+
+                // Ribbon pill
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#${cat.id}">${catName}</a>`;
+                categoryList.appendChild(li);
+
+                // Section
+                const section = document.createElement('section');
+                section.id = cat.id;
+                section.className = 'menu-section';
+
+                // Divider between sections
+                let divider = '';
+                if (idx > 0) divider = `
+                    <div class="section-divider">
+                        <span class="line"></span>
+                        <span class="icon">${ICONS[idx % ICONS.length]}</span>
+                        <span class="line"></span>
+                    </div>`;
+
+                let itemsHtml = '';
+                cat.items.forEach((item, i) => {
+                    const name = item.name[lang] || item.name['de'];
+                    const desc = item.desc ? (item.desc[lang] || item.desc['de']) : '';
+                    const soldOut = item.isSoldOut === true;
+                    itemsHtml += `
+                        <div class="menu-item ${soldOut ? 'is-sold-out' : ''}" style="transition-delay:${i * 60}ms">
+                            <div class="menu-item-info">
+                                <div class="item-name">${name}${soldOut ? '<span class="sold-out-badge">AUSVERKAUFT</span>' : ''}</div>
+                                ${desc ? `<p class="item-desc">${desc}</p>` : ''}
+                            </div>
+                            <div class="item-price">€ ${item.price}</div>
+                        </div>`;
+                });
+
+                const numStr = String(idx + 1).padStart(2, '0');
+                section.innerHTML = `
+                    ${divider}
+                    <div class="menu-section-header">
+                        <span class="cat-number">${numStr}</span>
+                        <h2>${catName}</h2>
+                    </div>
+                    <div class="items-grid">${itemsHtml}</div>`;
+
+                menuApp.appendChild(section);
+
+                // Inject Editorial Intermission after Dim Sum (idx 1) and Sushi (idx 4)
+                if (idx === 1) {
+                    const inter = document.createElement('div');
+                    inter.className = 'menu-intermission reveal-on-scroll';
+                    inter.innerHTML = `
+                        <img src="image/food 2.png" alt="Concept Food" class="parallax-img">
+                        <div class="menu-intermission-text">Signature Art</div>
+                    `;
+                    menuApp.appendChild(inter);
+                } else if (idx === 4) {
+                    const inter = document.createElement('div');
+                    inter.className = 'menu-intermission reveal-on-scroll';
+                    inter.innerHTML = `
+                        <img src="image/food 4.png" alt="Concept Food" class="parallax-img">
+                        <div class="menu-intermission-text">Culinary Craft</div>
+                    `;
+                    menuApp.appendChild(inter);
+                }
+            });
+
+            attachScrollReveal();
+            attachRibbonTracking();
+            attachSmoothScroll();
+            attachParallaxIntermissions();
+            syncLangBtns(lang);
+        }
+
+        function attachParallaxIntermissions() {
+            const parallaxImages = document.querySelectorAll('.menu-intermission .parallax-img');
+            if (parallaxImages.length === 0) return;
+
+            window.addEventListener('scroll', () => {
+                parallaxImages.forEach(img => {
+                    const parent = img.parentElement;
+                    const rect = parent.getBoundingClientRect();
+                    // If image is in viewport
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        const scrollDist = window.innerHeight - rect.top;
+                        const yPos = -(scrollDist * 0.15);
+                        img.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                    }
+                });
+            }, { passive: true });
+        }
+
+        function attachScrollReveal() {
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+            }, { threshold: 0.07 });
+            document.querySelectorAll('.menu-item').forEach(el => obs.observe(el));
+        }
+
+        function attachRibbonTracking() {
+            const navObs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        const id = e.target.id;
+                        document.querySelectorAll('.cat-ribbon a').forEach(a => {
+                            const active = a.getAttribute('href') === `#${id}`;
+                            a.classList.toggle('active', active);
+                            if (active) a.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        });
+                    }
+                });
+            }, { rootMargin: '-15% 0px -70% 0px' });
+            document.querySelectorAll('.menu-section').forEach(s => navObs.observe(s));
+        }
+
+        function attachSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', e => {
+                    e.preventDefault();
+                    const t = document.querySelector(a.getAttribute('href'));
+                    if (t) window.scrollTo({ top: t.offsetTop - 130, behavior: 'smooth' });
+                });
+            });
+        }
+
+        function syncLangBtns(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn =>
+                btn.classList.toggle('active', btn.dataset.lang === lang));
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentLang = btn.dataset.lang;
+                localStorage.setItem(storageKey, currentLang);
+                renderMenu(currentLang);
+            });
+        });
+
+        // ── Navbar scroll colour swap ──────────────────────────────
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ── Mobile Menu Toggle ────────────────────────────────────
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileToggle && mobileOverlay) {
+            function toggleMenu() {
+                mobileToggle.classList.toggle('active');
+                mobileOverlay.classList.toggle('open');
+                document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
+            }
+
+            mobileToggle.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            const reserveBtnMobile = mobileOverlay.querySelector('.btn-reserve');
+            if (reserveBtnMobile) {
+                reserveBtnMobile.addEventListener('click', toggleMenu);
+            }
+        }
+
+        // ── Init ──────────────────────────────────────────────────
+        init();
+    </script>
+    <script src="transition.js"></script>
+</body>
+
+</html>
