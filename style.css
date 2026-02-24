@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 @font-face {
     font-family: 'Stylish Classy Font';
@@ -26,8 +26,8 @@
     --accent: var(--color-accent-pdf);
 
     /* Typography - Replicating PDF */
-    --font-heading: 'Stylish Classy Font', cursive;
-    /* Custom Stylish font from PDF */
+    --font-heading: 'Cormorant Garamond', serif;
+    /* Luxurious & Readable Serif */
     --font-body: 'Montserrat', sans-serif;
     --font-accent: 'Tenor Sans', sans-serif;
 
