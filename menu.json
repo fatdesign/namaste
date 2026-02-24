@@ -3,8 +3,8 @@
     {
       "id": "lunch",
       "name": {
-        "de": "LUNCH",
-        "en": "LUNCH"
+        "de": "Lunch",
+        "en": "Lunch"
       },
       "description": {
         "de": "Dienstag-Freitag 12:00-14:30 Uhr · mit Reis + Fitness-Salat",
@@ -100,7 +100,7 @@
     {
       "id": "soups",
       "name": {
-        "de": "SOUPS"
+        "de": "Soups"
       },
       "items": [
         {
@@ -145,7 +145,7 @@
     {
       "id": "salads",
       "name": {
-        "de": "SALADS"
+        "de": "Salads"
       },
       "items": [
         {
@@ -217,7 +217,7 @@
     {
       "id": "tapas",
       "name": {
-        "de": "TAPAS"
+        "de": "Tapas"
       },
       "items": [
         {
@@ -344,7 +344,7 @@
     {
       "id": "main-course",
       "name": {
-        "de": "MAIN COURSE"
+        "de": "Main Course"
       },
       "items": [
         {
@@ -523,7 +523,7 @@
     {
       "id": "east-bowl",
       "name": {
-        "de": "EAST BOWL"
+        "de": "East Bowl"
       },
       "items": [
         {
@@ -570,7 +570,7 @@
     {
       "id": "udon",
       "name": {
-        "de": "UDON"
+        "de": "Udon"
       },
       "description": {
         "de": "Japanische Weizen-Nudeln"
@@ -609,7 +609,7 @@
     {
       "id": "beilagen",
       "name": {
-        "de": "BEILAGEN"
+        "de": "Beilagen"
       },
       "items": [
         {
@@ -638,7 +638,7 @@
     {
       "id": "premium-rolls",
       "name": {
-        "de": "PREMIUM ROLLS (8 Stück)"
+        "de": "Premium Rolls (8 Stück)"
       },
       "items": [
         {
@@ -764,7 +764,7 @@
     {
       "id": "nigiri",
       "name": {
-        "de": "NIGIRI (2 Stück)"
+        "de": "Nigiri (2 Stück)"
       },
       "items": [
         {
@@ -823,7 +823,7 @@
     {
       "id": "sushi-set",
       "name": {
-        "de": "SUSHI SET"
+        "de": "Sushi Set"
       },
       "items": [
         {
@@ -912,7 +912,7 @@
     {
       "id": "sashimi",
       "name": {
-        "de": "SASHIMI (4 Scheiben)"
+        "de": "Sashimi (4 Scheiben)"
       },
       "items": [
         {
@@ -932,7 +932,7 @@
     {
       "id": "desserts",
       "name": {
-        "de": "DESSERTS"
+        "de": "Desserts"
       },
       "items": [
         {
@@ -1003,7 +1003,7 @@
     {
       "id": "bier",
       "name": {
-        "de": "BIER"
+        "de": "Bier"
       },
       "items": [
         {
@@ -1083,7 +1083,7 @@
     {
       "id": "aperitiv",
       "name": {
-        "de": "APERITIV | BITTERS"
+        "de": "Aperitiv | Bitters"
       },
       "items": [
         {
@@ -1154,7 +1154,7 @@
     {
       "id": "alkoholfrei",
       "name": {
-        "de": "ALKOHOLFREI"
+        "de": "Alkoholfrei"
       },
       "items": [
         {
@@ -1294,7 +1294,7 @@
     {
       "id": "homemade",
       "name": {
-        "de": "HOMEMADE"
+        "de": "Homemade"
       },
       "items": [
         {
@@ -1356,7 +1356,7 @@
     {
       "id": "kaffee-tee",
       "name": {
-        "de": "KAFFEE | TEE"
+        "de": "Kaffee | Tee"
       },
       "items": [
         {
@@ -1436,7 +1436,7 @@
     {
       "id": "digestiv",
       "name": {
-        "de": "DIGESTIV | SPIRITS"
+        "de": "Digestiv | Spirits"
       },
       "items": [
         {

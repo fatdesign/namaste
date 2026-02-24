@@ -6,7 +6,7 @@
 
 const SETTINGS = {
     // 1. BRANDING
-    restaurantName: "EAST MENU",
+    restaurantName: "East Menu",
     tagline: "Asian Fusion & Fine Dining · Graz",
     metaDescription: "Speisekarte des East Menu – Asian Fusion & Fine Dining in Graz.",
     footerText: "2026 East Menu · Graz",

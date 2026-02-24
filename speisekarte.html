@@ -21,13 +21,14 @@
 
         .menu-page-hero h1 {
             font-family: var(--font-heading);
-            font-size: clamp(3rem, 10vw, 8rem);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
             color: var(--accent);
             font-weight: 400;
             letter-spacing: 0.05em;
             position: relative;
             z-index: 1;
             margin-top: 1rem;
+            text-transform: capitalize;
         }
 
         .hero-logo {
@@ -47,7 +48,7 @@
         }
 
         .chili-icon {
-            height: 14px;
+            height: 35px;
             width: auto;
         }
 
@@ -190,12 +191,13 @@
 
         .menu-section h2 {
             font-family: var(--font-heading);
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: 1.1rem;
             font-weight: 400;
             color: var(--accent);
             letter-spacing: 0.02em;
             line-height: 1.2;
             margin: 0;
+            text-transform: capitalize;
         }
 
         .items-grid {
@@ -207,14 +209,24 @@
 
         .menu-item {
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 1rem;
+            flex-direction: column;
+            gap: 0.1rem;
             padding: 1.1rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             opacity: 0;
             transform: translateY(12px);
             transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+        }
+
+        .item-dots {
+            display: none;
         }
 
         .menu-item.visible {
@@ -434,7 +446,7 @@
 
     <!-- ── Inline Menu Fallback (works on file://) ── -->
     <script>
-        const MENU_INLINE = { "categories": [{ "id": "lunch", "name": { "de": "LUNCH" }, "description": { "de": "Dienstag-Freitag 12:00-14:30 Uhr · mit Reis + Fitness-Salat" }, "items": [{ "name": { "de": "Basil Chicken AFN" }, "desc": { "de": "Hühnerfleisch | Basilikum | Saisongemüse" }, "price": "12,9" }] }, { "id": "soups", "name": { "de": "SOUPS" }, "items": [{ "name": { "de": "Miso Shiru DF" }, "desc": { "de": "Tofu | Wakame | Frühlingszwiebeln | Pilze" }, "price": "5,9" }] }] };
+        const MENU_INLINE = { "categories": [{ "id": "lunch", "name": { "de": "Lunch" }, "description": { "de": "Dienstag-Freitag 12:00-14:30 Uhr · mit Reis + Fitness-Salat" }, "items": [{ "name": { "de": "Basil Chicken AFN" }, "desc": { "de": "Hühnerfleisch | Basilikum | Saisongemüse" }, "price": "12,9" }] }, { "id": "soups", "name": { "de": "Soups" }, "items": [{ "name": { "de": "Miso Shiru DF" }, "desc": { "de": "Tofu | Wakame | Frühlingszwiebeln | Pilze" }, "price": "5,9" }] }] };
     </script>
 
     <script>
@@ -507,7 +519,6 @@
                         <div class="menu-item ${soldOut ? 'is-sold-out' : ''}" style="transition-delay:${i * 60}ms">
                             <div class="item-header">
                                 <span class="item-name">${name}${chiliHtml}</span>
-                                <span class="item-dots"></span>
                                 <span class="item-price">€ ${item.price}</span>
                             </div>
                             ${desc ? `<p class="item-desc">${desc}</p>` : ''}
