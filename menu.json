@@ -1,637 +1,1524 @@
 {
   "categories": [
     {
-      "id": "vorspeisen",
+      "id": "lunch",
       "name": {
-        "de": "VORSPEISEN",
-        "en": "STARTERS"
+        "de": "LUNCH",
+        "en": "LUNCH"
+      },
+      "description": {
+        "de": "Dienstag-Freitag 12:00-14:30 Uhr · mit Reis + Fitness-Salat",
+        "en": "Tuesday-Friday 12:00-14:30 · with rice + fitness salad"
       },
       "items": [
         {
           "name": {
-            "de": "Edamame",
-            "en": "Edamame"
+            "de": "Basil Chicken AFN"
           },
-          "price": "5.50",
-          "isSoldOut": false,
-          "spiciness": "2",
           "desc": {
-            "de": "Gedämpfte Sojabohnen · Meersalz · Sesam",
-            "en": "Steamed soybeans · Sea salt · Sesame"
-          }
+            "de": "Hühnerfleisch | Basilikum | Saisongemüse"
+          },
+          "price": "12,9"
         },
         {
           "name": {
-            "de": "Miso Suppe",
-            "en": "Miso Soup"
+            "de": "Nyonya Curry DR"
           },
           "desc": {
-            "de": "Dashi · Tofu · Wakame · Frühlingszwiebel",
-            "en": "Dashi · Tofu · Wakame · Spring onion"
+            "de": "Malaysisches Curry | Hühnerfleisch | Kurkuma | Kokosmilch"
           },
-          "price": "5.90"
+          "price": "12,9"
         },
         {
           "name": {
-            "de": "Spring Rolls (3 Stk.)",
-            "en": "Spring Rolls (3 pcs.)"
+            "de": "Black Pepper Beef AFN"
           },
           "desc": {
-            "de": "Knuspriges Gemüse · Glasnudeln · Süß-sauer Dip",
-            "en": "Crispy vegetables · Glass noodles · Sweet & sour dip"
+            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse"
           },
-          "price": "8.50"
+          "price": "16,9"
         },
         {
           "name": {
-            "de": "Garnelen Tempura (4 Stk.)",
-            "en": "Prawn Tempura (4 pcs.)"
+            "de": "Bulgogi AFN"
           },
           "desc": {
-            "de": "Black Tiger Garnelen · Ponzu · Wasabi-Mayo",
-            "en": "Black Tiger prawns · Ponzu · Wasabi mayo"
+            "de": "Mariniertes Rindfleisch | Kimchi | Koreanische Art"
           },
-          "price": "13.90"
+          "price": "14,9"
         },
         {
           "name": {
-            "de": "Tom Kha Suppe",
-            "en": "Tom Kha Soup"
+            "de": "Gaeng Phed ADR"
           },
           "desc": {
-            "de": "Kokosmilch · Galgant · Zitronengras · Champignons",
-            "en": "Coconut milk · Galangal · Lemongrass · Mushrooms"
+            "de": "Rotes Thaicurry | Ente"
           },
-          "price": "9.50"
+          "price": "15,9"
         },
         {
           "name": {
-            "de": "Beef Tataki",
-            "en": "Beef Tataki"
+            "de": "Yaki Udon AFN (ohne Reis)"
           },
           "desc": {
-            "de": "Kurz gebratenes Rind · Yuzu Ponzu · Microgreens",
-            "en": "Seared beef · Yuzu ponzu · Microgreens"
+            "de": "Wok Udon-Nudeln | Saisongemüse"
           },
-          "price": "16.90"
+          "price": "10,9"
+        },
+        {
+          "name": {
+            "de": "Wok Saisongemüse AFN"
+          },
+          "price": "10,9"
+        },
+        {
+          "name": {
+            "de": "Poke Bowl Lachs ADFN (ohne Salat)"
+          },
+          "desc": {
+            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert Gemüse"
+          },
+          "price": "12,9"
+        },
+        {
+          "name": {
+            "de": "Poke Bowl Gemüse ADFN (ohne Salat)"
+          },
+          "price": "10,9"
+        },
+        {
+          "name": {
+            "de": "Asam Gulai DR"
+          },
+          "desc": {
+            "de": "Malaysisches Curry | Garnelen | Kokosmilch"
+          },
+          "price": "15,9"
         }
       ]
     },
     {
-      "id": "dumplings",
+      "id": "soups",
       "name": {
-        "de": "DIM SUM & DUMPLINGS",
-        "en": "DIM SUM & DUMPLINGS"
+        "de": "SOUPS"
       },
       "items": [
         {
           "name": {
-            "de": "Guotie (6 Stk.)",
-            "en": "Guotie (6 pcs.)"
+            "de": "Miso Shiru DF"
           },
           "desc": {
-            "de": "Pan-fried · Schwein & Kohl · Ingwer-Soja Dip",
-            "en": "Pan-fried · Pork & cabbage · Ginger-soy dip"
+            "de": "Tofu | Wakame | Frühlingszwiebeln | Pilze"
           },
-          "price": "12.90"
+          "price": "5,9"
         },
         {
           "name": {
-            "de": "Baozi (3 Stk.)",
-            "en": "Baozi (3 pcs.)"
+            "de": "Tom Yam Gung Soup BDR"
           },
           "desc": {
-            "de": "Gedämpfte Hefeteigtaschen · Cha Siu · Hoisin",
-            "en": "Steamed buns · Char siu · Hoisin"
+            "de": "Frische Miesmuscheln | Garnelen | Zitronengras | Basilikum"
           },
-          "price": "11.50"
+          "price": "8,9",
+          "spiciness": "2"
         },
         {
           "name": {
-            "de": "Har Gow (4 Stk.)",
-            "en": "Har Gow (4 pcs.)"
+            "de": "Soup"
           },
           "desc": {
-            "de": "Garnelen-Dumplings · Zitronengras · Chili-Öl",
-            "en": "Prawn dumplings · Lemongrass · Chili oil"
+            "de": "Hausgekochte Fleischbrühe | Saisongemüse"
           },
-          "price": "13.50"
+          "price": "6,5"
         },
         {
           "name": {
-            "de": "Siu Mai (4 Stk.)",
-            "en": "Siu Mai (4 pcs.)"
+            "de": "Tom Kha Gai BD"
           },
           "desc": {
-            "de": "Schwein & Garnelen · Bambussprossen · Soja",
-            "en": "Pork & prawn · Bamboo shoots · Soy"
+            "de": "Kokosmilch | Huhn | Zitronengras | Basilikum"
           },
-          "price": "12.90"
-        },
-        {
-          "name": {
-            "de": "Veggie Dumplings (5 Stk.)",
-            "en": "Veggie Dumplings (5 pcs.)"
-          },
-          "desc": {
-            "de": "Tofu · Shiitake · Edamame · Sesam-Soja Dip",
-            "en": "Tofu · Shiitake · Edamame · Sesame-soy dip"
-          },
-          "price": "11.50"
-        },
-        {
-          "name": {
-            "de": "Xiao Long Bao (4 Stk.)",
-            "en": "Xiao Long Bao (4 pcs.)"
-          },
-          "desc": {
-            "de": "Suppenknödel · Schweinebrät · Ingwer-Essig",
-            "en": "Soup dumplings · Pork filling · Ginger vinegar"
-          },
-          "price": "14.90"
+          "price": "7,9"
         }
       ]
     },
     {
-      "id": "bowls-ramen",
+      "id": "salads",
       "name": {
-        "de": "BOWLS & RAMEN",
-        "en": "BOWLS & RAMEN"
+        "de": "SALADS"
       },
       "items": [
         {
           "name": {
-            "de": "Tonkotsu Ramen",
-            "en": "Tonkotsu Ramen"
+            "de": "Wakame NR"
           },
           "desc": {
-            "de": "Schweineknochenbrühe · Chashu · Wachtelei · Nori · Bambus",
-            "en": "Pork bone broth · Chashu · Quail egg · Nori · Bamboo"
+            "de": "Japanischer Algensalat"
           },
-          "price": "18.90"
+          "price": "5,9"
         },
         {
           "name": {
-            "de": "Miso Ramen",
-            "en": "Miso Ramen"
+            "de": "Babyspinat AFN"
           },
           "desc": {
-            "de": "Shiro Miso Brühe · Tofu · Mais · Wakame · Frühlingszwiebel",
-            "en": "Shiro miso broth · Tofu · Corn · Wakame · Spring onion"
+            "de": "Sesamdressing"
           },
-          "price": "17.50"
+          "price": "6,2"
         },
         {
           "name": {
-            "de": "Spicy Tantanmen",
-            "en": "Spicy Tantanmen"
+            "de": "Fitness-Salad AFN"
           },
           "desc": {
-            "de": "Sesambrühe · Schweinhack · Chili · Tahini · Ramen-Ei",
-            "en": "Sesame broth · Pork mince · Chili · Tahini · Ramen egg"
+            "de": "Salatmix | Hausdressing"
           },
-          "price": "19.50"
+          "price": "7,9"
         },
         {
           "name": {
-            "de": "Alley 28 Signature Bowl",
-            "en": "Alley 28 Signature Bowl"
+            "de": "Kimchi DR"
           },
           "desc": {
-            "de": "Reis · Beef Bulgogi · Kimchi · Gurke · Sesam-Dressing",
-            "en": "Rice · Beef bulgogi · Kimchi · Cucumber · Sesame dressing"
+            "de": "Eingelegter Chinakohl | Koreanische Art"
           },
-          "price": "21.90"
+          "price": "5,9",
+          "spiciness": "2"
         },
         {
           "name": {
-            "de": "Chicken Teriyaki Bowl",
-            "en": "Chicken Teriyaki Bowl"
+            "de": "Pickle Salad"
           },
           "desc": {
-            "de": "Japanischer Reis · Gegrilltes Hähnchen · Teriyaki · Edamame",
-            "en": "Japanese rice · Grilled chicken · Teriyaki · Edamame"
+            "de": "Eingelegte Gurken"
           },
-          "price": "18.90"
+          "price": "5,9"
         },
         {
           "name": {
-            "de": "Veggie Buddha Bowl",
-            "en": "Veggie Buddha Bowl"
+            "de": "Yuzu Sake ADFN"
           },
           "desc": {
-            "de": "Quinoa-Reis · Avocado · Karotte · Tofu · Miso-Tahini",
-            "en": "Quinoa rice · Avocado · Carrot · Tofu · Miso tahini"
+            "de": "Roher Lachs | Yuzu-Wasabi-Sauce"
           },
-          "price": "16.90"
+          "price": "11,9"
+        },
+        {
+          "name": {
+            "de": "Yuzu Maguro ADFN"
+          },
+          "desc": {
+            "de": "Roher Thunfisch | Yuzu-Wasabi-Sauce"
+          },
+          "price": "13,9"
         }
       ]
     },
     {
-      "id": "wok",
+      "id": "tapas",
       "name": {
-        "de": "WOK GERICHTE",
-        "en": "WOK DISHES"
+        "de": "TAPAS"
       },
       "items": [
         {
           "name": {
-            "de": "Pad Thai Klassik",
-            "en": "Pad Thai Classic"
+            "de": "Edamame F"
           },
           "desc": {
-            "de": "Reisnudeln · Garnelen · Erdnüsse · Tamarinde · Limette",
-            "en": "Rice noodles · Prawns · Peanuts · Tamarind · Lime"
+            "de": "Grüne Sojabohnen gesalzen"
           },
-          "price": "17.50"
+          "price": "5,5"
         },
         {
           "name": {
-            "de": "Rindfleisch mit Austernsauce",
-            "en": "Beef with Oyster Sauce"
+            "de": "Takoyaki ACGRE"
           },
           "desc": {
-            "de": "Streifen · Chinakohl · Shiitake · Ingwer · Jasminreis",
-            "en": "Strips · Chinese cabbage · Shiitake · Ginger · Jasmine rice"
+            "de": "Oktopusbällchen | Bonitoflocken | Okonomi-Sauce"
           },
-          "price": "22.90"
+          "price": "6,9"
         },
         {
           "name": {
-            "de": "Gebratener Reis Spezial",
-            "en": "Fried Rice Special"
+            "de": "Karaage ACG"
           },
           "desc": {
-            "de": "Ei · Gemüse · Krabben · Soja · Frühlingszwiebel",
-            "en": "Egg · Vegetables · Crab · Soy · Spring onion"
+            "de": "Japanische Hühnerstücke | Japanische Mayonnaise"
           },
-          "price": "15.90"
+          "price": "6,9"
         },
         {
           "name": {
-            "de": "Kung Pao Hühnchen",
-            "en": "Kung Pao Chicken"
+            "de": "Hot Chili Wings ACG"
           },
           "desc": {
-            "de": "Zucchini · Paprika · Erdnüsse · Sichuan-Pfeffer",
-            "en": "Zucchini · Bell pepper · Peanuts · Sichuan pepper"
+            "de": "Hühnerflügel im knusprigen Chilimantel"
           },
-          "price": "19.90"
+          "price": "6,9",
+          "spiciness": "2"
         },
         {
           "name": {
-            "de": "Garnelen Thai Green Curry",
-            "en": "Prawn Thai Green Curry"
+            "de": "Ebi Tempura AB"
           },
           "desc": {
-            "de": "Kokosmilch · Thai-Basilikum · Aubergine · Jasminreis",
-            "en": "Coconut milk · Thai basil · Aubergine · Jasmine rice"
+            "de": "Garnelen im knusprigen Tempuramantel"
           },
-          "price": "23.50"
+          "price": "7,9"
         },
         {
           "name": {
-            "de": "Glasnudeln mit Gemüse",
-            "en": "Glass Noodles with Vegetables"
+            "de": "Satey DEGR"
           },
           "desc": {
-            "de": "Tofu · Shiitake · Paprika · Sojasprossen · Sesam",
-            "en": "Tofu · Shiitake · Bell pepper · Bean sprouts · Sesame"
+            "de": "Hühnerspieß aus ausgelöster Hühnerkeule | Erdnuss-Sauce"
           },
-          "price": "15.50"
+          "price": "7,9"
+        },
+        {
+          "name": {
+            "de": "Toriyaki ANO"
+          },
+          "desc": {
+            "de": "Hühnerspieß aus ausgelöster Hühnerkeule | Teriyaki-Sauce"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Gyoza Gemüse A (5 Stück)"
+          },
+          "price": "5,9"
+        },
+        {
+          "name": {
+            "de": "Gyoza Huhn A"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Gyoza Schwein A"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Kung Fu DouFu AFN"
+          },
+          "desc": {
+            "de": "Gegrillter Tofu | Chilipulver"
+          },
+          "price": "7,5",
+          "spiciness": "1"
+        },
+        {
+          "name": {
+            "de": "Tuna Tataki ADFN"
+          },
+          "desc": {
+            "de": "Thunfisch | Balsamico"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Hotate ABDFR (3 Stück)"
+          },
+          "desc": {
+            "de": "Gegrillte Jakobsmuscheln | Balsamico"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Smoked Duck DEGR"
+          },
+          "desc": {
+            "de": "Gerächerte Ente | Spezial-Sauce"
+          },
+          "price": "12,9"
         }
       ]
     },
     {
-      "id": "sushi",
+      "id": "main-course",
       "name": {
-        "de": "SUSHI",
-        "en": "SUSHI"
+        "de": "MAIN COURSE"
       },
       "items": [
         {
           "name": {
-            "de": "Sake Nigiri (2 Stk.)",
-            "en": "Sake Nigiri (2 pcs.)"
+            "de": "Duck AFN"
           },
           "desc": {
-            "de": "Lachs · Sushi-Reis · Wasabi",
-            "en": "Salmon · Sushi rice · Wasabi"
+            "de": "Gegrillte Entenbrust | Mandarin-Pfannkuchen | Spezialsauce"
           },
-          "price": "7.50"
+          "price": "19,9"
         },
         {
           "name": {
-            "de": "Ebi Nigiri (2 Stk.)",
-            "en": "Ebi Nigiri (2 pcs.)"
+            "de": "Gaeng Phed ADR (Hühnerfleisch)"
           },
           "desc": {
-            "de": "Garnelen · Sushi-Reis · Wasabi",
-            "en": "Prawn · Sushi rice · Wasabi"
+            "de": "Rotes Thaicurry | Kokosmilch | Zitronengras | Saisongemüse"
           },
-          "price": "7.90"
+          "price": "15,9",
+          "spiciness": "2"
         },
         {
           "name": {
-            "de": "Alley Roll (8 Stk.)",
-            "en": "Alley Roll (8 pcs.)"
+            "de": "Gaeng Phed ADR (Ente)"
           },
           "desc": {
-            "de": "Lachs · Avocado · Cream Cheese · Sesam · Teriyaki",
-            "en": "Salmon · Avocado · Cream cheese · Sesame · Teriyaki"
+            "de": "Gegrillte Entenbrust | Rotes Thaicurry"
           },
-          "price": "16.90"
+          "price": "19,9",
+          "spiciness": "2"
         },
         {
           "name": {
-            "de": "Spicy Tuna Roll (8 Stk.)",
-            "en": "Spicy Tuna Roll (8 pcs.)"
+            "de": "Nyonya Curry DR (Hühnerfleisch)"
           },
           "desc": {
-            "de": "Thunfisch · Chili-Mayo · Gurke · Sesam",
-            "en": "Tuna · Chili mayo · Cucumber · Sesame"
+            "de": "Malaysisches Curry | Kurkuma | Kokosmilch | Zitronengras"
           },
-          "price": "15.90"
+          "price": "15,9",
+          "spiciness": "1"
         },
         {
           "name": {
-            "de": "Veggie Maki (8 Stk.)",
-            "en": "Veggie Maki (8 pcs.)"
+            "de": "Nyonya Curry DR (Rinderfilet)"
           },
-          "desc": {
-            "de": "Avocado · Gurke · Karotte · Sesam",
-            "en": "Avocado · Cucumber · Carrot · Sesame"
-          },
-          "price": "11.50"
+          "price": "26,9",
+          "spiciness": "1"
         },
         {
           "name": {
-            "de": "Omakase Platte (18 Stk.)",
-            "en": "Omakase Plate (18 pcs.)"
+            "de": "Asam Gulai DR (Garnelen)"
           },
           "desc": {
-            "de": "Chef's Auswahl – Nigiri & Maki Mix",
-            "en": "Chef's selection – Nigiri & Maki mix"
+            "de": "Malaysisches Curry | Kokosmilch | Galgant"
           },
-          "price": "38.00"
+          "price": "20,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Asam Gulai DR (Jakobsmuschel)"
+          },
+          "price": "25,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Black Pepper Beef AFN"
+          },
+          "desc": {
+            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse"
+          },
+          "price": "26,9"
+        },
+        {
+          "name": {
+            "de": "Chili Beef AFN"
+          },
+          "desc": {
+            "de": "Rinderfilet | Szechuan Chili & Pfeffer"
+          },
+          "price": "26,9",
+          "spiciness": "3"
+        },
+        {
+          "name": {
+            "de": "Bulgogi AFN"
+          },
+          "desc": {
+            "de": "Mariniertes Rindfleisch | Koreanische Art | Knackiger Salat | Bao Brötchen"
+          },
+          "price": "20,9"
+        },
+        {
+          "name": {
+            "de": "Gegrillter Lachs AD"
+          },
+          "desc": {
+            "de": "Mit Saisongemüse"
+          },
+          "price": "22,9"
+        },
+        {
+          "name": {
+            "de": "King Prawns ACFB"
+          },
+          "desc": {
+            "de": "Riesengarnelen | Hausgemachte Eier-Sauce | Trüffelöl"
+          },
+          "price": "20,9"
+        },
+        {
+          "name": {
+            "de": "Basil Chicken AFN"
+          },
+          "desc": {
+            "de": "Hühnerfleisch | Basilikum | Saisongemüse"
+          },
+          "price": "15,9"
+        },
+        {
+          "name": {
+            "de": "Black Pepper Chicken AFN"
+          },
+          "desc": {
+            "de": "Hühnerfleisch | Schwarze Pfeffersauce | Saisongemüse"
+          },
+          "price": "15,9"
+        },
+        {
+          "name": {
+            "de": "Dou Fu Mix AFN"
+          },
+          "desc": {
+            "de": "Verschiedene Tofu-Arten in Wok-Gemüse"
+          },
+          "price": "15,9"
+        },
+        {
+          "name": {
+            "de": "Wok Saisongemüse AFN"
+          },
+          "price": "13,9"
+        },
+        {
+          "name": {
+            "de": "Kimchi Jjigae B"
+          },
+          "desc": {
+            "de": "Tofu | Eingelegter Chinakohl | Koreanische Art"
+          },
+          "price": "14,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Tom Yam Seafood BDR"
+          },
+          "desc": {
+            "de": "Frische Miesmuscheln | Garnelen | Jakobsmuscheln | Zitronengras | Basilikum"
+          },
+          "price": "22,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Gegrillte Kabeljauloins AD"
+          },
+          "desc": {
+            "de": "mit Saisongemüse"
+          },
+          "price": "25,9"
         }
       ]
     },
     {
-      "id": "vegetarisch",
+      "id": "east-bowl",
       "name": {
-        "de": "VEGETARISCH & VEGAN",
-        "en": "VEGETARIAN & VEGAN"
+        "de": "EAST BOWL"
       },
       "items": [
         {
           "name": {
-            "de": "Agedashi Tofu",
-            "en": "Agedashi Tofu"
+            "de": "Bulgogi Bowl AFN"
           },
           "desc": {
-            "de": "Frittierter Tofu · Dashi · Daikon · Katsuobushi",
-            "en": "Fried tofu · Dashi · Daikon · Bonito flakes"
+            "de": "Mariniertes Rindfleisch | Gemüse | Reis"
           },
-          "price": "12.90"
+          "price": "16,9"
         },
         {
           "name": {
-            "de": "Mapo Tofu",
-            "en": "Mapo Tofu"
+            "de": "Duck Bowl AFN"
           },
           "desc": {
-            "de": "Seidentofu · Sichuan · Chili-Öl · Jasminreis",
-            "en": "Silken tofu · Sichuan · Chili oil · Jasmine rice"
+            "de": "Gegrillte Entenbrust | Spezialsauce | Reis"
           },
-          "price": "14.50"
+          "price": "16,9"
         },
         {
           "name": {
-            "de": "Gemüse Tempura",
-            "en": "Vegetable Tempura"
+            "de": "Poke Bowl Thunfisch ADFN"
           },
           "desc": {
-            "de": "Süßkartoffel · Zucchini · Shiso · Tsuyu-Dip",
-            "en": "Sweet potato · Zucchini · Shiso · Tsuyu dip"
+            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert"
           },
-          "price": "13.90"
+          "price": "18,9"
         },
         {
           "name": {
-            "de": "Avocado-Mango Salat",
-            "en": "Avocado-Mango Salad"
+            "de": "Poke Bowl Lachs ADFN"
+          },
+          "price": "15,9"
+        },
+        {
+          "name": {
+            "de": "Poke Bowl Gemüse ADFN"
+          },
+          "price": "13,9"
+        }
+      ]
+    },
+    {
+      "id": "udon",
+      "name": {
+        "de": "UDON"
+      },
+      "description": {
+        "de": "Japanische Weizen-Nudeln"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Tom Yam Gung ABD"
           },
           "desc": {
-            "de": "Avocado · Mango · Sesam · Yuzu Vinaigrette · Koriander",
-            "en": "Avocado · Mango · Sesame · Yuzu vinaigrette · Coriander"
+            "de": "Nudelsuppe | Frische Miesmuscheln | Garnelen | Zitronengras | Basilikum"
           },
-          "price": "12.50"
+          "price": "19,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Beef Udon AFN"
+          },
+          "desc": {
+            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse"
+          },
+          "price": "24,9"
+        },
+        {
+          "name": {
+            "de": "Yaki Udon AFN"
+          },
+          "desc": {
+            "de": "Saisongemüse"
+          },
+          "price": "13,9"
         }
       ]
     },
     {
       "id": "beilagen",
       "name": {
-        "de": "BEILAGEN",
-        "en": "SIDES"
+        "de": "BEILAGEN"
       },
       "items": [
         {
           "name": {
-            "de": "Jasminreis",
-            "en": "Jasmine Rice"
+            "de": "Portion Reis"
           },
-          "price": "3.50"
+          "price": "2,9"
         },
         {
           "name": {
-            "de": "Gebratener Reis",
-            "en": "Fried Rice"
-          },
-          "price": "4.50"
-        },
-        {
-          "name": {
-            "de": "Sesam-Wokgemüse",
-            "en": "Sesame Wok Vegetables"
-          },
-          "price": "5.50"
-        },
-        {
-          "name": {
-            "de": "Kimchi",
-            "en": "Kimchi"
+            "de": "Mandarin Pfannkuchen A (6 Stück)"
           },
           "desc": {
-            "de": "Hausgemacht · scharf",
-            "en": "Homemade · spicy"
+            "de": "Hauchdünne Teigfladen"
           },
-          "price": "4.00"
+          "price": "2,9"
         },
         {
           "name": {
-            "de": "Edamame",
-            "en": "Edamame"
+            "de": "Bao-Brötchen A (2 Stück)"
           },
-          "price": "5.50"
-        },
+          "price": "3,9"
+        }
+      ]
+    },
+    {
+      "id": "premium-rolls",
+      "name": {
+        "de": "PREMIUM ROLLS (8 Stück)"
+      },
+      "items": [
         {
           "name": {
-            "de": "Ramen-Ei",
-            "en": "Ramen Egg"
+            "de": "Veggie Roll ACN"
           },
           "desc": {
-            "de": "Sous-vide · Soja mariniert",
-            "en": "Sous-vide · Soy marinated"
+            "de": "Gurke | Avocado | Babyspinat | Fruchtige Sauce"
           },
-          "price": "2.50"
+          "price": "10,9"
+        },
+        {
+          "name": {
+            "de": "California Roll ABFCN"
+          },
+          "desc": {
+            "de": "Gurke | Avocado | Japanische Mayonnaise | Ebi | Kaviar | Babyspinat"
+          },
+          "price": "16,9"
+        },
+        {
+          "name": {
+            "de": "Crunchy Ebi Roll ABCEGN"
+          },
+          "desc": {
+            "de": "Ebi Tempura | Gurke | Frischkäse | Röstzwiebel | Babyspinat"
+          },
+          "price": "17,9"
+        },
+        {
+          "name": {
+            "de": "Dragon Roll ADN"
+          },
+          "desc": {
+            "de": "Gurke | Avocado | Lachs | Japanische Mayonnaise"
+          },
+          "price": "17,9"
+        },
+        {
+          "name": {
+            "de": "Rainbow Roll ABCDN"
+          },
+          "desc": {
+            "de": "Ebi | Lachs | Thunfisch | Avocado | Gurke | Babyspinat"
+          },
+          "price": "19,9"
+        },
+        {
+          "name": {
+            "de": "Crazy Salmon Roll ADEHNO"
+          },
+          "desc": {
+            "de": "Flambierter Lachs | Roher Lachs | Avocado | Kaviar | Teriyaki-Sauce"
+          },
+          "price": "19,9"
+        },
+        {
+          "name": {
+            "de": "Volcano Spice Roll ACDN"
+          },
+          "desc": {
+            "de": "Thunfisch | Avocado | Kaviar | Scharfe Mayonnaise"
+          },
+          "price": "19,9",
+          "spiciness": "2"
+        },
+        {
+          "name": {
+            "de": "Toriyaki Roll AFNO"
+          },
+          "desc": {
+            "de": "Ausgelöste Hühnerkeule | Gurke | Avocado | Teriyaki-Sauce | Babyspinat | Reispapier"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Sake - Avocado Roll ADFCN"
+          },
+          "desc": {
+            "de": "Lachs | Avocado"
+          },
+          "price": "12,9"
+        },
+        {
+          "name": {
+            "de": "Smoked Salmon ADN"
+          },
+          "desc": {
+            "de": "Geräucherter Lachs | Rucola | Parmesan | Avocado | Roher Lachs"
+          },
+          "price": "19,9"
+        },
+        {
+          "name": {
+            "de": "Carpaccio Roll AHN"
+          },
+          "desc": {
+            "de": "Rohes, luftgetrocknetes Rind | Rucola | Parmesan | Gurke | Avocado"
+          },
+          "price": "19,9"
+        },
+        {
+          "name": {
+            "de": "Karaage Roll ACGN"
+          },
+          "desc": {
+            "de": "Japanische Hühnerstücke | Avocado | Hausgemachte Mayo | Röstzwiebel"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Duck Roll AFN"
+          },
+          "desc": {
+            "de": "Geräucherte Ente | Gurke | Spezial-Sauce"
+          },
+          "price": "19,9"
+        }
+      ]
+    },
+    {
+      "id": "nigiri",
+      "name": {
+        "de": "NIGIRI (2 Stück)"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Sake D"
+          },
+          "desc": {
+            "de": "Lachs"
+          },
+          "price": "5,9"
+        },
+        {
+          "name": {
+            "de": "Maguro D"
+          },
+          "desc": {
+            "de": "Thunfisch"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Ebi B"
+          },
+          "desc": {
+            "de": "Garnelen"
+          },
+          "price": "5,9"
+        },
+        {
+          "name": {
+            "de": "Gyuniku"
+          },
+          "desc": {
+            "de": "Rinderfilet"
+          },
+          "price": "9,9"
+        },
+        {
+          "name": {
+            "de": "Avocado"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Hotate BR"
+          },
+          "desc": {
+            "de": "Jakobsmuschel"
+          },
+          "price": "8,9"
+        }
+      ]
+    },
+    {
+      "id": "sushi-set",
+      "name": {
+        "de": "SUSHI SET"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Sake klein D"
+          },
+          "desc": {
+            "de": "4 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Maguro klein D"
+          },
+          "desc": {
+            "de": "4 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "16,9"
+        },
+        {
+          "name": {
+            "de": "Avocado klein"
+          },
+          "desc": {
+            "de": "4 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "12,9"
+        },
+        {
+          "name": {
+            "de": "Ebi klein B"
+          },
+          "desc": {
+            "de": "4 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "14,9"
+        },
+        {
+          "name": {
+            "de": "Sake groß D"
+          },
+          "desc": {
+            "de": "8 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "21,9"
+        },
+        {
+          "name": {
+            "de": "Maguro groß D"
+          },
+          "desc": {
+            "de": "8 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "23,9"
+        },
+        {
+          "name": {
+            "de": "Avocado groß"
+          },
+          "desc": {
+            "de": "8 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "17,9"
+        },
+        {
+          "name": {
+            "de": "Ebi groß B"
+          },
+          "desc": {
+            "de": "8 Nigiri + 4 Veggie Rolls"
+          },
+          "price": "21,9"
+        },
+        {
+          "name": {
+            "de": "Set BDR"
+          },
+          "desc": {
+            "de": "12 Nigiri + 8 Veggie Rolls (Sake | Maguro | Gyuniku | Ebi | Avocado | Hotate)"
+          },
+          "price": "42,9"
+        }
+      ]
+    },
+    {
+      "id": "sashimi",
+      "name": {
+        "de": "SASHIMI (4 Scheiben)"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Sake D"
+          },
+          "price": "10,9"
+        },
+        {
+          "name": {
+            "de": "Maguro D"
+          },
+          "price": "13,9"
         }
       ]
     },
     {
       "id": "desserts",
       "name": {
-        "de": "DESSERTS",
-        "en": "DESSERTS"
+        "de": "DESSERTS"
       },
       "items": [
         {
           "name": {
-            "de": "Matcha Tiramisu",
-            "en": "Matcha Tiramisu"
+            "de": "Matcha Creme Brulee CG"
           },
           "desc": {
-            "de": "Japanischer Matcha · Mascarpone · Biskuit",
-            "en": "Japanese matcha · Mascarpone · Biscuit"
+            "de": "Grüner Tee Creme | Karamelkruste"
           },
-          "price": "8.50"
+          "price": "8,9"
         },
         {
           "name": {
-            "de": "Mango Sticky Rice",
-            "en": "Mango Sticky Rice"
+            "de": "Mochi FGNH"
           },
           "desc": {
-            "de": "Klebreis · Frische Mango · Kokosmilch · Sesam",
-            "en": "Glutinous rice · Fresh mango · Coconut milk · Sesame"
+            "de": "Japanischer Klebreiskuchen"
           },
-          "price": "7.90"
+          "price": "8,9"
         },
         {
           "name": {
-            "de": "Schwarzes Sesam Eis",
-            "en": "Black Sesame Ice Cream"
+            "de": "Mochi Eis FGN"
           },
           "desc": {
-            "de": "Hausgemacht · Sesam-Pralinée · Mochi",
-            "en": "Homemade · Sesame praline · Mochi"
+            "de": "Klebreiskuchen | Eisfüllung"
           },
-          "price": "7.50"
+          "price": "8,9"
         },
         {
           "name": {
-            "de": "Dorayaki",
-            "en": "Dorayaki"
+            "de": "Cocos Panna Cotta G"
           },
           "desc": {
-            "de": "Japanische Pfannkuchen · Anko-Füllung · Sahne",
-            "en": "Japanese pancakes · Anko filling · Cream"
+            "de": "Kokosmilch | Sahne"
           },
-          "price": "6.90"
+          "price": "7,9"
+        },
+        {
+          "name": {
+            "de": "Evergreen G"
+          },
+          "desc": {
+            "de": "Kokosmilch | Sagoperlen | Pandan | Lychee"
+          },
+          "price": "7,9"
+        },
+        {
+          "name": {
+            "de": "Fujisan FHO"
+          },
+          "desc": {
+            "de": "Japanischer Sakewein | Zitroneneis"
+          },
+          "price": "8,5"
+        },
+        {
+          "name": {
+            "de": "Sago - Malaysisches Dessert GH"
+          },
+          "desc": {
+            "de": "Kokosmilch | Kokoseis | Sagoperlen | Pandan"
+          },
+          "price": "7,9"
         }
       ]
     },
     {
-      "id": "getraenke",
+      "id": "bier",
       "name": {
-        "de": "GETRÄNKE",
-        "en": "DRINKS"
+        "de": "BIER"
       },
       "items": [
         {
           "name": {
-            "de": "Jasmin-Tee (Kanne)",
-            "en": "Jasmine Tea (Pot)"
+            "de": "Zipfer Urtyp vom Fass"
           },
           "desc": {
-            "de": "Bio · Heiß oder kalt",
-            "en": "Organic · Hot or cold"
+            "de": "0,2/0,3 L"
           },
-          "price": "4.50"
+          "price": "3,5/4,5"
         },
         {
           "name": {
-            "de": "Matcha Latte",
-            "en": "Matcha Latte"
+            "de": "Zipfer Limettenradler Flasche"
           },
           "desc": {
-            "de": "Ceremonial Grade · Oat Milk",
-            "en": "Ceremonial grade · Oat milk"
+            "de": "0,3 L"
           },
-          "price": "5.90"
+          "price": "4,5"
         },
         {
           "name": {
-            "de": "Yuzu Lemonade",
-            "en": "Yuzu Lemonade"
+            "de": "Weissbier Weihenstephaner vom Fass"
           },
           "desc": {
-            "de": "Frischer Yuzu · Ingwer · Sprudelwasser",
-            "en": "Fresh yuzu · Ginger · Sparkling water"
+            "de": "0,5 L"
           },
-          "price": "5.50"
+          "price": "5,9"
         },
         {
           "name": {
-            "de": "Lychee Soda",
-            "en": "Lychee Soda"
+            "de": "Asahi (Japanisches Bier) Flasche"
           },
           "desc": {
-            "de": "Lychee Sirup · Zitrone · Minze",
-            "en": "Lychee syrup · Lemon · Mint"
+            "de": "0,3 L"
           },
-          "price": "4.90"
+          "price": "4,9"
         },
         {
           "name": {
-            "de": "Asahi Bier 0,33l",
-            "en": "Asahi Beer 0.33l"
+            "de": "Singha (Thailändisches Bier) Flasche"
           },
-          "price": "4.90"
+          "desc": {
+            "de": "0,3 L"
+          },
+          "price": "4,9"
         },
         {
           "name": {
-            "de": "Sake – Junmai Ginjo 0,18l",
-            "en": "Sake – Junmai Ginjo 0.18l"
+            "de": "Tsing Tao (Chinesisches Bier) Flasche"
           },
           "desc": {
-            "de": "Warm oder kalt",
-            "en": "Warm or cold"
+            "de": "0,3 L"
           },
-          "price": "7.90"
+          "price": "4,9"
         },
         {
           "name": {
-            "de": "Mineralwasser 0,5l",
-            "en": "Mineral Water 0.5l"
+            "de": "Zipfer (Alkoholfrei) Flasche"
           },
           "desc": {
-            "de": "Still oder prickelnd",
-            "en": "Still or sparkling"
+            "de": "0,5 L"
           },
-          "price": "3.50"
+          "price": "5,5"
         },
         {
           "name": {
-            "de": "Softdrinks 0,5l",
-            "en": "Soft Drinks 0.5l"
+            "de": "Weihenstephaner (Alkoholfrei) Flasche"
           },
           "desc": {
-            "de": "Cola · Zero · Fanta · Orange",
-            "en": "Cola · Zero · Fanta · Orange"
+            "de": "0,5 L"
           },
-          "price": "3.90"
+          "price": "5,5"
+        }
+      ]
+    },
+    {
+      "id": "aperitiv",
+      "name": {
+        "de": "APERITIV | BITTERS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Weißer Spritzer"
+          },
+          "desc": {
+            "de": "Wein | Soda | Früchte"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Belsazar Rose Spritzer"
+          },
+          "desc": {
+            "de": "Wermuth | Prosecco | Rosenlimonade | Früchte"
+          },
+          "price": "7,2"
+        },
+        {
+          "name": {
+            "de": "Hugo"
+          },
+          "desc": {
+            "de": "Prosecco | Soda | Holunderblütensirup | Minze | Früchte"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Campari Soda"
+          },
+          "desc": {
+            "de": "Campari | Soda | Früchte"
+          },
+          "price": "6,5"
+        },
+        {
+          "name": {
+            "de": "Aperol Prosecco"
+          },
+          "desc": {
+            "de": "Aperol | Soda | Prosecco | Orange | Früchte"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Gin Tonic"
+          },
+          "desc": {
+            "de": "Japanischer Roku Gin | Tonic water | Ingwer"
+          },
+          "price": "12,9"
+        },
+        {
+          "name": {
+            "de": "Gin Gin Lime"
+          },
+          "desc": {
+            "de": "Japanischer Roku Gin | Ginger Ale | Limetten"
+          },
+          "price": "12,9"
+        }
+      ]
+    },
+    {
+      "id": "alkoholfrei",
+      "name": {
+        "de": "ALKOHOLFREI"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Rose Lemonade Fentimans"
+          },
+          "desc": {
+            "de": "Flasche 0,25 L"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Coca Cola, Fanta, Spezi"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "Cola Zero Flasche"
+          },
+          "desc": {
+            "de": "0,33 L"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Apfel, Mango, Lychee, Aloe Vera"
+          },
+          "desc": {
+            "de": "0,30/0,50 L"
+          },
+          "price": "3,9/6,5"
+        },
+        {
+          "name": {
+            "de": "Saft mit Wasser"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Saft gespritzt"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "5,9"
+        },
+        {
+          "name": {
+            "de": "Red Bull"
+          },
+          "desc": {
+            "de": "0,25 L"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "Ginger Ale Organics"
+          },
+          "desc": {
+            "de": "0,25 L"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Tonic Water Organics"
+          },
+          "desc": {
+            "de": "0,25 L"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Sodawasser"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "3,2"
+        },
+        {
+          "name": {
+            "de": "Soda Zitrone"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "3,9"
+        },
+        {
+          "name": {
+            "de": "Tafelwasser"
+          },
+          "desc": {
+            "de": "0,50 L"
+          },
+          "price": "2,0"
+        },
+        {
+          "name": {
+            "de": "Mineralwasser still 0,33 L"
+          },
+          "price": "3,5"
+        },
+        {
+          "name": {
+            "de": "Mineralwasser still 0,75 L"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Mineralwasser prickelnd 0,33 L"
+          },
+          "price": "3,5"
+        },
+        {
+          "name": {
+            "de": "Mineralwasser prickelnd 0,75 L"
+          },
+          "price": "6,9"
+        }
+      ]
+    },
+    {
+      "id": "homemade",
+      "name": {
+        "de": "HOMEMADE"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Tropicana"
+          },
+          "desc": {
+            "de": "Passionsfrucht-Honig-Limo 0,5 L"
+          },
+          "price": "7,2"
+        },
+        {
+          "name": {
+            "de": "Fresh"
+          },
+          "desc": {
+            "de": "Mango-Himbeer-Eistee 0,5 L"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Intense"
+          },
+          "desc": {
+            "de": "Ingwer-Limo 0,5 L"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Frosty"
+          },
+          "desc": {
+            "de": "Lychee-Minze-Limo 0,5 L"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Sweet Mentha"
+          },
+          "desc": {
+            "de": "Holunder-Minze-Limo 0,5 L"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Creamy Mangolassi"
+          },
+          "desc": {
+            "de": "Indisches Joghurtgetränk 0,3/0,5 L"
+          },
+          "price": "5,5/6,9"
+        }
+      ]
+    },
+    {
+      "id": "kaffee-tee",
+      "name": {
+        "de": "KAFFEE | TEE"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Espresso Macchiato G"
+          },
+          "price": "3,9"
+        },
+        {
+          "name": {
+            "de": "Espresso Macchiato doppelt G"
+          },
+          "price": "5,9"
+        },
+        {
+          "name": {
+            "de": "Espresso"
+          },
+          "price": "3,5"
+        },
+        {
+          "name": {
+            "de": "Espresso doppelt"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "Verlängerter G"
+          },
+          "price": "4,5"
+        },
+        {
+          "name": {
+            "de": "Cappuccino G"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Cafe Latte G"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "Jasmintee"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Ba Bao Cha 8 Schätze Tee P"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "Jü Hua Cha Kamillenblütentee"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Genmaicha Tee Japanischer Reistee"
+          },
+          "price": "4,9"
+        },
+        {
+          "name": {
+            "de": "Ginger Tee Hausgemachter Ingwertee"
+          },
+          "price": "5,5"
+        }
+      ]
+    },
+    {
+      "id": "digestiv",
+      "name": {
+        "de": "DIGESTIV | SPIRITS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Marillenbrand Destillerie Donabaum"
+          },
+          "desc": {
+            "de": "42% vol. 2 cl"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "Williamsbirne Destillerie Reisetbauer"
+          },
+          "desc": {
+            "de": "41,5% vol. 2 cl"
+          },
+          "price": "8,5"
+        },
+        {
+          "name": {
+            "de": "Averna Italien"
+          },
+          "desc": {
+            "de": "29% vol. 2 cl"
+          },
+          "price": "5,5"
+        },
+        {
+          "name": {
+            "de": "White Chocolate & Chilli Austria"
+          },
+          "desc": {
+            "de": "25% vol. 2 cl"
+          },
+          "price": "6,9"
+        },
+        {
+          "name": {
+            "de": "NINKI-ICHI Black Ninki Flasche"
+          },
+          "desc": {
+            "de": "Junmai Ginjo | 15% vol. | Kalt serviert 0,3 L"
+          },
+          "price": "30,9"
+        },
+        {
+          "name": {
+            "de": "NINKI-ICHI Red Ninki Dentoshu (Ginjo)"
+          },
+          "desc": {
+            "de": "15% vol. 0,1 L | Kalt / warm serviert"
+          },
+          "price": "8,9"
+        },
+        {
+          "name": {
+            "de": "Whisky Hibiki Japanischer Whisky"
+          },
+          "desc": {
+            "de": "43% vol. 4 cl | Fruchtig, weich, rauchig"
+          },
+          "price": "18"
+        },
+        {
+          "name": {
+            "de": "Whisky Nikka Japanischer Whisky"
+          },
+          "desc": {
+            "de": "51,4% vol. 4 cl | Herzhaft, rauchig"
+          },
+          "price": "15"
+        },
+        {
+          "name": {
+            "de": "Whisky Toki Japanischer Whisky"
+          },
+          "desc": {
+            "de": "43% vol. 4 cl | Fruchtig, weich"
+          },
+          "price": "10"
         }
       ]
     }
