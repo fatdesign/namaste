@@ -230,6 +230,7 @@ function openItemModal(catIdx, itemIdx = null) {
     document.getElementById('item-cat-id').value = catIdx;
     document.getElementById('item-index').value = itemIdx !== null ? itemIdx : '';
     itemForm.reset();
+    document.getElementById('item-vegan').checked = false;
     document.querySelectorAll('input[name="allergen"]').forEach(cb => cb.checked = false);
 
     if (itemIdx !== null) {
@@ -239,6 +240,7 @@ function openItemModal(catIdx, itemIdx = null) {
         document.getElementById('item-name-en').value = item.name?.en || '';
         document.getElementById('item-price').value = item.price || '';
         document.getElementById('item-available').checked = item.isSoldOut === true;
+        document.getElementById('item-vegan').checked = item.isVegan === true;
         document.getElementById('item-desc-de').value = item.desc?.de || '';
         document.getElementById('item-desc-en').value = item.desc?.en || '';
         document.getElementById('item-spiciness').value = item.spiciness || '';
@@ -270,6 +272,7 @@ itemForm.onsubmit = (e) => {
         },
         price: document.getElementById('item-price').value.trim(),
         isSoldOut: document.getElementById('item-available').checked,
+        isVegan: document.getElementById('item-vegan').checked,
         spiciness: document.getElementById('item-spiciness').value,
         allergens: Array.from(document.querySelectorAll('input[name="allergen"]:checked')).map(cb => cb.value)
     };

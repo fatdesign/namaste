@@ -53,6 +53,14 @@
             margin-right: -10px;
         }
 
+        .vegan-icon {
+            height: 30px;
+            width: auto;
+            margin-left: 4px;
+            vertical-align: middle;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
         .menu-page-hero p {
             font-family: var(--font-body);
             font-size: 0.9rem;
@@ -538,6 +546,11 @@
                             '</span>';
                     }
 
+                    let veganHtml = '';
+                    if (item.isVegan) {
+                        veganHtml = '<img src="image/vegan-icon.PNG" class="vegan-icon" alt="Vegan">';
+                    }
+
                     let allergenHtml = '';
                     if (item.allergens && item.allergens.length > 0) {
                         allergenHtml = `<span class="item-allergens">${item.allergens.join('')}</span>`;
@@ -546,7 +559,7 @@
                     itemsHtml += `
                         <div class="menu-item ${soldOut ? 'is-sold-out' : ''}" style="transition-delay:${i * 60}ms">
                             <div class="item-header">
-                                <span class="item-name">${name}${chiliHtml}${allergenHtml}</span>
+                                <span class="item-name">${name}${chiliHtml}${veganHtml}${allergenHtml}</span>
                                 <span class="item-price">${item.price}</span>
                             </div>
                             ${desc ? `<p class="item-desc">${desc}</p>` : ''}
