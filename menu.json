@@ -249,13 +249,16 @@
         },
         {
           "name": {
-            "de": "Hot Chili Wings ACG"
-          },
-          "desc": {
-            "de": "Hühnerflügel im knusprigen Chilimantel"
+            "de": "Hot Chili Wings ACG",
+            "en": ""
           },
           "price": "6,9",
-          "spiciness": "2"
+          "isSoldOut": false,
+          "spiciness": "3",
+          "desc": {
+            "de": "Hühnerflügel im knusprigen Chilimantel",
+            "en": ""
+          }
         },
         {
           "name": {
