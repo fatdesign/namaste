@@ -82,43 +82,104 @@
             color: white;
         }
 
-        /* ── Category Ribbon ── */
-        .cat-ribbon-wrap {
+        /* ── 3D Category Wheel ── */
+        .cat-wheel-wrap {
             position: sticky;
             top: 72px;
             z-index: 90;
             background: var(--bg-primary);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-
-        .cat-ribbon {
+            height: 70px;
             display: flex;
-            gap: 0;
-            list-style: none;
-            margin: 0 auto;
-            padding: 0;
-            width: max-content;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            perspective: 1200px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .cat-ribbon li a {
-            display: block;
+        .cat-wheel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .cat-wheel-item {
+            position: absolute;
+            list-style: none;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0;
+            pointer-events: none;
+            text-align: center;
+            width: 200px;
+        }
+
+        .cat-wheel-item a {
             font-family: var(--font-accent);
             font-size: 0.7rem;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.5);
-            padding: 1rem 1.5rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
+            color: rgba(255, 255, 255, 0.4);
+            display: block;
+            padding: 1rem;
+            transition: color 0.4s;
         }
 
-        .cat-ribbon li a:hover,
-        .cat-ribbon li a.active {
+        /* 3D States */
+        .cat-wheel-item.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateZ(150px) translateX(0);
+        }
+
+        .cat-wheel-item.active a {
             color: var(--accent);
-            border-bottom-color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .cat-wheel-item.prev1 {
+            opacity: 0.4;
+            pointer-events: auto;
+            transform: translateX(-180px) translateZ(0) rotateY(35deg);
+        }
+
+        .cat-wheel-item.next1 {
+            opacity: 0.4;
+            pointer-events: auto;
+            transform: translateX(180px) translateZ(0) rotateY(-35deg);
+        }
+
+        .cat-wheel-item.prev2 {
+            opacity: 0.1;
+            transform: translateX(-320px) translateZ(-100px) rotateY(50deg);
+        }
+
+        .cat-wheel-item.next2 {
+            opacity: 0.1;
+            transform: translateX(320px) translateZ(-100px) rotateY(-50deg);
+        }
+
+        @media(max-width: 768px) {
+            .cat-wheel-item {
+                width: 140px;
+            }
+
+            .cat-wheel-item.prev1 {
+                transform: translateX(-100px) translateZ(0) rotateY(25deg);
+            }
+
+            .cat-wheel-item.next1 {
+                transform: translateX(100px) translateZ(0) rotateY(-25deg);
+            }
+
+            .cat-wheel-item.prev2,
+            .cat-wheel-item.next2 {
+                display: none;
+            }
         }
 
         /* ── Lang Switcher ── */
@@ -382,9 +443,9 @@
         <button class="lang-btn" data-lang="en">EN</button>
     </div>
 
-    <!-- Sticky Category Ribbon -->
-    <div class="cat-ribbon-wrap">
-        <ul id="category-list" class="cat-ribbon"></ul>
+    <!-- 3D Category Wheel -->
+    <div class="cat-wheel-wrap">
+        <ul id="category-list" class="cat-wheel"></ul>
     </div>
 
     <!-- Menu App -->
@@ -442,8 +503,10 @@
                 const catName = cat.name[lang] || cat.name.de;
                 const catDesc = cat.description ? (cat.description[lang] || cat.description.de) : null;
 
-                // Ribbon pill
+                // Wheel item
                 const li = document.createElement('li');
+                li.className = 'cat-wheel-item';
+                li.setAttribute('data-index', idx);
                 li.innerHTML = `<a href="#${cat.id}">${catName}</a>`;
                 categoryList.appendChild(li);
 
@@ -505,11 +568,85 @@
             });
 
             attachScrollReveal();
-            attachRibbonTracking();
+            attachWheelNavigation();
             attachSmoothScroll();
             syncLangBtns(lang);
         }
 
+        let isProgrammaticScroll = false;
+        let lastWheelTime = 0;
+
+        function attachWheelNavigation() {
+            const wheelContainer = document.querySelector('.cat-wheel-wrap');
+            const items = document.querySelectorAll('.cat-wheel-item');
+            if (!wheelContainer || items.length === 0) return;
+
+            // 1. Mouse Wheel on Ribbon
+            wheelContainer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const now = Date.now();
+                if (now - lastWheelTime < 150) return; // Throttling
+                lastWheelTime = now;
+
+                const active = document.querySelector('.cat-wheel-item.active');
+                if (!active) return;
+
+                let targetIdx = parseInt(active.dataset.index);
+                if (e.deltaY > 0) targetIdx++;
+                else targetIdx--;
+
+                if (targetIdx >= 0 && targetIdx < items.length) {
+                    const targetId = items[targetIdx].querySelector('a').getAttribute('href').substring(1);
+                    navigateToCategory(targetId);
+                }
+            }, { passive: false });
+
+            // 2. Click on side items
+            items.forEach(item => {
+                item.onclick = (e) => {
+                    e.preventDefault();
+                    const targetId = item.querySelector('a').getAttribute('href').substring(1);
+                    navigateToCategory(targetId);
+                };
+            });
+
+            // 3. Page Scroll Tracking (Observer)
+            attachRibbonTracking();
+        }
+
+        function navigateToCategory(id) {
+            const section = document.getElementById(id);
+            if (!section) return;
+            isProgrammaticScroll = true;
+
+            const offset = 140; // Space for nav + wheel
+            const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({ top, behavior: 'smooth' });
+
+            // Re-enable tracking after scroll finishes
+            setTimeout(() => { isProgrammaticScroll = false; }, 1000);
+            updateWheelClasses(id);
+        }
+
+        function updateWheelClasses(activeId) {
+            const items = document.querySelectorAll('.cat-wheel-item');
+            let activeIdx = -1;
+
+            items.forEach((item, idx) => {
+                const href = item.querySelector('a').getAttribute('href').substring(1);
+                if (href === activeId) activeIdx = idx;
+                item.className = 'cat-wheel-item'; // Reset
+            });
+
+            if (activeIdx === -1) return;
+
+            items[activeIdx].classList.add('active');
+            if (items[activeIdx - 1]) items[activeIdx - 1].classList.add('prev1');
+            if (items[activeIdx + 1]) items[activeIdx + 1].classList.add('next1');
+            if (items[activeIdx - 2]) items[activeIdx - 2].classList.add('prev2');
+            if (items[activeIdx + 2]) items[activeIdx + 2].classList.add('next2');
+        }
 
         function attachScrollReveal() {
             const obs = new IntersectionObserver(entries => {
@@ -520,18 +657,15 @@
 
         function attachRibbonTracking() {
             const navObs = new IntersectionObserver(entries => {
+                if (isProgrammaticScroll) return;
                 entries.forEach(e => {
                     if (e.isIntersecting) {
-                        const id = e.target.id;
-                        document.querySelectorAll('.cat-ribbon a').forEach(a => {
-                            const active = a.getAttribute('href') === `#${id}`;
-                            a.classList.toggle('active', active);
-                            if (active) a.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        });
+                        updateWheelClasses(e.target.id);
                     }
                 });
-            }, { rootMargin: '-15% 0px -70% 0px' });
-            document.querySelectorAll('.menu-section').forEach(s => navObs.observe(s));
+            }, { threshold: 0.1, rootMargin: '-150px 0px -50% 0px' });
+
+            document.querySelectorAll('.menu-section').forEach(sec => navObs.observe(sec));
         }
 
         function attachSmoothScroll() {
