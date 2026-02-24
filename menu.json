@@ -13,17 +13,21 @@
       "items": [
         {
           "name": {
-            "de": "Basil Chicken"
-          },
-          "desc": {
-            "de": "Hühnerfleisch | Basilikum | Saisongemüse"
+            "de": "Basil Chicken",
+            "en": ""
           },
           "price": "12,9",
+          "isSoldOut": false,
+          "spiciness": "3",
           "allergens": [
             "A",
             "F",
             "N"
-          ]
+          ],
+          "desc": {
+            "de": "Hühnerfleisch | Basilikum | Saisongemüse",
+            "en": ""
+          }
         },
         {
           "name": {
