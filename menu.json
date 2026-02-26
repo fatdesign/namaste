@@ -48,7 +48,7 @@
           "price": "6,90",
           "isSoldOut": false,
           "isVegan": true,
-          "spiciness": "3",
+          "spiciness": "2",
           "allergens": [
             "A"
           ],
