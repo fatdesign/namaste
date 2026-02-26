@@ -4,40 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>East Menu | Asian Fusion & Fine Dining Salzburg</title>
+    <title>Namaste | Indische Spezialitäten in Hallein</title>
     <meta name="description"
-        content="Erleben Sie die kulinarische Reise des East Menu in Salzburg. Traditionelle asiatische Aromen treffen auf moderne Einflüsse. Fine Dining & Asian Fusion in der Getreidegasse.">
+        content="Erleben Sie die kulinarische Reise des Namaste in Hallein. Authentische indische Genüsse, traditionelle Gewürze und herzliche Gastfreundschaft am Pflegerplatz.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Italiana&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="js-enabled">
     <!-- Extravagant Page Transition Overlay -->
     <div class="page-transition active">
-        <img src="image/east-logo.webp" alt="East Menu" class="transition-logo">
+        <img src="image/namaste-logo.png" alt="Namaste" class="transition-logo">
     </div>
 
     <!-- Boss-Level Atmospheric Layer -->
     <canvas id="atmosphere-layer"></canvas>
 
     <nav id="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="image/east-logo.webp" alt="East Menu Logo" style="height: 50px; width: auto;">
+                <img src="image/namaste-logo.png" alt="Namaste Logo">
             </a>
 
             <!-- Desktop Nav -->
             <div class="nav-links">
                 <a href="#about" class="nav-link-boss">Konzept</a>
                 <a href="#menu" class="nav-link-boss">Highlights</a>
-                <a href="#gallery" class="nav-link-boss">Impressionen</a>
+                <a href="#gallery" class="nav-link-boss">Galerie</a>
                 <a href="#contact" class="nav-link-boss">Kontakt</a>
                 <a href="speisekarte.html" class="nav-link-boss">Menü</a>
-                <span class="nav-underline-glide"></span>
             </div>
-            <a href="#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny"
-                style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Reservieren</a>
 
-            <!-- Mobile Burger Toggle -->
+            <a href="#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny">Reservieren</a>
+
+            <!-- Mobile Burger -->
             <button class="mobile-menu-toggle" aria-label="Menu öffnen">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
@@ -50,7 +54,7 @@
         <div class="mobile-nav-content">
             <a href="#about" class="mobile-nav-link">Konzept</a>
             <a href="#menu" class="mobile-nav-link">Highlights</a>
-            <a href="#gallery" class="mobile-nav-link">Impressionen</a>
+            <a href="#gallery" class="mobile-nav-link">Galerie</a>
             <a href="#contact" class="mobile-nav-link">Kontakt</a>
             <a href="speisekarte.html" class="mobile-nav-link">Menü</a>
             <div>
@@ -70,10 +74,13 @@
             <div class="container"
                 style="position: relative; z-index: 2; text-align: center; color: var(--color-white);">
                 <span class="reveal-on-scroll"
-                    style="display: block; font-family: var(--font-accent); letter-spacing: 0.1em; text-transform: none; margin-bottom: 1rem; font-size: 1.2rem;">
-                    Entdecken Sie den echten Geschmack aus dem fernen Osten.
+                    style="display: block; font-family: var(--font-accent); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.5rem; font-size: 1rem; color: var(--accent);">
+                    Herzlich Willkommen im NAMASTE
                 </span>
-                <h1 class="luxury-heading reveal-on-scroll" style="color: #fff;">Asian Fusion & Fine Dining</h1>
+                <h1 class="luxury-heading reveal-on-scroll"
+                    style="color: #fff; font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: -0.04em;">Indische
+                    <span>Spezialitäten</span> <br> in Hallein
+                </h1>
             </div>
         </section>
 
@@ -81,69 +88,65 @@
         <section id="marquee-gallery" class="reveal-on-scroll marquee-container">
             <div class="marquee-content">
                 <div class="marquee-item">
-                    <img src="image/food 1.jpg" alt="Culinary Masterpiece 1">
-                    <div class="swipe-caption">Exotische Sushi</div>
+                    <img src="image/namaste 1.png" alt="Namaste Impression 1">
+                    <div class="swipe-caption">Authentische Aromen</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 2.jpg" alt="Culinary Masterpiece 2">
-                    <div class="swipe-caption">Scharfe Currys</div>
+                    <img src="image/namaste 2.png" alt="Namaste Impression 2">
+                    <div class="swipe-caption">Traditionelle Gewürze</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 3.jpg" alt="Culinary Masterpiece 3">
-                    <div class="swipe-caption">Wok-Kreationen</div>
+                    <img src="image/namaste 3.png" alt="Namaste Impression 3">
+                    <div class="swipe-caption">Herzliche Gastfreundschaft</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 4.jpg" alt="Culinary Masterpiece 4">
-                    <div class="swipe-caption">Asian Fusion</div>
+                    <img src="image/namaste 4.png" alt="Namaste Impression 4">
+                    <div class="swipe-caption">Indische Kochkunst</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 5.jpg" alt="Culinary Masterpiece 5">
-                    <div class="swipe-caption">Fine Dining</div>
-                </div>
-                <div class="marquee-item">
-                    <img src="image/food 6.jpg" alt="Culinary Masterpiece 6">
-                    <div class="swipe-caption">Tradition & Moderne</div>
-                </div>
-                <div class="marquee-item">
-                    <img src="image/food 7.jpg" alt="Culinary Masterpiece 7">
+                    <img src="image/namaste 5.png" alt="Namaste Impression 5">
                     <div class="swipe-caption">Frische Zutaten</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 8.jpg" alt="Culinary Masterpiece 8">
-                    <div class="swipe-caption">Kulinarik pur</div>
+                    <img src="image/namaste 6.png" alt="Namaste Impression 6">
+                    <div class="swipe-caption">Beste Qualität</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/namaste 7.png" alt="Namaste Impression 7">
+                    <div class="swipe-caption">Kulinarische Reise</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/namaste 8.png" alt="Namaste Impression 8">
+                    <div class="swipe-caption">Namaste Spirit</div>
                 </div>
                 <!-- Duplicates for Seamless Loop -->
                 <div class="marquee-item">
-                    <img src="image/food 1.jpg" alt="Culinary Masterpiece 1">
-                    <div class="swipe-caption">Exotische Sushi</div>
+                    <img src="image/food 1.png" alt="Indian Dish 1">
+                    <div class="swipe-caption">Authentische Aromen</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 2.jpg" alt="Culinary Masterpiece 2">
-                    <div class="swipe-caption">Scharfe Currys</div>
+                    <img src="image/food 2.png" alt="Indian Dish 2">
+                    <div class="swipe-caption">Traditionelle Gewürze</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 3.jpg" alt="Culinary Masterpiece 3">
-                    <div class="swipe-caption">Wok-Kreationen</div>
+                    <img src="image/food 3.png" alt="Indian Dish 3">
+                    <div class="swipe-caption">Herzliche Gastfreundschaft</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 4.jpg" alt="Culinary Masterpiece 4">
-                    <div class="swipe-caption">Asian Fusion</div>
+                    <img src="image/food 4.png" alt="Indian Dish 4">
+                    <div class="swipe-caption">Indische Kochkunst</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 5.jpg" alt="Culinary Masterpiece 5">
-                    <div class="swipe-caption">Fine Dining</div>
-                </div>
-                <div class="marquee-item">
-                    <img src="image/food 6.jpg" alt="Culinary Masterpiece 6">
-                    <div class="swipe-caption">Tradition & Moderne</div>
-                </div>
-                <div class="marquee-item">
-                    <img src="image/food 7.jpg" alt="Culinary Masterpiece 7">
+                    <img src="image/food 5.png" alt="Indian Dish 5">
                     <div class="swipe-caption">Frische Zutaten</div>
                 </div>
                 <div class="marquee-item">
-                    <img src="image/food 8.jpg" alt="Culinary Masterpiece 8">
-                    <div class="swipe-caption">Kulinarik pur</div>
+                    <img src="image/food 6.png" alt="Indian Dish 6">
+                    <div class="swipe-caption">Beste Qualität</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="image/food 7.png" alt="Indian Dish 7">
+                    <div class="swipe-caption">Kulinarische Reise</div>
                 </div>
             </div>
         </section>
@@ -159,12 +162,13 @@
                         <div class="luxury-line stagger-1" style="margin-bottom: var(--spacing-md);"></div>
                         <h2 class="section-title seal-reveal stagger-2"
                             style="text-align: left; margin-bottom: var(--spacing-md);">
-                            East Menu <br>Asian Fusion.
+                            Gastfreundschaft <br>ist unsere Seele.
                         </h2>
                         <p class="stagger-3 seal-reveal" style="max-width: 500px; color: var(--text-secondary);">
-                            Tauchen Sie ein in eine kulinarische Reise, die traditionelle asiatische Aromen mit modernen
-                            internationalen Einflüssen verbindet. Unsere frischen Zutaten und kreativen Gerichte
-                            vereinen das Beste aus Ost und West und bieten Ihnen einzigartige Geschmackserlebnisse.
+                            Dieser respektvolle Gruß ist mehr als nur unser Name – Namaste ist unsere Philosophie
+                            und spiegelt die tiefe Gastfreundschaft wider, die uns am Herzen liegt. Lassen Sie sich
+                            von uns auf eine kulinarische Entdeckungsreise durch die Vielfalt Indiens entführen.
+                            Im NAMASTE vereinen wir authentische Kochkunst mit einer warmherzigen Atmosphäre.
                         </p>
                         <div class="stagger-4 seal-reveal" style="margin-top: var(--spacing-lg);">
                             <a href="#gallery" class="btn-luxury">Impressionen ansehen</a>
@@ -173,7 +177,7 @@
 
                     <div class="reveal-on-scroll" style="position: relative; z-index: 10;">
                         <div class="reveal-mask" style="aspect-ratio: 4/5;">
-                            <img src="image/food 1.jpg" alt="Interior East Menu" class="img-luxury"
+                            <img src="image/namaste 9.png" alt="Namaste Ambience" class="img-luxury"
                                 style="height: 100%;">
                         </div>
                         <!-- Depth overlay element -->
@@ -194,29 +198,30 @@
                     <!-- Item 1 -->
                     <div class="reveal-on-scroll" style="text-align: center;">
                         <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
-                            <img src="image/food 2.jpg" alt="Curry" class="img-luxury">
+                            <img src="image/namaste menu 1.jpg" alt="Tandoori Spezialitäten" class="img-luxury">
                         </div>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Scharfe Currys</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Die Harmonie von Gewürzen und
-                            Frische. Traditionelle Rezepturen modern interpretiert.</p>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Gewürzkunst</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Die feine Balance erlesener Kräuter.
+                            Echte indische Küche definiert sich durch Aroma, nicht nur durch Schärfe.</p>
                     </div>
                     <!-- Item 2 -->
                     <div class="reveal-on-scroll" style="text-align: center;">
                         <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
-                            <img src="image/food 3.jpg" alt="Sushi" class="img-luxury">
+                            <img src="image/namaste menu 2.jpg" alt="Traditionelle Currys" class="img-luxury">
                         </div>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Exotische Sushi</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Kreative Sushi-Kreationen, die Kunst
-                            und Geschmack in Perfektion vereinen.</p>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Hausgemacht</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Jedes Gericht wird mit Liebe zum
+                            Detail
+                            aus frischen, regionalen Zutaten und Liebe zubereitet.</p>
                     </div>
                     <!-- Item 3 -->
                     <div class="reveal-on-scroll" style="text-align: center;">
                         <div style="height: 350px; overflow: hidden; margin-bottom: 1.5rem;">
-                            <img src="image/food 4.jpg" alt="Wok" class="img-luxury">
+                            <img src="image/namaste 5.png" alt="Vegetarische Köstlichkeiten" class="img-luxury">
                         </div>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Wok-Gerichte</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Mit Feuer und Leidenschaft
-                            zubereitet. Knackiges Gemüse und feine Aromen direkt aus dem Wok.</p>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Bewusster Genuss</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Traditionelle Rezepturen, die
+                            nicht nur schmecken, sondern auch Seele und Körper guttun.</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +237,7 @@
                         <div class="vertical-label stagger-1">Est. 2024</div>
                         <div class="main-image-wrap stagger-2">
                             <div class="iris-reveal" style="aspect-ratio: 4/5;">
-                                <img src="image/food 5.jpg" alt="Culinary Art" class="img-luxury"
+                                <img src="image/namaste 4.png" alt="Culinary Art" class="img-luxury"
                                     style="height: 100%; object-fit: cover;">
                             </div>
                         </div>
@@ -242,26 +247,27 @@
                         <div class="luxury-line-h stagger-1" style="margin-bottom: var(--spacing-md);"></div>
                         <h2 class="luxury-heading stagger-2"
                             style="color: #fff; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; margin-bottom: 3rem; text-align: left;">
-                            Leidenschaft <br><span style="color: var(--accent);">statt</span> Rezeptur.
+                            Wir verbeugen <br><span style="color: var(--accent);">uns</span> vor dir.
                         </h2>
                         <div class="philosophy-content stagger-3" style="max-width: 450px;">
                             <p
                                 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 2rem; line-height: 1.3;">
-                                „Ost trifft West – eine kulinarische Liebeserklärung an Salzburg.“
+                                „Namaste – Ehre dem Göttlichen in Dir.“
                             </p>
                             <p style="color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; line-height: 1.8;">
-                                Ob würzige Currys, exotische Sushi-Kreationen oder verführerische Wok-Gerichte – bei uns
-                                finden Sie eine Vielfalt an Speisen, die Ihre Sinne begeistern.
+                                Der Name unseres Restaurants entstammt dem Sanskrit: NAMAS steht für die „Verbeugung“
+                                und TE für „Dir“. Es ist Ausdruck unserer Philosophie und tiefen Wertschätzung.
                             </p>
                             <p style="color: rgba(255,255,255,0.6); margin-bottom: 3rem; line-height: 1.8;">
-                                Kommen Sie vorbei und erleben Sie die perfekte Symbiose aus Tradition und Innovation.
+                                Erleben Sie bei uns außergewöhnlichen Service und Gerichte, die mit Liebe zum Detail
+                                zubereitet werden. Wir freuen uns auf Ihren Besuch.
                             </p>
 
                             <div style="display: flex; align-items: center; gap: 1.5rem;">
                                 <div style="width: 30px; height: 1px; background: var(--accent);"></div>
                                 <p
                                     style="font-family: var(--font-accent); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; color: var(--accent);">
-                                    Team East Salzburg
+                                    Team Namaste Hallein
                                 </p>
                             </div>
                         </div>
@@ -274,41 +280,41 @@
         <!-- Gallery Section (Chaotic Art Gallery - Full Suite) -->
         <section id="gallery" class="reveal-on-scroll" style="overflow: hidden;">
             <div class="perspective-grid">
-                <div class="perspective-item" data-index="01" style="grid-column: span 3; grid-row: span 4;">
-                    <img src="image/food 1.jpg" alt="East Menu 1">
+                <div class="perspective-item large" data-index="01" style="grid-column: span 3; grid-row: span 4;">
+                    <img src="image/namaste 1.png" alt="Namaste 1">
                 </div>
-                <div class="perspective-item" data-index="02" style="grid-column: span 1; grid-row: span 2;">
-                    <img src="image/food 2.jpg" alt="Detail 1">
+                <div class="perspective-item" data-index="02" style="grid-column: span 2; grid-row: span 2;">
+                    <img src="image/namaste 2.png" alt="Namaste 2">
                 </div>
                 <div class="perspective-item" data-index="03" style="grid-column: span 2; grid-row: span 3;">
-                    <img src="image/food 3.jpg" alt="Detail 2">
+                    <img src="image/namaste 3.png" alt="Namaste 3">
                 </div>
                 <div class="perspective-item" data-index="04" style="grid-column: span 1; grid-row: span 2;">
-                    <img src="image/food 4.jpg" alt="Atmosphere">
+                    <img src="image/namaste 4.png" alt="Namaste 4">
                 </div>
                 <div class="perspective-item" data-index="05" style="grid-column: span 2; grid-row: span 4;">
-                    <img src="image/food 5.jpg" alt="Detail 4">
+                    <img src="image/namaste 5.png" alt="Namaste 5">
                 </div>
                 <div class="perspective-item" data-index="06" style="grid-column: span 3; grid-row: span 3;">
-                    <img src="image/food 6.jpg" alt="Detail 5">
+                    <img src="image/food 1.png" alt="Food 1">
                 </div>
                 <div class="perspective-item" data-index="07" style="grid-column: span 1; grid-row: span 2;">
-                    <img src="image/food 7.jpg" alt="Culinary Art">
+                    <img src="image/food 2.png" alt="Food 2">
                 </div>
                 <div class="perspective-item" data-index="08" style="grid-column: span 2; grid-row: span 2;">
-                    <img src="image/food 8.jpg" alt="Detail 7">
+                    <img src="image/food 3.png" alt="Food 3">
                 </div>
                 <div class="perspective-item" data-index="09" style="grid-column: span 4; grid-row: span 2;">
-                    <img src="image/food 9.jpg" alt="Detail 8">
+                    <img src="image/food 4.png" alt="Food 4">
                 </div>
                 <div class="perspective-item" data-index="10" style="grid-column: span 2; grid-row: span 3;">
-                    <img src="image/food 1.jpg" alt="Detail 9">
+                    <img src="image/food 5.png" alt="Food 5">
                 </div>
                 <div class="perspective-item" data-index="11" style="grid-column: span 1; grid-row: span 2;">
-                    <img src="image/food 2.jpg" alt="Detail 10">
+                    <img src="image/food 6.png" alt="Food 6">
                 </div>
                 <div class="perspective-item" data-index="12" style="grid-column: span 3; grid-row: span 3;">
-                    <img src="image/food 3.jpg" alt="Detail 11">
+                    <img src="image/food 7.png" alt="Food 7">
                 </div>
             </div>
         </section>
@@ -322,22 +328,25 @@
                         <h4
                             style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
                             Adresse</h4>
-                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-black);">Getreidegasse
-                            36a<br>5020 Salzburg, Österreich</p>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-white);">Pflegerplatz
+                            3<br>5400 Hallein, Österreich</p>
 
                         <h4
                             style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
                             Kontakt</h4>
-                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-black);">Email:
-                            info@east-salzburg.at</p>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-white);">
+                            Email: kontakt@namasterestaurant.at<br>
+                            Tel: +43 6245 77140 | 0660 3960273
+                        </p>
 
                         <h4
                             style="margin-bottom: 0.5rem; font-family: var(--font-accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent);">
                             Öffnungszeiten</h4>
-                        <p style="font-size: 1.1rem; color: var(--color-black);">
-                            Di - So: 12:00 - 23:00<br>
-                            Bar: Di - Fr ab 18:00 | Sa ab 16:00<br>
-                            Montag: Ruhetag
+                        <p style="font-size: 1.1rem; color: var(--color-white); line-height: 1.6;">
+                            Mo - Di: 11:00 - 14:00 | 17:00 - 22:00<br>
+                            Mi: Ruhetag<br>
+                            Do - Fr: 11:00 - 14:00 | 17:00 - 22:00<br>
+                            Sa - So & Feiertags: 12:00 - 22:00
                         </p>
                     </div>
                 </div>
@@ -348,7 +357,7 @@
     <footer
         style="padding: var(--spacing-md) 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.8rem; color: var(--text-secondary);">
         <div class="container">
-            <p>&copy; 2026 East Salzburg. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2026 Namaste Hallein. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 

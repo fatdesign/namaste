@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 @font-face {
     font-family: 'Stylish Classy Font';
@@ -8,28 +8,35 @@
 }
 
 :root {
-    /* PDF Accurate Theme - Dark Gray & Cream/Gold */
-    --color-white: #FFFFFF;
-    --color-bg-pdf: #3d3d3d;
-    /* PDF Background color */
-    --color-text-pdf: #FFFFFF;
-    /* White text on dark bg */
-    --color-accent-pdf: #e3c49e;
-    /* Muted gold/cream for accents */
-    --color-gray: #aaaaaa;
+    /* Namaste Theme - Indian Luxury Refined */
+    --color-white: #fdfcf0;
+    --color-bg-dark: #120a0a;
+    /* Deeper Black/Burgundy */
+    --color-bg-accent: #1a0f0f;
+    /* Deep Burgundy */
+    --color-text-primary: #fdfcf0;
+    --color-accent-gold: #c5a059;
+    /* More Muted Premium Gold */
+    --color-accent-saffron: #e67e22;
+    /* Rich Saffron */
+    --color-gray: rgba(253, 252, 240, 0.6);
 
     /* Palette mapping */
-    --bg-primary: var(--color-bg-pdf);
-    --bg-secondary: #2d2d2d;
-    --text-primary: var(--color-text-pdf);
+    --bg-primary: var(--color-bg-dark);
+    --bg-secondary: var(--color-bg-accent);
+    --text-primary: var(--color-text-primary);
     --text-secondary: var(--color-gray);
-    --accent: var(--color-accent-pdf);
+    --accent: var(--color-accent-gold);
 
-    /* Typography - Replicating PDF */
-    --font-heading: 'Cormorant Garamond', serif;
-    /* Luxurious & Readable Serif */
-    --font-body: 'Montserrat', sans-serif;
-    --font-accent: 'Tenor Sans', sans-serif;
+    /* Typography - Premium Choices */
+    --font-heading: 'Playfair Display', serif;
+    /* Cinematic Serif */
+    --font-nav: 'Italiana', serif;
+    /* Bespoke Heritage */
+    --font-body: 'Outfit', sans-serif;
+    /* Modern & Clean */
+    --font-accent: 'Cormorant Garamond', serif;
+    /* Elegant Accents */
 
     /* Spacing & Layout */
     --container-max: 1400px;
@@ -94,32 +101,47 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    line-height: 1.7;
+    line-height: 1.8;
     overflow-x: hidden;
     font-weight: 300;
+}
+
+/* Decorative Ornaments */
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.ornament::before,
+.ornament::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: var(--accent);
+    opacity: 0.5;
+}
+
+.ornament span {
+    color: var(--accent);
+    font-size: 1.2rem;
 }
 
 h1,
 h2,
 h3,
-h4 {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    line-height: 1.1;
-    text-transform: none;
-}
-
 .luxury-heading {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: var(--spacing-md);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
     margin-bottom: var(--spacing-lg);
     position: relative;
@@ -176,7 +198,8 @@ a {
 
 .btn-luxury:hover {
     background: transparent;
-    color: var(--color-black);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .btn-shiny {
@@ -222,8 +245,8 @@ a {
     position: absolute;
     font-family: var(--font-heading);
     font-size: clamp(8rem, 20vw, 25rem);
-    color: var(--color-black);
-    opacity: 0.03;
+    color: #000;
+    opacity: 0.05;
     pointer-events: none;
     z-index: 0;
     white-space: nowrap;
@@ -351,47 +374,50 @@ a {
     transform: translateY(0);
 }
 
-/* Navigation */
+/* Navigation - Bespoke Glass Capsule */
 nav {
     position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1.2rem 0;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: fit-content;
     z-index: 2500;
     transition: var(--transition-medium);
-    background: #000;
-    /* Boss-Level Black */
-}
-
-nav.scrolled {
-    background: rgba(0, 0, 0, 0.95);
-    padding: 0.8rem 0;
-    backdrop-filter: blur(10px);
 }
 
 .nav-container {
+    background: rgba(18, 10, 10, 0.6);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    padding: 0.6rem 2.5rem;
+    border-radius: 100px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 3rem;
+    transition: var(--transition-medium);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+nav.scrolled .nav-container {
+    background: rgba(18, 10, 10, 0.9);
+    padding: 0.4rem 2rem;
+    transform: scale(0.95);
 }
 
 .logo img {
-    height: 65px;
-    /* Dominant Boutique presence */
+    height: 40px;
     width: auto;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo:hover img {
-    transform: scale(1.03);
+    transform: rotate(5deg) scale(1.1);
 }
 
-/* Architectural Glide Nav */
 .nav-links {
-    position: relative;
     display: flex;
-    gap: 3.5rem;
-    /* Breathable spacing */
+    gap: 2.5rem;
     align-items: center;
 }
 
@@ -399,39 +425,44 @@ nav.scrolled {
     position: relative;
     text-decoration: none;
     color: var(--color-white);
-    font-family: var(--font-accent);
+    font-family: var(--font-nav);
     text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.35em;
-    /* Extreme luxury tracking */
-    padding: 0.8rem 0;
-    display: flex;
-    overflow: hidden;
-    transition: color 0.4s ease;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 0;
+    display: block;
+    transition: all 0.4s ease;
 }
 
-/* Character Level Control */
-.nav-link-boss .char {
-    display: inline-block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, color 0.4s ease;
+.nav-link-boss:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
 }
 
-/* The Glide Underline */
+/* Remove old complicated bits */
+.nav-link-boss span,
+.nav-link-boss span::before,
+.nav-link-boss:hover span {
+    transform: none !important;
+    position: static !important;
+    display: inline !important;
+}
+
+.nav-link-boss span::before {
+    display: none !important;
+}
+
 .nav-underline-glide {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    height: 1px;
-    background: var(--accent);
-    /* Brand Gold */
-    width: 0;
-    pointer-events: none;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), width 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
-    opacity: 0;
+    display: none;
 }
 
-.nav-links:hover .nav-underline-glide {
-    opacity: 1;
+.btn-reserve.desktop-reserve {
+    font-family: var(--font-nav);
+    letter-spacing: 0.1em;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem !important;
+    font-size: 0.75rem !important;
 }
 
 /* Enforcing Sharpness for Heritage Section */
@@ -441,10 +472,10 @@ nav.scrolled {
 }
 
 .btn-reserve {
-    background: var(--color-white) !important;
-    color: #E63946 !important;
-    /* Elegant Red */
-    border-color: var(--color-white) !important;
+    background: var(--accent) !important;
+    color: var(--color-bg-dark) !important;
+    /* Elegant Red removal, using brand gold */
+    border-color: var(--accent) !important;
 }
 
 .btn-reserve:hover {
@@ -1047,37 +1078,37 @@ nav.scrolled {
     overflow: hidden;
 }
 
-/* Two panels that meet in the middle */
+/* Vertical curtain panels */
 .page-transition::before,
 .page-transition::after {
     content: '';
     position: absolute;
-    top: 0;
-    width: 50.5%;
+    left: 0;
+    width: 100%;
+    height: 50.5%;
     /* Slight overlap to prevent gap */
-    height: 100%;
-    background: #000;
+    background: var(--color-bg-dark);
     transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 1;
 }
 
 .page-transition::before {
-    left: 0;
-    transform: translateX(0);
+    top: 0;
+    transform: translateY(0);
 }
 
 .page-transition::after {
-    right: 0;
-    transform: translateX(0);
+    bottom: 0;
+    transform: translateY(0);
 }
 
 /* When transition is NOT active (i.e., revealing the page) */
 .page-transition:not(.active)::before {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
 }
 
 .page-transition:not(.active)::after {
-    transform: translateX(100%);
+    transform: translateY(100%);
 }
 
 .page-transition.active {
@@ -1086,24 +1117,21 @@ nav.scrolled {
 
 .page-transition.active::before,
 .page-transition.active::after {
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .transition-logo {
-    height: 80px;
+    height: 120px;
     width: auto;
     z-index: 2;
     opacity: 0;
-    transform: scale(0.8);
-    filter: brightness(0) invert(1);
-    /* Ensure logo is white/visible on black */
+    transform: scale(0.6) translateY(20px);
     transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .page-transition.active .transition-logo {
     opacity: 1;
-    transform: scale(1);
-    animation: logoPulse 2s ease-in-out infinite alternate;
+    transform: scale(1) translateY(0);
 }
 
 @keyframes logoPulse {

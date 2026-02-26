@@ -1,11 +1,11 @@
 // ============================================
-// EAST MENU – CLOUDFLARE WORKER PROXY
-// Deploy at: east-menu-proxy.f-klavun.workers.dev
+// NAMASTE – CLOUDFLARE WORKER PROXY
+// Deploy at: namaste-proxy.f-klavun.workers.dev
 //
 // Cloudflare Environment Secrets needed:
 //   ADMIN_PASSWORD  – Admin-Passwort für das Panel
 //   GITHUB_OWNER    – GitHub Username / Organisation
-//   GITHUB_REPO     – Repository Name (z.B. east-menu)
+//   GITHUB_REPO     – Repository Name (z.B. namaste)
 //   GITHUB_TOKEN    – GitHub Personal Access Token (repo Schreibrecht)
 // ============================================
 
@@ -34,7 +34,7 @@ export default {
         const githubHeaders = {
             'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'Alley28MenuAdmin/1.0',
+            'User-Agent': 'NamasteMenuAdmin/1.0',
             'Content-Type': 'application/json',
         };
 
@@ -70,7 +70,7 @@ export default {
                 method: 'PUT',
                 headers: githubHeaders,
                 body: JSON.stringify({
-                    message: `Admin: East Menu Speisekarte (${menuFile}) aktualisiert`,
+                    message: `Admin: Namaste Speisekarte (${menuFile}) aktualisiert`,
                     content: body.content,
                     sha: body.sha,
                 }),

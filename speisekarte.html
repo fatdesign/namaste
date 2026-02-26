@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisekarte | East Menu – Asian Fusion & Fine Dining Salzburg</title>
+    <title>Speisekarte | Namaste – Authentic Indian Flavors & Fine Dining Graz</title>
     <meta name="description"
-        content="Entdecken Sie die Speisekarte des East Menu in Salzburg. Authentische asiatische Fusion-Küche.">
+        content="Entdecken Sie die Speisekarte des Namaste in Graz. Authentische indische Genüsse.">
     <script src="settings.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Italiana&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         /* ── Speisekarte Page ── */
@@ -244,10 +249,10 @@
 
         .lang-btn.active {
             background: var(--accent);
-            color: #000;
+            color: var(--color-bg-dark);
             border-color: var(--accent);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(227, 196, 158, 0.2);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
 
         .lang-btn:hover:not(.active) {
@@ -428,27 +433,26 @@
 <body>
     <!-- Extravagant Page Transition Overlay -->
     <div class="page-transition active">
-        <img src="image/east-logo.webp" alt="East Menu" class="transition-logo">
+        <img src="image/namaste-logo.png" alt="Namaste" class="transition-logo">
     </div>
 
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="image/east-logo.webp" alt="East Menu Logo" style="height: 50px; width: auto;">
+                <img src="image/namaste-logo.png" alt="Namaste Logo">
             </a>
 
             <!-- Desktop Nav -->
             <div class="nav-links">
                 <a href="index.html#about" class="nav-link-boss">Konzept</a>
                 <a href="index.html#menu" class="nav-link-boss">Highlights</a>
-                <a href="index.html#gallery" class="nav-link-boss">Impressionen</a>
+                <a href="index.html#gallery" class="nav-link-boss">Galerie</a>
                 <a href="index.html#contact" class="nav-link-boss">Kontakt</a>
                 <a href="speisekarte.html" class="nav-link-boss" style="color: var(--accent);">Menü</a>
-                <span class="nav-underline-glide"></span>
             </div>
-            <a href="index.html#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny"
-                style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Reservieren</a>
+
+            <a href="index.html#contact" class="btn-luxury btn-reserve desktop-reserve btn-shiny">Reservieren</a>
 
             <!-- Mobile Burger Toggle -->
             <button class="mobile-menu-toggle" aria-label="Menu öffnen">
@@ -476,8 +480,8 @@
     <!-- Hero -->
     <section class="menu-page-hero">
         <div class="container">
-            <h1 data-hydrate="restaurantName">EAST MENU</h1>
-            <p data-hydrate="tagline">Asian Fusion & Fine Dining · Graz</p>
+            <h1 data-hydrate="restaurantName">NAMASTE</h1>
+            <p data-hydrate="tagline">Indische Spezialitäten in Hallein · Pflegerplatz 3</p>
             <div class="icon-legend">
                 <div class="legend-item">
                     <img src="image/chili-icon.png" class="legend-icon" alt="Scharf">
@@ -521,7 +525,7 @@
 
     <!-- ── Inline Menu Fallback (works on file://) ── -->
     <script>
-        const MENU_INLINE = { "categories": [{ "id": "lunch", "name": { "de": "Lunch" }, "description": { "de": "Dienstag-Freitag 12:00-14:30 Uhr · mit Reis + Fitness-Salat" }, "items": [{ "name": { "de": "Basil Chicken AFN" }, "desc": { "de": "Hühnerfleisch | Basilikum | Saisongemüse" }, "price": "12,9" }] }, { "id": "soups", "name": { "de": "Soups" }, "items": [{ "name": { "de": "Miso Shiru DF" }, "desc": { "de": "Tofu | Wakame | Frühlingszwiebeln | Pilze" }, "price": "5,9" }] }] };
+        const MENU_INLINE = { "categories": [{ "id": "starters", "name": { "de": "Vorspeisen", "en": "Appetizers" }, "description": { "de": "Traditionelle indische Vorspeisen", "en": "Traditional Indian starters" }, "items": [{ "name": { "de": "Samosa", "en": "Samosa" }, "desc": { "de": "Zwei hausgemachte Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen", "en": "Two homemade pastry pockets filled with spiced potatoes and peas" }, "price": "6,9" }] }] };
     </script>
 
     <script>
@@ -533,7 +537,7 @@
         const menuApp = document.getElementById('menu-app');
         const categoryList = document.getElementById('category-list');
 
-        const ICONS = ['🥟', '🍜', '🍣', '🥢', '🍱', '🌿', '🥗', '🍡', '🍵'];
+        const ICONS = ['🍛', '🍲', '🥘', '🍲', '🍚', '🌿', '🥗', '🍨', '☕'];
 
         async function init() {
             // Try fetch first (works when hosted on a server)

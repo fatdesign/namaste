@@ -6,26 +6,29 @@
 
 const SETTINGS = {
     // 1. BRANDING
-    restaurantName: "East Menu",
-    tagline: "Asian Fusion & Fine Dining · Graz",
-    metaDescription: "Speisekarte des East Menu – Asian Fusion & Fine Dining in Graz.",
-    footerText: "2026 East Menu · Graz",
+    restaurantName: "Namaste",
+    tagline: "Indische Spezialitäten in Hallein · Pflegerplatz 3",
+    metaDescription: "Herzlich Willkommen im Namaste – Ihr Restaurant für authentische indische Spezialitäten in Hallein.",
+    footerText: "2026 Namaste · Hallein",
 
-    // 2. DESIGN TOKENS (Alley 28 Palette)
+    // 2. DESIGN TOKENS (Namaste Indian Palette)
     theme: {
-        bgPrimary: "#3d3d3d",
-        bgHeader: "#2d2d2d",
-        accentGold: "#e3c49e",
-        accentSecondary: "#aaaaaa",
-        textPrimary: "#ffffff",
-        textSecondary: "rgba(255,255,255,0.6)",
-        fontHeading: "'Stylish Classy Font', cursive",
+        colors: {
+            background: "#120a0a",
+            header: "#1a0f0f",
+            accent: "#c5a059",
+            saffron: "#e67e22",
+            text: "#fdfcf0",
+            gray: "rgba(253, 252, 240, 0.6)"
+        },
+        accent: "accent",
+        fontHeading: "'Cormorant Garamond', serif",
         fontBody: "'Montserrat', sans-serif"
     },
 
     // 3. API & STORAGE
-    proxyUrl: "https://east-menu-proxy.f-klavun.workers.dev",
-    storageKey: "eastmenu_lang",
+    proxyUrl: "https://namaste-proxy.f-klavun.workers.dev",
+    storageKey: "namaste_lang",
 
     // 4. FEATURES
     languages: ["de", "en"],

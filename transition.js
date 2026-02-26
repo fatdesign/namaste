@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Wait for the animation to finish (e.g., 1200ms) before navigating
             setTimeout(() => {
                 window.location.href = href;
-            }, 1200);
+            }, 1000);
         });
     });
 
