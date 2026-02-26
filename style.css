@@ -9,17 +9,18 @@
 
 :root {
     /* Namaste Theme - Indian Luxury Refined */
-    --color-white: #fdfcf0;
-    --color-bg-dark: #120a0a;
-    /* Deeper Black/Burgundy */
-    --color-bg-accent: #1a0f0f;
-    /* Deep Burgundy */
-    --color-text-primary: #fdfcf0;
-    --color-accent-gold: #c5a059;
-    /* More Muted Premium Gold */
-    --color-accent-saffron: #e67e22;
-    /* Rich Saffron */
-    --color-gray: rgba(253, 252, 240, 0.6);
+    --color-white: #F2BF80;
+    --color-bg-dark: #401201;
+    /* Deep Earth */
+    --color-bg-accent: #5c1a01;
+    /* Warm Earth */
+    --color-text-primary: #F2BF80;
+    --color-accent-gold: #BF6E0B;
+    /* Mustard Gold */
+    --color-accent-saffron: #A6330A;
+    /* Sienna Spice */
+    --color-gray: #8C5637;
+    /* Clay Brown */
 
     /* Palette mapping */
     --bg-primary: var(--color-bg-dark);

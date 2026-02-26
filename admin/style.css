@@ -1,12 +1,12 @@
 :root {
-    --bg: #120a0a;
-    --bg-card: #1a0f0f;
-    --gold: #c5a059;
-    --gold-soft: rgba(197, 160, 89, 0.15);
-    --text: #fdfcf0;
-    --text-muted: rgba(253, 252, 240, 0.5);
-    --border: rgba(197, 160, 89, 0.2);
-    --danger: #e67e22;
+    --bg: #401201;
+    --bg-card: #5c1a01;
+    --gold: #BF6E0B;
+    --gold-soft: rgba(191, 110, 11, 0.15);
+    --text: #F2BF80;
+    --text-muted: #8C5637;
+    --border: rgba(191, 110, 11, 0.2);
+    --danger: #A6330A;
     --radius: 8px;
     --radius-lg: 12px;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
