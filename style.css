@@ -132,14 +132,37 @@ body {
 }
 
 h1,
-h2,
-h3,
 .luxury-heading {
     font-family: var(--font-heading);
     font-weight: 400;
+    font-size: clamp(3rem, 8.5vw, 6.8rem);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     letter-spacing: -0.02em;
     line-height: 1.1;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+h4 {
+    font-family: var(--font-accent);
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 .section-title {
@@ -635,6 +658,13 @@ nav.scrolled .burger-line {
 
 .mobile-menu-toggle.active .burger-line:last-child {
     transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Fix for vanishing X: transparent container when nav is open */
+nav.nav-open .nav-container {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .mobile-nav-overlay {

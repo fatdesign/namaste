@@ -437,24 +437,37 @@
             white-space: nowrap;
         }
 
-        /* ── Section Divider ── */
+        /* ── Section Divider (Ornamental) ── */
         .section-divider {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin: 3rem 0 3rem;
-            color: rgba(0, 0, 0, 0.18);
+            justify-content: center;
+            gap: 2rem;
+            margin: 5rem 0 4rem;
+            color: var(--accent);
+            opacity: 0.6;
         }
 
         .section-divider .line {
             flex: 1;
-            height: 1px;
-            background: currentColor;
+            height: 12px;
+            /* Taller to house the pattern */
+            background-image: radial-gradient(circle, currentColor 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+            background-repeat: repeat-x;
+            background-position: center;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
 
-        .section-divider .icon {
-            font-size: 1.1rem;
-            opacity: 0.5;
+        .section-divider .ornament-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: serif;
+            /* Use a classic serif for the diamond */
         }
 
 
@@ -613,7 +626,7 @@
         const menuApp = document.getElementById('menu-app');
         const categoryList = document.getElementById('category-list');
 
-        const ICONS = ['🍛', '🍲', '🥘', '🍲', '🍚', '🌿', '🥗', '🍨', '☕'];
+        const ICONS = ['◈', '◇', '◈', '◇', '◈', '◇', '◈', '◇', '◈'];
 
         async function init() {
             // Try fetch first (works when hosted on a server)
@@ -654,7 +667,7 @@
                 if (idx > 0) divider = `
         <div class="section-divider">
             <span class="line"></span>
-            <span class="icon">${ICONS[idx % ICONS.length]}</span>
+            <span class="ornament-icon">${ICONS[idx % ICONS.length]}</span>
             <span class="line"></span>
         </div>`;
 
@@ -848,6 +861,7 @@
             function toggleMenu() {
                 mobileToggle.classList.toggle('active');
                 mobileOverlay.classList.toggle('open');
+                navbar.classList.toggle('nav-open');
                 document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
             }
 

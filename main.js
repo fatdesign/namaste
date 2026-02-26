@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function toggleMenu() {
             mobileToggle.classList.toggle('active');
             mobileOverlay.classList.toggle('open');
+            navbar.classList.toggle('nav-open');
             document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
         }
 
