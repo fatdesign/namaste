@@ -235,11 +235,11 @@
 
         @media(max-width: 768px) {
             .cat-wheel-wrap {
-                top: 0;
-                /* Sticky at top, floating nav will hover */
-                height: 120px;
+                top: 75px;
+                /* Offset to clear floating nav */
+                height: 140px;
                 /* Taller to provide clearance from floating nav */
-                padding-top: 50px;
+                padding-top: 60px;
                 /* Spacer for floating nav */
             }
 
@@ -258,6 +258,11 @@
             .cat-wheel-item.prev2,
             .cat-wheel-item.next2 {
                 display: none;
+            }
+
+            .lang-bar {
+                padding-top: 5rem;
+                /* Push below floating nav */
             }
         }
 
