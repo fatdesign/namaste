@@ -12,15 +12,18 @@
             "de": "VORSPEISENPLATTE (für 2 Personen)",
             "en": "STARTER PLATTER (for 2 persons)"
           },
-          "desc": {
-            "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys",
-            "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys"
-          },
           "price": "21,90",
+          "isSoldOut": false,
+          "isVegan": false,
+          "spiciness": "1",
           "allergens": [
             "A",
             "G"
-          ]
+          ],
+          "desc": {
+            "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys",
+            "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys"
+          }
         },
         {
           "name": {
@@ -45,7 +48,7 @@
           "price": "116,90",
           "isSoldOut": false,
           "isVegan": true,
-          "spiciness": "",
+          "spiciness": "3",
           "allergens": [
             "A"
           ],
