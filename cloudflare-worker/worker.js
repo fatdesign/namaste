@@ -40,7 +40,8 @@ export default {
 
         // ── GET: Aktuelle menu.json von GitHub laden ────────
         if (request.method === 'GET') {
-            const res = await fetch(githubApiUrl, { headers: githubHeaders });
+            const freshGithubUrl = `${githubApiUrl}?t=${Date.now()}`;
+            const res = await fetch(freshGithubUrl, { headers: githubHeaders });
             const data = await res.text();
             return corsResponse(data, res.status, env);
         }
@@ -91,6 +92,9 @@ function corsResponse(body, status, env) {
         'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN || '*',
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, X-Admin-Password, X-Menu-File',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
     };
     return new Response(body, { status, headers });
 }

@@ -98,7 +98,8 @@ async function proxyRequest(method, body = null) {
     };
     if (body) options.body = JSON.stringify(body);
 
-    const res = await fetch(PROXY_URL, options);
+    const url = `${PROXY_URL}?t=${Date.now()}`;
+    const res = await fetch(url, options);
     if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(`${res.status}: ${err.error || 'Request fehlgeschlagen'}`);
