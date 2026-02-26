@@ -94,7 +94,8 @@ body {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
     padding: 0.85rem;
-    color: var(--text);
+    color: white;
+    /* Changed from var(--text) for better contrast */
     border-radius: var(--radius);
     text-align: center;
     margin-bottom: 1rem;
@@ -455,7 +456,8 @@ body {
     border: 1px solid var(--border);
     padding: 0.7rem;
     border-radius: 6px;
-    color: var(--text);
+    color: white;
+    /* Changed from var(--text) for better contrast */
     resize: vertical;
     transition: border-color 0.3s;
     outline: none;

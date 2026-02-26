@@ -403,12 +403,20 @@ nav {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-nav.scrolled .nav-container {
-    background: rgba(64, 18, 1, 0.98);
-    /* Deep Earth for Scrolled Background */
-    padding: 0.4rem 2rem;
-    transform: scale(0.95);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+@media (min-width: 769px) {
+    nav.scrolled {
+        top: 2rem;
+        transform: translateX(-50%);
+    }
+
+    nav.scrolled .nav-container {
+        background: rgba(64, 18, 1, 0.98);
+        padding: 0.4rem 2rem;
+        transform: scale(0.95);
+        border-radius: 100px;
+        width: auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 }
 
 nav.scrolled .nav-link-boss {
@@ -568,6 +576,25 @@ nav.scrolled .burger-line {
     gap: var(--spacing-lg);
 }
 
+.highlights-grid.highlights-full {
+    width: 100%;
+    max-width: 100vw;
+    gap: 0;
+    /* Remove gap for seamless edge-to-edge if desired, or keep spacing */
+    padding: 0 2vw;
+}
+
+.highlights-grid .img-luxury {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlights-grid .reveal-on-scroll:hover .img-luxury {
+    transform: scale(1.05);
+}
+
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -597,6 +624,11 @@ nav.scrolled .burger-line {
 }
 
 /* Hamburger Animation States */
+.mobile-menu-toggle.active .burger-line {
+    background: var(--color-text-primary);
+    /* Ensure burger stays visible against light overlay */
+}
+
 .mobile-menu-toggle.active .burger-line:first-child {
     transform: translateY(9px) rotate(45deg);
 }
@@ -611,7 +643,8 @@ nav.scrolled .burger-line {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.98);
+    background: rgba(255, 252, 245, 0.98);
+    /* Light Ivory Base */
     backdrop-filter: blur(15px);
     z-index: 1500;
     display: flex;
@@ -651,17 +684,46 @@ nav.scrolled .burger-line {
 .mobile-nav-link {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--color-white);
+    color: var(--color-text-primary);
+    /* Dark text for contrast */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     position: relative;
     overflow: hidden;
 }
 
+.mobile-nav-link:hover {
+    color: var(--accent);
+}
+
 /* --- End Mobile Navigation System --- */
 
 /* Responsive */
 @media (max-width: 768px) {
+    nav {
+        top: 1rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-container {
+        border-radius: 100px;
+        width: 100%;
+        padding: 0.4rem 1.2rem;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    nav.scrolled .nav-container {
+        transform: scale(0.98);
+        background: rgba(64, 18, 1, 0.98);
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
     .nav-links {
         display: none;
     }

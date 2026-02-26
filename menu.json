@@ -14,7 +14,7 @@
         {
           "name": {
             "de": "Basil Chicken",
-            "en": ""
+            "en": "Basil Chicken"
           },
           "price": "12,9",
           "isSoldOut": true,
@@ -27,13 +27,13 @@
           ],
           "desc": {
             "de": "Hühnerfleisch | Basilikum | Saisongemüse",
-            "en": ""
+            "en": "Chicken | Basil | Seasonal vegetables"
           }
         },
         {
           "name": {
             "de": "Nyonya Curry",
-            "en": ""
+            "en": "Nyonya Curry"
           },
           "price": "12,9",
           "isSoldOut": true,
@@ -45,13 +45,13 @@
           ],
           "desc": {
             "de": "Malaysisches Curry | Hühnerfleisch | Kurkuma | Kokosmilch",
-            "en": ""
+            "en": "Malaysian curry | Chicken | Turmeric | Coconut milk"
           }
         },
         {
           "name": {
             "de": "Black Pepper Beef",
-            "en": ""
+            "en": "Black Pepper Beef"
           },
           "price": "16,9",
           "isSoldOut": true,
@@ -64,13 +64,13 @@
           ],
           "desc": {
             "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse",
-            "en": ""
+            "en": "Beef fillet | Black pepper sauce | Seasonal vegetables"
           }
         },
         {
           "name": {
             "de": "Bulgogi",
-            "en": ""
+            "en": "Bulgogi"
           },
           "price": "14,9",
           "isSoldOut": true,
@@ -83,15 +83,17 @@
           ],
           "desc": {
             "de": "Mariniertes Rindfleisch | Kimchi | Koreanische Art",
-            "en": ""
+            "en": "Marinated beef | Kimchi | Korean style"
           }
         },
         {
           "name": {
-            "de": "Gaeng Phed"
+            "de": "Gaeng Phed",
+            "en": "Gaeng Phed"
           },
           "desc": {
-            "de": "Rotes Thaicurry | Ente"
+            "de": "Rotes Thaicurry | Ente",
+            "en": "Red Thai curry | Duck"
           },
           "price": "15,9",
           "allergens": [
@@ -102,10 +104,12 @@
         },
         {
           "name": {
-            "de": "Yaki Udon (ohne Reis)"
+            "de": "Yaki Udon (ohne Reis)",
+            "en": "Yaki Udon (without rice)"
           },
           "desc": {
-            "de": "Wok Udon-Nudeln | Saisongemüse"
+            "de": "Wok Udon-Nudeln | Saisongemüse",
+            "en": "Wok Udon noodles | Seasonal vegetables"
           },
           "price": "10,9",
           "allergens": [
@@ -116,7 +120,8 @@
         },
         {
           "name": {
-            "de": "Wok Saisongemüse"
+            "de": "Wok Saisongemüse",
+            "en": "Wok Seasonal Vegetables"
           },
           "price": "10,9",
           "allergens": [
@@ -127,10 +132,12 @@
         },
         {
           "name": {
-            "de": "Poke Bowl Lachs (ohne Salat)"
+            "de": "Poke Bowl Lachs (ohne Salat)",
+            "en": "Poke Bowl Salmon (without salad)"
           },
           "desc": {
-            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert Gemüse"
+            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert Gemüse",
+            "en": "Sushi rice | Avocado | Edamame | Cold served vegetables"
           },
           "price": "12,9",
           "allergens": [
@@ -142,7 +149,8 @@
         },
         {
           "name": {
-            "de": "Poke Bowl Gemüse (ohne Salat)"
+            "de": "Poke Bowl Gemüse (ohne Salat)",
+            "en": "Poke Bowl Vegetable (without salad)"
           },
           "price": "10,9",
           "allergens": [
@@ -154,10 +162,12 @@
         },
         {
           "name": {
-            "de": "Asam Gulai"
+            "de": "Asam Gulai",
+            "en": "Asam Gulai"
           },
           "desc": {
-            "de": "Malaysisches Curry | Garnelen | Kokosmilch"
+            "de": "Malaysisches Curry | Garnelen | Kokosmilch",
+            "en": "Malaysian curry | Prawns | Coconut milk"
           },
           "price": "15,9",
           "allergens": [
@@ -316,15 +326,18 @@
     {
       "id": "salads",
       "name": {
-        "de": "Salads"
+        "de": "Salads",
+        "en": "Salads"
       },
       "items": [
         {
           "name": {
-            "de": "Wakame"
+            "de": "Wakame",
+            "en": "Wakame"
           },
           "desc": {
-            "de": "Japanischer Algensalat"
+            "de": "Japanischer Algensalat",
+            "en": "Japanese seaweed salad"
           },
           "price": "5,9",
           "allergens": [
@@ -334,10 +347,12 @@
         },
         {
           "name": {
-            "de": "Babyspinat"
+            "de": "Babyspinat",
+            "en": "Baby Spinach"
           },
           "desc": {
-            "de": "Sesamdressing"
+            "de": "Sesamdressing",
+            "en": "Sesame dressing"
           },
           "price": "6,2",
           "allergens": [
@@ -348,10 +363,12 @@
         },
         {
           "name": {
-            "de": "Fitness-Salad"
+            "de": "Fitness-Salad",
+            "en": "Fitness Salad"
           },
           "desc": {
-            "de": "Salatmix | Hausdressing"
+            "de": "Salatmix | Hausdressing",
+            "en": "Salad mix | House dressing"
           },
           "price": "7,9",
           "allergens": [
@@ -362,10 +379,12 @@
         },
         {
           "name": {
-            "de": "Kimchi"
+            "de": "Kimchi",
+            "en": "Kimchi"
           },
           "desc": {
-            "de": "Eingelegter Chinakohl | Koreanische Art"
+            "de": "Eingelegter Chinakohl | Koreanische Art",
+            "en": "Pickled Chinese cabbage | Korean style"
           },
           "price": "5,9",
           "spiciness": "2",
@@ -376,19 +395,23 @@
         },
         {
           "name": {
-            "de": "Pickle Salad"
+            "de": "Pickle Salad",
+            "en": "Pickle Salad"
           },
           "desc": {
-            "de": "Eingelegte Gurken"
+            "de": "Eingelegte Gurken",
+            "en": "Pickled cucumbers"
           },
           "price": "5,9"
         },
         {
           "name": {
-            "de": "Yuzu Sake"
+            "de": "Yuzu Sake",
+            "en": "Yuzu Sake"
           },
           "desc": {
-            "de": "Roher Lachs | Yuzu-Wasabi-Sauce"
+            "de": "Roher Lachs | Yuzu-Wasabi-Sauce",
+            "en": "Raw salmon | Yuzu-wasabi sauce"
           },
           "price": "11,9",
           "allergens": [
@@ -400,10 +423,12 @@
         },
         {
           "name": {
-            "de": "Yuzu Maguro"
+            "de": "Yuzu Maguro",
+            "en": "Yuzu Maguro"
           },
           "desc": {
-            "de": "Roher Thunfisch | Yuzu-Wasabi-Sauce"
+            "de": "Roher Thunfisch | Yuzu-Wasabi-Sauce",
+            "en": "Raw tuna | Yuzu-wasabi sauce"
           },
           "price": "13,9",
           "allergens": [
@@ -496,15 +521,18 @@
     {
       "id": "main-course",
       "name": {
-        "de": "Main Course"
+        "de": "Main Course",
+        "en": "Main Course"
       },
       "items": [
         {
           "name": {
-            "de": "Duck"
+            "de": "Duck",
+            "en": "Duck"
           },
           "desc": {
-            "de": "Gegrillte Entenbrust | Mandarin-Pfannkuchen | Spezialsauce"
+            "de": "Gegrillte Entenbrust | Mandarin-Pfannkuchen | Spezialsauce",
+            "en": "Grilled duck breast | Mandarin pancakes | Special sauce"
           },
           "price": "19,9",
           "allergens": [
@@ -515,10 +543,12 @@
         },
         {
           "name": {
-            "de": "Gaeng Phed (Hühnerfleisch)"
+            "de": "Gaeng Phed (Hühnerfleisch)",
+            "en": "Gaeng Phed (Chicken)"
           },
           "desc": {
-            "de": "Rotes Thaicurry | Kokosmilch | Zitronengras | Saisongemüse"
+            "de": "Rotes Thaicurry | Kokosmilch | Zitronengras | Saisongemüse",
+            "en": "Red Thai curry | Coconut milk | Lemongrass | Seasonal vegetables"
           },
           "price": "15,9",
           "spiciness": "2",
@@ -530,10 +560,12 @@
         },
         {
           "name": {
-            "de": "Gaeng Phed (Ente)"
+            "de": "Gaeng Phed (Ente)",
+            "en": "Gaeng Phed (Duck)"
           },
           "desc": {
-            "de": "Gegrillte Entenbrust | Rotes Thaicurry"
+            "de": "Gegrillte Entenbrust | Rotes Thaicurry",
+            "en": "Grilled duck breast | Red Thai curry"
           },
           "price": "19,9",
           "spiciness": "2",
@@ -545,10 +577,12 @@
         },
         {
           "name": {
-            "de": "Nyonya Curry (Hühnerfleisch)"
+            "de": "Nyonya Curry (Hühnerfleisch)",
+            "en": "Nyonya Curry (Chicken)"
           },
           "desc": {
-            "de": "Malaysisches Curry | Kurkuma | Kokosmilch | Zitronengras"
+            "de": "Malaysisches Curry | Kurkuma | Kokosmilch | Zitronengras",
+            "en": "Malaysian curry | Turmeric | Coconut milk | Lemongrass"
           },
           "price": "15,9",
           "spiciness": "1",
@@ -559,7 +593,8 @@
         },
         {
           "name": {
-            "de": "Nyonya Curry (Rinderfilet)"
+            "de": "Nyonya Curry (Rinderfilet)",
+            "en": "Nyonya Curry (Beef Fillet)"
           },
           "price": "26,9",
           "spiciness": "1",
@@ -570,10 +605,12 @@
         },
         {
           "name": {
-            "de": "Asam Gulai (Garnelen)"
+            "de": "Asam Gulai (Garnelen)",
+            "en": "Asam Gulai (Prawns)"
           },
           "desc": {
-            "de": "Malaysisches Curry | Kokosmilch | Galgant"
+            "de": "Malaysisches Curry | Kokosmilch | Galgant",
+            "en": "Malaysian curry | Coconut milk | Galangal"
           },
           "price": "20,9",
           "spiciness": "2",
@@ -584,7 +621,8 @@
         },
         {
           "name": {
-            "de": "Asam Gulai (Jakobsmuschel)"
+            "de": "Asam Gulai (Jakobsmuschel)",
+            "en": "Asam Gulai (Scallops)"
           },
           "price": "25,9",
           "spiciness": "2",
@@ -595,10 +633,12 @@
         },
         {
           "name": {
-            "de": "Black Pepper Beef"
+            "de": "Black Pepper Beef",
+            "en": "Black Pepper Beef"
           },
           "desc": {
-            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse"
+            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse",
+            "en": "Beef fillet | Black pepper sauce | Seasonal vegetables"
           },
           "price": "26,9",
           "allergens": [
@@ -609,10 +649,12 @@
         },
         {
           "name": {
-            "de": "Chili Beef"
+            "de": "Chili Beef",
+            "en": "Chili Beef"
           },
           "desc": {
-            "de": "Rinderfilet | Szechuan Chili & Pfeffer"
+            "de": "Rinderfilet | Szechuan Chili & Pfeffer",
+            "en": "Beef fillet | Szechuan chili & pepper"
           },
           "price": "26,9",
           "spiciness": "3",
@@ -624,10 +666,12 @@
         },
         {
           "name": {
-            "de": "Bulgogi"
+            "de": "Bulgogi",
+            "en": "Bulgogi"
           },
           "desc": {
-            "de": "Mariniertes Rindfleisch | Koreanische Art | Knackiger Salat | Bao Brötchen"
+            "de": "Mariniertes Rindfleisch | Koreanische Art | Knackiger Salat | Bao Brötchen",
+            "en": "Marinated beef | Korean style | Crunchy salad | Bao buns"
           },
           "price": "20,9",
           "allergens": [
@@ -638,10 +682,12 @@
         },
         {
           "name": {
-            "de": "Gegrillter Lachs"
+            "de": "Gegrillter Lachs",
+            "en": "Grilled Salmon"
           },
           "desc": {
-            "de": "Mit Saisongemüse"
+            "de": "Mit Saisongemüse",
+            "en": "With seasonal vegetables"
           },
           "price": "22,9",
           "allergens": [
@@ -651,10 +697,12 @@
         },
         {
           "name": {
-            "de": "King Prawns"
+            "de": "King Prawns",
+            "en": "King Prawns"
           },
           "desc": {
-            "de": "Riesengarnelen | Hausgemachte Eier-Sauce | Trüffelöl"
+            "de": "Riesengarnelen | Hausgemachte Eier-Sauce | Trüffelöl",
+            "en": "King prawns | Homemade egg sauce | Truffle oil"
           },
           "price": "20,9",
           "allergens": [
@@ -666,10 +714,12 @@
         },
         {
           "name": {
-            "de": "Basil Chicken"
+            "de": "Basil Chicken",
+            "en": "Basil Chicken"
           },
           "desc": {
-            "de": "Hühnerfleisch | Basilikum | Saisongemüse"
+            "de": "Hühnerfleisch | Basilikum | Saisongemüse",
+            "en": "Chicken | Basil | Seasonal vegetables"
           },
           "price": "15,9",
           "allergens": [
@@ -680,10 +730,12 @@
         },
         {
           "name": {
-            "de": "Black Pepper Chicken"
+            "de": "Black Pepper Chicken",
+            "en": "Black Pepper Chicken"
           },
           "desc": {
-            "de": "Hühnerfleisch | Schwarze Pfeffersauce | Saisongemüse"
+            "de": "Hühnerfleisch | Schwarze Pfeffersauce | Saisongemüse",
+            "en": "Chicken | Black pepper sauce | Seasonal vegetables"
           },
           "price": "15,9",
           "allergens": [
@@ -694,10 +746,12 @@
         },
         {
           "name": {
-            "de": "Dou Fu Mix"
+            "de": "Dou Fu Mix",
+            "en": "Dou Fu Mix"
           },
           "desc": {
-            "de": "Verschiedene Tofu-Arten in Wok-Gemüse"
+            "de": "Verschiedene Tofu-Arten in Wok-Gemüse",
+            "en": "Various tofu types with wok vegetables"
           },
           "price": "15,9",
           "allergens": [
@@ -708,7 +762,8 @@
         },
         {
           "name": {
-            "de": "Wok Saisongemüse"
+            "de": "Wok Saisongemüse",
+            "en": "Wok Seasonal Vegetables"
           },
           "price": "13,9",
           "allergens": [
@@ -719,10 +774,12 @@
         },
         {
           "name": {
-            "de": "Kimchi Jjigae"
+            "de": "Kimchi Jjigae",
+            "en": "Kimchi Jjigae"
           },
           "desc": {
-            "de": "Tofu | Eingelegter Chinakohl | Koreanische Art"
+            "de": "Tofu | Eingelegter Chinakohl | Koreanische Art",
+            "en": "Tofu | Pickled Chinese cabbage | Korean style"
           },
           "price": "14,9",
           "spiciness": "2",
@@ -732,10 +789,12 @@
         },
         {
           "name": {
-            "de": "Tom Yam Seafood"
+            "de": "Tom Yam Seafood",
+            "en": "Tom Yam Seafood"
           },
           "desc": {
-            "de": "Frische Miesmuscheln | Garnelen | Jakobsmuscheln | Zitronengras | Basilikum"
+            "de": "Frische Miesmuscheln | Garnelen | Jakobsmuschellen | Zitronengras | Basilikum",
+            "en": "Fresh mussels | Prawns | Scallops | Lemongrass | Basil"
           },
           "price": "22,9",
           "spiciness": "2",
@@ -747,10 +806,12 @@
         },
         {
           "name": {
-            "de": "Gegrillte Kabeljauloins"
+            "de": "Gegrillte Kabeljauloins",
+            "en": "Grilled Cod Loins"
           },
           "desc": {
-            "de": "mit Saisongemüse"
+            "de": "mit Saisongemüse",
+            "en": "with seasonal vegetables"
           },
           "price": "25,9",
           "allergens": [
@@ -763,15 +824,18 @@
     {
       "id": "east-bowl",
       "name": {
-        "de": "East Bowl"
+        "de": "East Bowl",
+        "en": "East Bowl"
       },
       "items": [
         {
           "name": {
-            "de": "Bulgogi Bowl"
+            "de": "Bulgogi Bowl",
+            "en": "Bulgogi Bowl"
           },
           "desc": {
-            "de": "Mariniertes Rindfleisch | Gemüse | Reis"
+            "de": "Mariniertes Rindfleisch | Gemüse | Reis",
+            "en": "Marinated beef | Vegetables | Rice"
           },
           "price": "16,9",
           "allergens": [
@@ -782,10 +846,12 @@
         },
         {
           "name": {
-            "de": "Duck Bowl"
+            "de": "Duck Bowl",
+            "en": "Duck Bowl"
           },
           "desc": {
-            "de": "Gegrillte Entenbrust | Spezialsauce | Reis"
+            "de": "Gegrillte Entenbrust | Spezialsauce | Reis",
+            "en": "Grilled duck breast | Special sauce | Rice"
           },
           "price": "16,9",
           "allergens": [
@@ -796,10 +862,12 @@
         },
         {
           "name": {
-            "de": "Poke Bowl Thunfisch"
+            "de": "Poke Bowl Thunfisch",
+            "en": "Poke Bowl Tuna"
           },
           "desc": {
-            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert"
+            "de": "Sushi-Reis | Avocado | Edamame | Kalt serviert",
+            "en": "Sushi rice | Avocado | Edamame | Cold served"
           },
           "price": "18,9",
           "allergens": [
@@ -811,7 +879,8 @@
         },
         {
           "name": {
-            "de": "Poke Bowl Lachs"
+            "de": "Poke Bowl Lachs",
+            "en": "Poke Bowl Salmon"
           },
           "price": "15,9",
           "allergens": [
@@ -823,7 +892,8 @@
         },
         {
           "name": {
-            "de": "Poke Bowl Gemüse"
+            "de": "Poke Bowl Gemüse",
+            "en": "Poke Bowl Vegetable"
           },
           "price": "13,9",
           "allergens": [
@@ -838,18 +908,22 @@
     {
       "id": "udon",
       "name": {
-        "de": "Udon"
+        "de": "Udon",
+        "en": "Udon"
       },
       "description": {
-        "de": "Japanische Weizen-Nudeln"
+        "de": "Japanische Weizen-Nudeln",
+        "en": "Japanese wheat noodles"
       },
       "items": [
         {
           "name": {
-            "de": "Tom Yam Gung"
+            "de": "Tom Yam Gung",
+            "en": "Tom Yam Gung"
           },
           "desc": {
-            "de": "Nudelsuppe | Frische Miesmuscheln | Garnelen | Zitronengras | Basilikum"
+            "de": "Nudelsuppe | Frische Miesmuscheln | Garnelen | Zitronengras | Basilikum",
+            "en": "Noodle soup | Fresh mussels | Prawns | Lemongrass | Basil"
           },
           "price": "19,9",
           "spiciness": "2",
@@ -861,10 +935,12 @@
         },
         {
           "name": {
-            "de": "Beef Udon"
+            "de": "Beef Udon",
+            "en": "Beef Udon"
           },
           "desc": {
-            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse"
+            "de": "Rinderfilet | Schwarze Pfeffersauce | Saisongemüse",
+            "en": "Beef fillet | Black pepper sauce | Seasonal vegetables"
           },
           "price": "24,9",
           "allergens": [
@@ -875,10 +951,12 @@
         },
         {
           "name": {
-            "de": "Yaki Udon"
+            "de": "Yaki Udon",
+            "en": "Yaki Udon"
           },
           "desc": {
-            "de": "Saisongemüse"
+            "de": "Saisongemüse",
+            "en": "Seasonal vegetables"
           },
           "price": "13,9",
           "allergens": [
@@ -892,21 +970,25 @@
     {
       "id": "beilagen",
       "name": {
-        "de": "Beilagen"
+        "de": "Beilagen",
+        "en": "Sides"
       },
       "items": [
         {
           "name": {
-            "de": "Portion Reis"
+            "de": "Portion Reis",
+            "en": "Portion of rice"
           },
           "price": "2,9"
         },
         {
           "name": {
-            "de": "Mandarin Pfannkuchen (6 Stück)"
+            "de": "Mandarin Pfannkuchen (6 Stück)",
+            "en": "Mandarin Pancakes (6 pieces)"
           },
           "desc": {
-            "de": "Hauchdünne Teigfladen"
+            "de": "Hauchdünne Teigfladen",
+            "en": "Thin pancakes"
           },
           "price": "2,9",
           "allergens": [
@@ -915,7 +997,8 @@
         },
         {
           "name": {
-            "de": "Bao-Brötchen (2 Stück)"
+            "de": "Bao-Brötchen (2 Stück)",
+            "en": "Bao Buns (2 pieces)"
           },
           "price": "3,9",
           "allergens": [
@@ -927,15 +1010,18 @@
     {
       "id": "premium-rolls",
       "name": {
-        "de": "Premium Rolls (8 Stück)"
+        "de": "Premium Rolls (8 Stück)",
+        "en": "Premium Rolls (8 pieces)"
       },
       "items": [
         {
           "name": {
-            "de": "Veggie Roll"
+            "de": "Veggie Roll",
+            "en": "Veggie Roll"
           },
           "desc": {
-            "de": "Gurke | Avocado | Babyspinat | Fruchtige Sauce"
+            "de": "Gurke | Avocado | Babyspinat | Fruchtige Sauce",
+            "en": "Cucumber | Avocado | Baby spinach | Fruity sauce"
           },
           "price": "10,9",
           "allergens": [
@@ -946,10 +1032,12 @@
         },
         {
           "name": {
-            "de": "California Roll"
+            "de": "California Roll",
+            "en": "California Roll"
           },
           "desc": {
-            "de": "Gurke | Avocado | Japanische Mayonnaise | Ebi | Kaviar | Babyspinat"
+            "de": "Gurke | Avocado | Japanische Mayonnaise | Ebi | Kaviar | Babyspinat",
+            "en": "Cucumber | Avocado | Japanese mayonnaise | Ebi | Caviar | Baby spinach"
           },
           "price": "16,9",
           "allergens": [
@@ -962,10 +1050,12 @@
         },
         {
           "name": {
-            "de": "Crunchy Ebi Roll"
+            "de": "Crunchy Ebi Roll",
+            "en": "Crunchy Ebi Roll"
           },
           "desc": {
-            "de": "Ebi Tempura | Gurke | Frischkäse | Röstzwiebel | Babyspinat"
+            "de": "Ebi Tempura | Gurke | Frischkäse | Röstzwiebel | Babyspinat",
+            "en": "Ebi tempura | Cucumber | Cream cheese | Fried onion | Baby spinach"
           },
           "price": "17,9",
           "allergens": [
@@ -979,10 +1069,12 @@
         },
         {
           "name": {
-            "de": "Dragon Roll"
+            "de": "Dragon Roll",
+            "en": "Dragon Roll"
           },
           "desc": {
-            "de": "Gurke | Avocado | Lachs | Japanische Mayonnaise"
+            "de": "Gurke | Avocado | Lachs | Japanische Mayonnaise",
+            "en": "Cucumber | Avocado | Salmon | Japanese mayonnaise"
           },
           "price": "17,9",
           "allergens": [
@@ -993,10 +1085,12 @@
         },
         {
           "name": {
-            "de": "Rainbow Roll"
+            "de": "Rainbow Roll",
+            "en": "Rainbow Roll"
           },
           "desc": {
-            "de": "Ebi | Lachs | Thunfisch | Avocado | Gurke | Babyspinat"
+            "de": "Ebi | Lachs | Thunfisch | Avocado | Gurke | Babyspinat",
+            "en": "Ebi | Salmon | Tuna | Avocado | Cucumber | Baby spinach"
           },
           "price": "19,9",
           "allergens": [
@@ -1009,10 +1103,12 @@
         },
         {
           "name": {
-            "de": "Crazy Salmon Roll"
+            "de": "Crazy Salmon Roll",
+            "en": "Crazy Salmon Roll"
           },
           "desc": {
-            "de": "Flambierter Lachs | Roher Lachs | Avocado | Kaviar | Teriyaki-Sauce"
+            "de": "Flambierter Lachs | Roher Lachs | Avocado | Kaviar | Teriyaki-Sauce",
+            "en": "Flambéed salmon | Raw salmon | Avocado | Caviar | Teriyaki sauce"
           },
           "price": "19,9",
           "allergens": [
@@ -1026,10 +1122,12 @@
         },
         {
           "name": {
-            "de": "Volcano Spice Roll"
+            "de": "Volcano Spice Roll",
+            "en": "Volcano Spice Roll"
           },
           "desc": {
-            "de": "Thunfisch | Avocado | Kaviar | Scharfe Mayonnaise"
+            "de": "Thunfisch | Avocado | Kaviar | Scharfe Mayonnaise",
+            "en": "Tuna | Avocado | Caviar | Spicy mayonnaise"
           },
           "price": "19,9",
           "spiciness": "2",
@@ -1042,10 +1140,12 @@
         },
         {
           "name": {
-            "de": "Toriyaki Roll"
+            "de": "Toriyaki Roll",
+            "en": "Toriyaki Roll"
           },
           "desc": {
-            "de": "Ausgelöste Hühnerkeule | Gurke | Avocado | Teriyaki-Sauce | Babyspinat | Reispapier"
+            "de": "Ausgelöste Hühnerkeule | Gurke | Avocado | Teriyaki-Sauce | Babyspinat | Reispapier",
+            "en": "Boneless chicken leg | Cucumber | Avocado | Teriyaki sauce | Baby spinach | Rice paper"
           },
           "price": "14,9",
           "allergens": [
@@ -1057,10 +1157,12 @@
         },
         {
           "name": {
-            "de": "Sake - Avocado Roll"
+            "de": "Sake - Avocado Roll",
+            "en": "Sake - Avocado Roll"
           },
           "desc": {
-            "de": "Lachs | Avocado"
+            "de": "Lachs | Avocado",
+            "en": "Salmon | Avocado"
           },
           "price": "12,9",
           "allergens": [
@@ -1073,10 +1175,12 @@
         },
         {
           "name": {
-            "de": "Smoked Salmon"
+            "de": "Smoked Salmon",
+            "en": "Smoked Salmon Roll"
           },
           "desc": {
-            "de": "Geräucherter Lachs | Rucola | Parmesan | Avocado | Roher Lachs"
+            "de": "Geräucherter Lachs | Rucola | Parmesan | Avocado | Roher Lachs",
+            "en": "Smoked salmon | Rocket | Parmesan | Avocado | Raw salmon"
           },
           "price": "19,9",
           "allergens": [
@@ -1087,10 +1191,12 @@
         },
         {
           "name": {
-            "de": "Carpaccio Roll"
+            "de": "Carpaccio Roll",
+            "en": "Carpaccio Roll"
           },
           "desc": {
-            "de": "Rohes, luftgetrocknetes Rind | Rucola | Parmesan | Gurke | Avocado"
+            "de": "Rohes, luftgetrocknetes Rind | Rucola | Parmesan | Gurke | Avocado",
+            "en": "Raw, air-dried beef | Rocket | Parmesan | Cucumber | Avocado"
           },
           "price": "19,9",
           "allergens": [
@@ -1101,10 +1207,12 @@
         },
         {
           "name": {
-            "de": "Karaage Roll"
+            "de": "Karaage Roll",
+            "en": "Karaage Roll"
           },
           "desc": {
-            "de": "Japanische Hühnerstücke | Avocado | Hausgemachte Mayo | Röstzwiebel"
+            "de": "Japanische Hühnerstücke | Avocado | Hausgemachte Mayo | Röstzwiebel",
+            "en": "Japanese chicken pieces | Avocado | Homemade mayo | Fried onion"
           },
           "price": "14,9",
           "allergens": [
@@ -1116,10 +1224,12 @@
         },
         {
           "name": {
-            "de": "Duck Roll"
+            "de": "Duck Roll",
+            "en": "Duck Roll"
           },
           "desc": {
-            "de": "Geräucherte Ente | Gurke | Spezial-Sauce"
+            "de": "Geräucherte Ente | Gurke | Spezial-Sauce",
+            "en": "Smoked duck | Cucumber | Special sauce"
           },
           "price": "19,9",
           "allergens": [
@@ -1133,15 +1243,18 @@
     {
       "id": "nigiri",
       "name": {
-        "de": "Nigiri (2 Stück)"
+        "de": "Nigiri (2 Stück)",
+        "en": "Nigiri (2 pieces)"
       },
       "items": [
         {
           "name": {
-            "de": "Sake"
+            "de": "Sake",
+            "en": "Salmon"
           },
           "desc": {
-            "de": "Lachs"
+            "de": "Lachs",
+            "en": "Salmon"
           },
           "price": "5,9",
           "allergens": [
@@ -1150,10 +1263,12 @@
         },
         {
           "name": {
-            "de": "Maguro"
+            "de": "Maguro",
+            "en": "Tuna"
           },
           "desc": {
-            "de": "Thunfisch"
+            "de": "Thunfisch",
+            "en": "Tuna"
           },
           "price": "6,9",
           "allergens": [
@@ -1162,10 +1277,12 @@
         },
         {
           "name": {
-            "de": "Ebi"
+            "de": "Ebi",
+            "en": "Prawns"
           },
           "desc": {
-            "de": "Garnelen"
+            "de": "Garnelen",
+            "en": "Prawns"
           },
           "price": "5,9",
           "allergens": [
@@ -1174,25 +1291,30 @@
         },
         {
           "name": {
-            "de": "Gyuniku"
+            "de": "Gyuniku",
+            "en": "Beef Fillet"
           },
           "desc": {
-            "de": "Rinderfilet"
+            "de": "Rinderfilet",
+            "en": "Beef fillet"
           },
           "price": "9,9"
         },
         {
           "name": {
-            "de": "Avocado"
+            "de": "Avocado",
+            "en": "Avocado"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Hotate"
+            "de": "Hotate",
+            "en": "Scallop"
           },
           "desc": {
-            "de": "Jakobsmuschel"
+            "de": "Jakobsmuschel",
+            "en": "Scallop"
           },
           "price": "8,9",
           "allergens": [
@@ -1205,15 +1327,18 @@
     {
       "id": "sushi-set",
       "name": {
-        "de": "Sushi Set"
+        "de": "Sushi Set",
+        "en": "Sushi Set"
       },
       "items": [
         {
           "name": {
-            "de": "Sake klein"
+            "de": "Sake klein",
+            "en": "Salmon small"
           },
           "desc": {
-            "de": "4 Nigiri + 4 Veggie Rolls"
+            "de": "4 Nigiri + 4 Veggie Rolls",
+            "en": "4 Nigiri + 4 Veggie Rolls"
           },
           "price": "14,9",
           "allergens": [
@@ -1222,10 +1347,12 @@
         },
         {
           "name": {
-            "de": "Maguro klein"
+            "de": "Maguro klein",
+            "en": "Tuna small"
           },
           "desc": {
-            "de": "4 Nigiri + 4 Veggie Rolls"
+            "de": "4 Nigiri + 4 Veggie Rolls",
+            "en": "4 Nigiri + 4 Veggie Rolls"
           },
           "price": "16,9",
           "allergens": [
@@ -1234,19 +1361,23 @@
         },
         {
           "name": {
-            "de": "Avocado klein"
+            "de": "Avocado klein",
+            "en": "Avocado small"
           },
           "desc": {
-            "de": "4 Nigiri + 4 Veggie Rolls"
+            "de": "4 Nigiri + 4 Veggie Rolls",
+            "en": "4 Nigiri + 4 Veggie Rolls"
           },
           "price": "12,9"
         },
         {
           "name": {
-            "de": "Ebi klein"
+            "de": "Ebi klein",
+            "en": "Prawn small"
           },
           "desc": {
-            "de": "4 Nigiri + 4 Veggie Rolls"
+            "de": "4 Nigiri + 4 Veggie Rolls",
+            "en": "4 Nigiri + 4 Veggie Rolls"
           },
           "price": "14,9",
           "allergens": [
@@ -1255,10 +1386,12 @@
         },
         {
           "name": {
-            "de": "Sake groß"
+            "de": "Sake groß",
+            "en": "Salmon large"
           },
           "desc": {
-            "de": "8 Nigiri + 4 Veggie Rolls"
+            "de": "8 Nigiri + 4 Veggie Rolls",
+            "en": "8 Nigiri + 4 Veggie Rolls"
           },
           "price": "21,9",
           "allergens": [
@@ -1267,10 +1400,12 @@
         },
         {
           "name": {
-            "de": "Maguro groß"
+            "de": "Maguro groß",
+            "en": "Tuna large"
           },
           "desc": {
-            "de": "8 Nigiri + 4 Veggie Rolls"
+            "de": "8 Nigiri + 4 Veggie Rolls",
+            "en": "8 Nigiri + 4 Veggie Rolls"
           },
           "price": "23,9",
           "allergens": [
@@ -1279,19 +1414,23 @@
         },
         {
           "name": {
-            "de": "Avocado groß"
+            "de": "Avocado groß",
+            "en": "Avocado large"
           },
           "desc": {
-            "de": "8 Nigiri + 4 Veggie Rolls"
+            "de": "8 Nigiri + 4 Veggie Rolls",
+            "en": "8 Nigiri + 4 Veggie Rolls"
           },
           "price": "17,9"
         },
         {
           "name": {
-            "de": "Ebi groß"
+            "de": "Ebi groß",
+            "en": "Prawn large"
           },
           "desc": {
-            "de": "8 Nigiri + 4 Veggie Rolls"
+            "de": "8 Nigiri + 4 Veggie Rolls",
+            "en": "8 Nigiri + 4 Veggie Rolls"
           },
           "price": "21,9",
           "allergens": [
@@ -1300,10 +1439,12 @@
         },
         {
           "name": {
-            "de": "Set"
+            "de": "Set",
+            "en": "Set"
           },
           "desc": {
-            "de": "12 Nigiri + 8 Veggie Rolls (Sake | Maguro | Gyuniku | Ebi | Avocado | Hotate)"
+            "de": "12 Nigiri + 8 Veggie Rolls (Sake | Maguro | Gyuniku | Ebi | Avocado | Hotate)",
+            "en": "12 Nigiri + 8 Veggie Rolls (Salmon | Tuna | Beef | Prawn | Avocado | Scallop)"
           },
           "price": "42,9",
           "allergens": [
@@ -1317,12 +1458,14 @@
     {
       "id": "sashimi",
       "name": {
-        "de": "Sashimi (4 Scheiben)"
+        "de": "Sashimi (4 Scheiben)",
+        "en": "Sashimi (4 slices)"
       },
       "items": [
         {
           "name": {
-            "de": "Sake"
+            "de": "Sake",
+            "en": "Salmon"
           },
           "price": "10,9",
           "allergens": [
@@ -1331,7 +1474,8 @@
         },
         {
           "name": {
-            "de": "Maguro"
+            "de": "Maguro",
+            "en": "Tuna"
           },
           "price": "13,9",
           "allergens": [
@@ -1343,15 +1487,18 @@
     {
       "id": "desserts",
       "name": {
-        "de": "Desserts"
+        "de": "Desserts",
+        "en": "Desserts"
       },
       "items": [
         {
           "name": {
-            "de": "Matcha Creme Brulee"
+            "de": "Matcha Creme Brulee",
+            "en": "Matcha Creme Brulee"
           },
           "desc": {
-            "de": "Grüner Tee Creme | Karamelkruste"
+            "de": "Grüner Tee Creme | Karamelkruste",
+            "en": "Green tea cream | Caramel crust"
           },
           "price": "8,9",
           "allergens": [
@@ -1361,10 +1508,12 @@
         },
         {
           "name": {
-            "de": "Mochi"
+            "de": "Mochi",
+            "en": "Mochi"
           },
           "desc": {
-            "de": "Japanischer Klebreiskuchen"
+            "de": "Japanischer Klebreiskuchen",
+            "en": "Japanese glutinous rice cake"
           },
           "price": "8,9",
           "allergens": [
@@ -1376,10 +1525,12 @@
         },
         {
           "name": {
-            "de": "Mochi Eis"
+            "de": "Mochi Eis",
+            "en": "Mochi Ice"
           },
           "desc": {
-            "de": "Klebreiskuchen | Eisfüllung"
+            "de": "Klebreiskuchen | Eisfüllung",
+            "en": "Glutinous rice cake | Ice filling"
           },
           "price": "8,9",
           "allergens": [
@@ -1390,10 +1541,12 @@
         },
         {
           "name": {
-            "de": "Cocos Panna Cotta"
+            "de": "Cocos Panna Cotta",
+            "en": "Coconut Panna Cotta"
           },
           "desc": {
-            "de": "Kokosmilch | Sahne"
+            "de": "Kokosmilch | Sahne",
+            "en": "Coconut milk | Cream"
           },
           "price": "7,9",
           "allergens": [
@@ -1402,10 +1555,12 @@
         },
         {
           "name": {
-            "de": "Evergreen"
+            "de": "Evergreen",
+            "en": "Evergreen"
           },
           "desc": {
-            "de": "Kokosmilch | Sagoperlen | Pandan | Lychee"
+            "de": "Kokosmilch | Sagoperlen | Pandan | Lychee",
+            "en": "Coconut milk | Sago pearls | Pandan | Lychee"
           },
           "price": "7,9",
           "allergens": [
@@ -1414,10 +1569,12 @@
         },
         {
           "name": {
-            "de": "Fujisan"
+            "de": "Fujisan",
+            "en": "Fujisan"
           },
           "desc": {
-            "de": "Japanischer Sakewein | Zitroneneis"
+            "de": "Japanischer Sakewein | Zitroneneis",
+            "en": "Japanese sake wine | Lemon ice cream"
           },
           "price": "8,5",
           "allergens": [
@@ -1428,10 +1585,12 @@
         },
         {
           "name": {
-            "de": "Sago - Malaysisches Dessert"
+            "de": "Sago - Malaysisches Dessert",
+            "en": "Sago - Malaysian Dessert"
           },
           "desc": {
-            "de": "Kokosmilch | Kokoseis | Sagoperlen | Pandan"
+            "de": "Kokosmilch | Kokoseis | Sagoperlen | Pandan",
+            "en": "Coconut milk | Coconut ice cream | Sago pearls | Pandan"
           },
           "price": "7,9",
           "allergens": [
@@ -1444,78 +1603,95 @@
     {
       "id": "bier",
       "name": {
-        "de": "Bier"
+        "de": "Bier",
+        "en": "Beer"
       },
       "items": [
         {
           "name": {
-            "de": "Zipfer Urtyp vom Fass"
+            "de": "Zipfer Urtyp vom Fass",
+            "en": "Zipfer Urtyp on tap"
           },
           "desc": {
-            "de": "0,2/0,3 L"
+            "de": "0,2/0,3 L",
+            "en": "0.2/0.3 L"
           },
           "price": "3,5/4,5"
         },
         {
           "name": {
-            "de": "Zipfer Limettenradler Flasche"
+            "de": "Zipfer Limettenradler Flasche",
+            "en": "Zipfer Lime Shandy Bottle"
           },
           "desc": {
-            "de": "0,3 L"
+            "de": "0,3 L",
+            "en": "0.3 L"
           },
           "price": "4,5"
         },
         {
           "name": {
-            "de": "Weissbier Weihenstephaner vom Fass"
+            "de": "Weissbier Weihenstephaner vom Fass",
+            "en": "Wheat Beer Weihenstephaner on tap"
           },
           "desc": {
-            "de": "0,5 L"
+            "de": "0,5 L",
+            "en": "0.5 L"
           },
           "price": "5,9"
         },
         {
           "name": {
-            "de": "Asahi (Japanisches Bier) Flasche"
+            "de": "Asahi (Japanisches Bier) Flasche",
+            "en": "Asahi (Japanese Beer) Bottle"
           },
           "desc": {
-            "de": "0,3 L"
+            "de": "0,3 L",
+            "en": "0.3 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Singha (Thailändisches Bier) Flasche"
+            "de": "Singha (Thailändisches Bier) Flasche",
+            "en": "Singha (Thai Beer) Bottle"
           },
           "desc": {
-            "de": "0,3 L"
+            "de": "0,3 L",
+            "en": "0.3 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Tsing Tao (Chinesisches Bier) Flasche"
+            "de": "Tsing Tao (Chinesisches Bier) Flasche",
+            "en": "Tsing Tao (Chinese Beer) Bottle"
           },
           "desc": {
-            "de": "0,3 L"
+            "de": "0,3 L",
+            "en": "0.3 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Zipfer (Alkoholfrei) Flasche"
+            "de": "Zipfer (Alkoholfrei) Flasche",
+            "en": "Zipfer (Alcohol-free) Bottle"
           },
           "desc": {
-            "de": "0,5 L"
+            "de": "0,5 L",
+            "en": "0.5 L"
           },
           "price": "5,5"
         },
         {
           "name": {
-            "de": "Weihenstephaner (Alkoholfrei) Flasche"
+            "de": "Weihenstephaner (Alkoholfrei) Flasche",
+            "en": "Weihenstephaner (Alcohol-free) Bottle"
           },
           "desc": {
-            "de": "0,5 L"
+            "de": "0,5 L",
+            "en": "0.5 L"
           },
           "price": "5,5"
         }
@@ -1524,69 +1700,84 @@
     {
       "id": "aperitiv",
       "name": {
-        "de": "Aperitiv | Bitters"
+        "de": "Aperitiv | Bitters",
+        "en": "Aperitif | Bitters"
       },
       "items": [
         {
           "name": {
-            "de": "Weißer Spritzer"
+            "de": "Weißer Spritzer",
+            "en": "White Spritzer"
           },
           "desc": {
-            "de": "Wein | Soda | Früchte"
+            "de": "Wein | Soda | Früchte",
+            "en": "Wine | Soda | Fruits"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Belsazar Rose Spritzer"
+            "de": "Belsazar Rose Spritzer",
+            "en": "Belsazar Rose Spritzer"
           },
           "desc": {
-            "de": "Wermuth | Prosecco | Rosenlimonade | Früchte"
+            "de": "Wermuth | Prosecco | Rosenlimonade | Früchte",
+            "en": "Vermouth | Prosecco | Rose lemonade | Fruits"
           },
           "price": "7,2"
         },
         {
           "name": {
-            "de": "Hugo"
+            "de": "Hugo",
+            "en": "Hugo"
           },
           "desc": {
-            "de": "Prosecco | Soda | Holunderblütensirup | Minze | Früchte"
+            "de": "Prosecco | Soda | Holunderblütensirup | Minze | Früchte",
+            "en": "Prosecco | Soda | Elderflower syrup | Mint | Fruits"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Campari Soda"
+            "de": "Campari Soda",
+            "en": "Campari Soda"
           },
           "desc": {
-            "de": "Campari | Soda | Früchte"
+            "de": "Campari | Soda | Früchte",
+            "en": "Campari | Soda | Fruits"
           },
           "price": "6,5"
         },
         {
           "name": {
-            "de": "Aperol Prosecco"
+            "de": "Aperol Prosecco",
+            "en": "Aperol Prosecco"
           },
           "desc": {
-            "de": "Aperol | Soda | Prosecco | Orange | Früchte"
+            "de": "Aperol | Soda | Prosecco | Orange | Früchte",
+            "en": "Aperol | Soda | Prosecco | Orange | Fruits"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Gin Tonic"
+            "de": "Gin Tonic",
+            "en": "Gin Tonic"
           },
           "desc": {
-            "de": "Japanischer Roku Gin | Tonic water | Ingwer"
+            "de": "Japanischer Roku Gin | Tonic water | Ingwer",
+            "en": "Japanese Roku Gin | Tonic water | Ginger"
           },
           "price": "12,9"
         },
         {
           "name": {
-            "de": "Gin Gin Lime"
+            "de": "Gin Gin Lime",
+            "en": "Gin Gin Lime"
           },
           "desc": {
-            "de": "Japanischer Roku Gin | Ginger Ale | Limetten"
+            "de": "Japanischer Roku Gin | Ginger Ale | Limetten",
+            "en": "Japanese Roku Gin | Ginger Ale | Limes"
           },
           "price": "12,9"
         }
@@ -1595,120 +1786,146 @@
     {
       "id": "alkoholfrei",
       "name": {
-        "de": "Alkoholfrei"
+        "de": "Alkoholfrei",
+        "en": "Non-alcoholic"
       },
       "items": [
         {
           "name": {
-            "de": "Rose Lemonade Fentimans"
+            "de": "Rose Lemonade Fentimans",
+            "en": "Rose Lemonade Fentimans"
           },
           "desc": {
-            "de": "Flasche 0,25 L"
+            "de": "Flasche 0,25 L",
+            "en": "0.25 L Bottle"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Coca Cola, Fanta, Spezi"
+            "de": "Coca Cola, Fanta, Spezi",
+            "en": "Coca Cola, Fanta, Spezi"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "5,5"
         },
         {
           "name": {
-            "de": "Cola Zero Flasche"
+            "de": "Cola Zero Flasche",
+            "en": "Cola Zero Bottle"
           },
           "desc": {
-            "de": "0,33 L"
+            "de": "0,33 L",
+            "en": "0.33 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Apfel, Mango, Lychee, Aloe Vera"
+            "de": "Apfel, Mango, Lychee, Aloe Vera",
+            "en": "Apple, Mango, Lychee, Aloe Vera"
           },
           "desc": {
-            "de": "0,30/0,50 L"
+            "de": "0,30/0,50 L",
+            "en": "0.30/0.50 L"
           },
           "price": "3,9/6,5"
         },
         {
           "name": {
-            "de": "Saft mit Wasser"
+            "de": "Saft mit Wasser",
+            "en": "Juice with Water"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Saft gespritzt"
+            "de": "Saft gespritzt",
+            "en": "Juice with Soda"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "5,9"
         },
         {
           "name": {
-            "de": "Red Bull"
+            "de": "Red Bull",
+            "en": "Red Bull"
           },
           "desc": {
-            "de": "0,25 L"
+            "de": "0,25 L",
+            "en": "0.25 L"
           },
           "price": "5,5"
         },
         {
           "name": {
-            "de": "Ginger Ale Organics"
+            "de": "Ginger Ale Organics",
+            "en": "Ginger Ale Organics"
           },
           "desc": {
-            "de": "0,25 L"
+            "de": "0,25 L",
+            "en": "0.25 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Tonic Water Organics"
+            "de": "Tonic Water Organics",
+            "en": "Tonic Water Organics"
           },
           "desc": {
-            "de": "0,25 L"
+            "de": "0,25 L",
+            "en": "0.25 L"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Sodawasser"
+            "de": "Sodawasser",
+            "en": "Soda Water"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "3,2"
         },
         {
           "name": {
-            "de": "Soda Zitrone"
+            "de": "Soda Zitrone",
+            "en": "Soda Lemon"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "3,9"
         },
         {
           "name": {
-            "de": "Tafelwasser"
+            "de": "Tafelwasser",
+            "en": "Table Water"
           },
           "desc": {
-            "de": "0,50 L"
+            "de": "0,50 L",
+            "en": "0.50 L"
           },
           "price": "2,0"
         },
         {
           "name": {
-            "de": "Mineralwasser still 0,33"
+            "de": "Mineralwasser still 0,33",
+            "en": "Mineral Water still 0.33"
           },
           "price": "3,5",
           "allergens": [
@@ -1717,7 +1934,8 @@
         },
         {
           "name": {
-            "de": "Mineralwasser still 0,75"
+            "de": "Mineralwasser still 0,75",
+            "en": "Mineral Water still 0.75"
           },
           "price": "6,9",
           "allergens": [
@@ -1726,7 +1944,8 @@
         },
         {
           "name": {
-            "de": "Mineralwasser prickelnd 0,33"
+            "de": "Mineralwasser prickelnd 0,33",
+            "en": "Mineral Water sparkling 0.33"
           },
           "price": "3,5",
           "allergens": [
@@ -1735,7 +1954,8 @@
         },
         {
           "name": {
-            "de": "Mineralwasser prickelnd 0,75"
+            "de": "Mineralwasser prickelnd 0,75",
+            "en": "Mineral Water sparkling 0.75"
           },
           "price": "6,9",
           "allergens": [
@@ -1747,60 +1967,73 @@
     {
       "id": "homemade",
       "name": {
-        "de": "Homemade"
+        "de": "Homemade",
+        "en": "Homemade"
       },
       "items": [
         {
           "name": {
-            "de": "Tropicana"
+            "de": "Tropicana",
+            "en": "Tropicana"
           },
           "desc": {
-            "de": "Passionsfrucht-Honig-Limo 0,5 L"
+            "de": "Passionsfrucht-Honig-Limo 0,5 L",
+            "en": "Passion fruit-honey lemonade 0.5 L"
           },
           "price": "7,2"
         },
         {
           "name": {
-            "de": "Fresh"
+            "de": "Fresh",
+            "en": "Fresh"
           },
           "desc": {
-            "de": "Mango-Himbeer-Eistee 0,5 L"
+            "de": "Mango-Himbeer-Eistee 0,5 L",
+            "en": "Mango-raspberry ice tea 0.5 L"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Intense"
+            "de": "Intense",
+            "en": "Intense"
           },
           "desc": {
-            "de": "Ingwer-Limo 0,5 L"
+            "de": "Ingwer-Limo 0,5 L",
+            "en": "Ginger lemonade 0.5 L"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Frosty"
+            "de": "Frosty",
+            "en": "Frosty"
           },
           "desc": {
-            "de": "Lychee-Minze-Limo 0,5 L"
+            "de": "Lychee-Minze-Limo 0,5 L",
+            "en": "Lychee-mint lemonade 0.5 L"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Sweet Mentha"
+            "de": "Sweet Mentha",
+            "en": "Sweet Mentha"
           },
           "desc": {
-            "de": "Holunder-Minze-Limo 0,5 L"
+            "de": "Holunder-Minze-Limo 0,5 L",
+            "en": "Elderflower-mint lemonade 0.5 L"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Creamy Mangolassi"
+            "de": "Creamy Mangolassi",
+            "en": "Creamy Mangolassi"
           },
           "desc": {
-            "de": "Indisches Joghurtgetränk 0,3/0,5 L"
+            "de": "Indisches Joghurtgetränk 0,3/0,5 L",
+            "en": "Indian yogurt drink 0.3/0.5 L"
           },
           "price": "5,5/6,9"
         }
@@ -1809,12 +2042,14 @@
     {
       "id": "kaffee-tee",
       "name": {
-        "de": "Kaffee | Tee"
+        "de": "Kaffee | Tee",
+        "en": "Coffee | Tea"
       },
       "items": [
         {
           "name": {
-            "de": "Espresso Macchiato"
+            "de": "Espresso Macchiato",
+            "en": "Espresso Macchiato"
           },
           "price": "3,9",
           "allergens": [
@@ -1823,7 +2058,8 @@
         },
         {
           "name": {
-            "de": "Espresso Macchiato doppelt"
+            "de": "Espresso Macchiato doppelt",
+            "en": "Espresso Macchiato double"
           },
           "price": "5,9",
           "allergens": [
@@ -1832,19 +2068,22 @@
         },
         {
           "name": {
-            "de": "Espresso"
+            "de": "Espresso",
+            "en": "Espresso"
           },
           "price": "3,5"
         },
         {
           "name": {
-            "de": "Espresso doppelt"
+            "de": "Espresso doppelt",
+            "en": "Espresso double"
           },
           "price": "5,5"
         },
         {
           "name": {
-            "de": "Verlängerter"
+            "de": "Verlängerter",
+            "en": "Verlängerter (Americano)"
           },
           "price": "4,5",
           "allergens": [
@@ -1853,7 +2092,8 @@
         },
         {
           "name": {
-            "de": "Cappuccino"
+            "de": "Cappuccino",
+            "en": "Cappuccino"
           },
           "price": "4,9",
           "allergens": [
@@ -1862,7 +2102,8 @@
         },
         {
           "name": {
-            "de": "Cafe Latte"
+            "de": "Cafe Latte",
+            "en": "Cafe Latte"
           },
           "price": "5,5",
           "allergens": [
@@ -1871,13 +2112,15 @@
         },
         {
           "name": {
-            "de": "Jasmintee"
+            "de": "Jasmintee",
+            "en": "Jasmine Tea"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Ba Bao Cha 8 Schätze Tee"
+            "de": "Ba Bao Cha 8 Schätze Tee",
+            "en": "Ba Bao Cha (8 Treasures Tea)"
           },
           "price": "5,5",
           "allergens": [
@@ -1886,19 +2129,22 @@
         },
         {
           "name": {
-            "de": "Jü Hua Cha Kamillenblütentee"
+            "de": "Jü Hua Cha Kamillenblütentee",
+            "en": "Jü Hua Cha (Chamomile Tea)"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Genmaicha Tee Japanischer Reistee"
+            "de": "Genmaicha Tee Japanischer Reistee",
+            "en": "Genmaicha (Japanese Rice Tea)"
           },
           "price": "4,9"
         },
         {
           "name": {
-            "de": "Ginger Tee Hausgemachter Ingwertee"
+            "de": "Ginger Tee Hausgemachter Ingwertee",
+            "en": "Ginger Tea (Homemade)"
           },
           "price": "5,5"
         }
@@ -1907,87 +2153,106 @@
     {
       "id": "digestiv",
       "name": {
-        "de": "Digestiv | Spirits"
+        "de": "Digestiv | Spirits",
+        "en": "Digestif | Spirits"
       },
       "items": [
         {
           "name": {
-            "de": "Marillenbrand Destillerie Donabaum"
+            "de": "Marillenbrand Destillerie Donabaum",
+            "en": "Apricot Brandy Distillery Donabaum"
           },
           "desc": {
-            "de": "42% vol. 2 cl"
+            "de": "42% vol. 2 cl",
+            "en": "42% vol. 2 cl"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "Williamsbirne Destillerie Reisetbauer"
+            "de": "Williamsbirne Destillerie Reisetbauer",
+            "en": "Williams Pear Distillery Reisetbauer"
           },
           "desc": {
-            "de": "41,5% vol. 2 cl"
+            "de": "41,5% vol. 2 cl",
+            "en": "41.5% vol. 2 cl"
           },
           "price": "8,5"
         },
         {
           "name": {
-            "de": "Averna Italien"
+            "de": "Averna Italien",
+            "en": "Averna Italy"
           },
           "desc": {
-            "de": "29% vol. 2 cl"
+            "de": "29% vol. 2 cl",
+            "en": "29% vol. 2 cl"
           },
           "price": "5,5"
         },
         {
           "name": {
-            "de": "White Chocolate & Chilli Austria"
+            "de": "White Chocolate & Chilli Austria",
+            "en": "White Chocolate & Chili Austria"
           },
           "desc": {
-            "de": "25% vol. 2 cl"
+            "de": "25% vol. 2 cl",
+            "en": "25% vol. 2 cl"
           },
           "price": "6,9"
         },
         {
           "name": {
-            "de": "NINKI-ICHI Black Ninki Flasche"
+            "de": "NINKI-ICHI Black Ninki Flasche",
+            "en": "NINKI-ICHI Black Ninki Bottle"
           },
           "desc": {
-            "de": "Junmai Ginjo | 15% vol. | Kalt serviert 0,3 L"
+            "de": "Junmai Ginjo | 15% vol. | Kalt serviert 0,3 L",
+            "en": "Junmai Ginjo | 15% vol. | Cold served 0.3 L"
           },
           "price": "30,9"
         },
         {
           "name": {
-            "de": "NINKI-ICHI Red Ninki Dentoshu (Ginjo)"
+            "de": "NINKI-ICHI Red Ninki Dentoshu (Ginjo)",
+            "en": "NINKI-ICHI Red Ninki Dentoshu (Ginjo)"
           },
           "desc": {
-            "de": "15% vol. 0,1 L | Kalt / warm serviert"
+            "de": "15% vol. 0,1 L | Kalt / warm serviert",
+            "en": "15% vol. 0.1 L | Cold / warm served"
           },
           "price": "8,9"
         },
         {
           "name": {
-            "de": "Whisky Hibiki Japanischer Whisky"
+            "de": "Whisky Hibiki Japanischer Whisky",
+            "en": "Whisky Hibiki (Japanese Whisky)"
           },
           "desc": {
-            "de": "43% vol. 4 cl | Fruchtig, weich, rauchig"
+            "de": "43% vol. 4 cl | Fruchtig, weich, rauchig",
+            "en": "43% vol. 4 cl | Fruity, smooth, smoky"
           },
           "price": "18"
         },
         {
           "name": {
-            "de": "Whisky Nikka Japanischer Whisky"
+            "de": "Whisky Nikka Japanischer Whisky",
+            "en": "Whisky Nikka (Japanese Whisky)"
           },
           "desc": {
-            "de": "51,4% vol. 4 cl | Herzhaft, rauchig"
+            "de": "51,4% vol. 4 cl | Herzhaft, rauchig",
+            "en": "51.4% vol. 4 cl | Hearty, smoky"
           },
           "price": "15"
         },
         {
           "name": {
-            "de": "Whisky Toki Japanischer Whisky"
+            "de": "Whisky Toki Japanischer Whisky",
+            "en": "Whisky Toki (Japanese Whisky)"
           },
           "desc": {
-            "de": "43% vol. 4 cl | Fruchtig, weich"
+            "de": "43% vol. 4 cl | Fruchtig, weich",
+            "en": "43% vol. 4 cl | Fruity, smooth"
           },
           "price": "10"
         }

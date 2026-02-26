@@ -127,7 +127,8 @@
         /* ── 3D Category Wheel ── */
         .cat-wheel-wrap {
             position: sticky;
-            top: 72px;
+            top: 0;
+            /* Dock at very top on desktop scroll */
             z-index: 90;
             background: var(--bg-primary);
             height: 70px;
@@ -137,6 +138,32 @@
             overflow: hidden;
             perspective: 1200px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: top 0.4s ease;
+        }
+
+        /* Nav Collapse Logic for Desktop on Scroll */
+        @media (min-width: 769px) {
+
+            nav.scrolled .nav-links,
+            nav.scrolled .btn-reserve {
+                display: none;
+            }
+
+            nav.scrolled .nav-container {
+                gap: 0;
+                padding: 0.4rem 1rem;
+            }
+
+            nav.scrolled .logo img {
+                height: 45px;
+            }
+
+            nav.scrolled {
+                top: 0.5rem;
+                left: calc(100% - 60px);
+                /* Dock to the top right out of the way */
+                transform: translateX(-100%);
+            }
         }
 
         .cat-wheel {
@@ -207,6 +234,15 @@
         }
 
         @media(max-width: 768px) {
+            .cat-wheel-wrap {
+                top: 0;
+                /* Sticky at top, floating nav will hover */
+                height: 120px;
+                /* Taller to provide clearance from floating nav */
+                padding-top: 50px;
+                /* Spacer for floating nav */
+            }
+
             .cat-wheel-item {
                 width: 140px;
             }
@@ -532,36 +568,36 @@
                     "id": "starters",
                     "name": { "de": "Vorspeisen", "en": "Starters" },
                     "items": [
-                        { "name": { "de": "Vorspeisenplatte (Vegetarisch, für 2 Personen)", "en": "Starter Platter (Vegetarian, for 2)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys" }, "price": "21,90" },
-                        { "name": { "de": "Sabzee Pakora (Vegan)", "en": "Sabzee Pakora (Vegan)" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen-Teigmantel ausgebacken" }, "price": "6,90" },
-                        { "name": { "de": "Aloo-Samosa (Vegan)", "en": "Aloo Samosa (Vegan)" }, "desc": { "de": "2 Stück ausgebackene Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen" }, "price": "6,90" },
-                        { "name": { "de": "Papadam (Vegan)", "en": "Papadam (Vegan)" }, "desc": { "de": "2 Stück hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys" }, "price": "3,50" },
-                        { "name": { "de": "Murg - Tikka", "en": "Murgh Tikka" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen" }, "price": "8,50" },
-                        { "name": { "de": "Grillplatte (Fleisch)", "en": "Grill Platter (Meat)" }, "desc": { "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam, serviert mit Chutneys" }, "price": "39,90" }
+                        { "name": { "de": "Vorspeisenplatte (Vegetarisch, für 2 Personen)", "en": "Starter Platter (Vegetarian, for 2)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys", "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys" }, "price": "21,90" },
+                        { "name": { "de": "Sabzee Pakora (Vegan)", "en": "Sabzee Pakora (Vegan)" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen-Teigmantel ausgebacken", "en": "Fresh vegetables deep-fried in a chickpea batter" }, "price": "6,90", "isVegan": true },
+                        { "name": { "de": "Aloo-Samosa (Vegan)", "en": "Aloo Samosa (Vegan)" }, "desc": { "de": "2 Stück ausgebackene Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen", "en": "2 pieces of deep-fried pastry pockets filled with spiced potatoes and peas" }, "price": "6,90", "isVegan": true },
+                        { "name": { "de": "Papadam (Vegan)", "en": "Papadam (Vegan)" }, "desc": { "de": "2 Stück hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys", "en": "2 pieces of thin, spiced and baked lentil flour wafers with three different chutneys" }, "price": "3,50", "isVegan": true },
+                        { "name": { "de": "Murg - Tikka", "en": "Murgh Tikka" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen", "en": "Boneless, marinated and grilled chicken thighs" }, "price": "8,50" },
+                        { "name": { "de": "Grillplatte (Fleisch)", "en": "Grill Platter (Meat)" }, "desc": { "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam, serviert mit Chutneys", "en": "Murgh Tikka, Achari Tikka, Malai Tikka and Papadam, served with chutneys" }, "price": "39,90" }
                     ]
                 },
                 {
                     "id": "soups",
                     "name": { "de": "Suppen", "en": "Soups" },
                     "items": [
-                        { "name": { "de": "Dal-Soup (Vegan)", "en": "Dal Soup (Vegan)" }, "desc": { "de": "Würzige Linsensuppe" }, "price": "6,90" },
-                        { "name": { "de": "Tamatar-Soup", "en": "Tamatar Soup" }, "desc": { "de": "Fruchtige Tomatensuppe mit frischem Koriander" }, "price": "6,90" }
+                        { "name": { "de": "Dal-Soup (Vegan)", "en": "Dal Soup (Vegan)" }, "desc": { "de": "Würzige Linsensuppe", "en": "Spiced lentil soup" }, "price": "6,90", "isVegan": true },
+                        { "name": { "de": "Tamatar-Soup", "en": "Tamatar Soup" }, "desc": { "de": "Fruchtige Tomatensuppe mit frischem Koriander", "en": "Fruity tomato soup with fresh coriander" }, "price": "6,90" }
                     ]
                 },
                 {
                     "id": "lamb",
                     "name": { "de": "Lamm", "en": "Lamb" },
-                    "description": { "de": "Alle Lammgerichte werden mit Basmatireis serviert." },
+                    "description": { "de": "Alle Lammgerichte werden mit Basmatireis serviert.", "en": "All lamb dishes are served with Basmati rice." },
                     "items": [
-                        { "name": { "de": "Rajasthani-Achari Goscht", "en": "Rajasthani Achari Gosht" }, "desc": { "de": "Zartes Lammfleisch mit Gewürzen in einer kräftigen und scharfen Sauce" }, "price": "17,90" },
-                        { "name": { "de": "Lamm-Vindaloo (Scharf)", "en": "Lamb Vindaloo (Scharf)" }, "desc": { "de": "Zartes Lammfleisch mit Kartoffeln in einer scharfen Currysauce" }, "price": "17,90" },
-                        { "name": { "de": "Pahari-Lamm (Scharf)", "en": "Pahari-Lamm (Scharf)" }, "desc": { "de": "Zartes Lammfleisch mit scharfer Tomaten-Knoblauch-Kokoscurrysauce" }, "price": "17,90" },
-                        { "name": { "de": "Palak-Goasht", "en": "Palak-Goasht" }, "desc": { "de": "Zartes Lammfleisch mit würzigem Blattspinat" }, "price": "17,90" },
-                        { "name": { "de": "Mutton-Korma", "en": "Mutton-Korma" }, "desc": { "de": "Zartes Lammfleisch in einer Safran-Mandelsauce" }, "price": "18,50" },
-                        { "name": { "de": "Karahi-Goasht", "en": "Karahi-Goasht" }, "desc": { "de": "Zartes Lammfleisch mit Paprika, Zwiebeln und Tomatensauce" }, "price": "17,90" },
-                        { "name": { "de": "Chana-Goasht", "en": "Chana-Goasht" }, "desc": { "de": "Zartes Lammfleisch und Kichererbsen mit Tomatensauce" }, "price": "17,90" },
-                        { "name": { "de": "Kashmiri-Roganjosh", "en": "Kashmiri-Roganjosh" }, "desc": { "de": "Zartes Lammfleisch in einer würzigen Tomaten-Curry-Sauce" }, "price": "17,90" },
-                        { "name": { "de": "Sabzee-Goascht", "en": "Sabzee-Goascht" }, "desc": { "de": "Zartes Lammfleisch und Gemüse mit Currysauce" }, "price": "17,90" }
+                        { "name": { "de": "Rajasthani-Achari Goscht", "en": "Rajasthani Achari Gosht" }, "desc": { "de": "Zartes Lammfleisch mit Gewürzen in einer kräftigen und scharfen Sauce", "en": "Tender lamb with spices in a rich and spicy sauce" }, "price": "17,90" },
+                        { "name": { "de": "Lamm-Vindaloo (Scharf)", "en": "Lamb Vindaloo (Spicy)" }, "desc": { "de": "Zartes Lammfleisch mit Kartoffeln in einer scharfen Currysauce", "en": "Tender lamb with potatoes in a spicy curry sauce" }, "price": "17,90", "spiciness": "2" },
+                        { "name": { "de": "Pahari-Lamm (Scharf)", "en": "Pahari Lamb (Spicy)" }, "desc": { "de": "Zartes Lammfleisch mit scharfer Tomaten-Knoblauch-Kokoscurrysauce", "en": "Tender lamb with spicy tomato-garlic-coconut curry sauce" }, "price": "17,90", "spiciness": "2" },
+                        { "name": { "de": "Palak-Goasht", "en": "Palak Gosht" }, "desc": { "de": "Zartes Lammfleisch mit würzigem Blattspinat", "en": "Tender lamb with spiced leaf spinach" }, "price": "17,90" },
+                        { "name": { "de": "Mutton-Korma", "en": "Mutton Korma" }, "desc": { "de": "Zartes Lammfleisch in einer Safran-Mandelsauce", "en": "Tender lamb in a saffron-almond sauce" }, "price": "18,50" },
+                        { "name": { "de": "Karahi-Goasht", "en": "Karahi Gosht" }, "desc": { "de": "Zartes Lammfleisch mit Paprika, Zwiebeln und Tomatensauce", "en": "Tender lamb with peppers, onions and tomato sauce" }, "price": "17,90" },
+                        { "name": { "de": "Chana-Goasht", "en": "Chana Gosht" }, "desc": { "de": "Zartes Lammfleisch und Kichererbsen mit Tomatensauce", "en": "Tender lamb and chickpeas with tomato sauce" }, "price": "17,90" },
+                        { "name": { "de": "Kashmiri-Roganjosh", "en": "Kashmiri Roganjosh" }, "desc": { "de": "Zartes Lammfleisch in einer würzigen Tomaten-Curry-Sauce", "en": "Tender lamb in a spiced tomato curry sauce" }, "price": "17,90" },
+                        { "name": { "de": "Sabzee-Goascht", "en": "Sabzee Gosht" }, "desc": { "de": "Zartes Lammfleisch und Gemüse mit Currysauce", "en": "Tender lamb and vegetables with curry sauce" }, "price": "17,90" }
                     ]
                 }
             ]
@@ -722,7 +758,8 @@
             if (!section) return;
             isProgrammaticScroll = true;
 
-            const offset = 140; // Space for nav + wheel
+            const isMobile = window.innerWidth <= 768;
+            const offset = isMobile ? 120 : 75;
             const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
 
             window.scrollTo({ top, behavior: 'smooth' });
@@ -776,7 +813,9 @@
                 a.addEventListener('click', e => {
                     e.preventDefault();
                     const t = document.querySelector(a.getAttribute('href'));
-                    if (t) window.scrollTo({ top: t.offsetTop - 130, behavior: 'smooth' });
+                    const isMobile = window.innerWidth <= 768;
+                    const offset = isMobile ? 120 : 75; // Matches mobile cat-wheel-wrap height
+                    if (t) window.scrollTo({ top: t.offsetTop - offset, behavior: 'smooth' });
                 });
             });
         }
