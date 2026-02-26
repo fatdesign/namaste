@@ -42,15 +42,17 @@
             "de": "ALOO-SAMOSA",
             "en": "ALOO-SAMOSA"
           },
+          "price": "116,90",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "",
+          "allergens": [
+            "A"
+          ],
           "desc": {
             "de": "2 Stk ausgebackene Teigtaschen mit würzigen Kartoffeln und Erbsen gefüllt",
             "en": "2 pieces of baked dumplings filled with spicy potatoes and peas"
-          },
-          "price": "6,90",
-          "isVegan": true,
-          "allergens": [
-            "A"
-          ]
+          }
         },
         {
           "name": {
