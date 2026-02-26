@@ -244,14 +244,16 @@ body {
 @media(max-width: 580px) {
     .header-top {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        /* Center everything horizontally */
         gap: 1rem;
     }
 
     .header-actions {
         width: 100%;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Allow status to wrap */
         gap: 0.5rem;
     }
 
@@ -261,6 +263,15 @@ body {
         font-size: 0.7rem;
         text-align: center;
         white-space: nowrap;
+    }
+
+    .save-status {
+        width: 100%;
+        /* Force to its own row */
+        text-align: center;
+        order: 3;
+        /* Place after buttons */
+        margin-top: 0.2rem;
     }
 }
 
