@@ -358,7 +358,8 @@ body {
 }
 
 .item-row-price {
-    font-family: var(--font);
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 1rem;
     color: var(--gold);
     text-align: right;

@@ -578,23 +578,23 @@
         const MENU_INLINE = {
             "categories": [
                 {
-                    "id": "starters",
-                    "name": { "de": "Vorspeisen", "en": "Starters" },
-                    "items": [
-                        { "name": { "de": "Vorspeisenplatte (Vegetarisch, für 2 Personen)", "en": "Starter Platter (Vegetarian, for 2)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys", "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys" }, "price": "21,90" },
-                        { "name": { "de": "Sabzee Pakora (Vegan)", "en": "Sabzee Pakora (Vegan)" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen-Teigmantel ausgebacken", "en": "Fresh vegetables deep-fried in a chickpea batter" }, "price": "6,90", "isVegan": true },
-                        { "name": { "de": "Aloo-Samosa (Vegan)", "en": "Aloo Samosa (Vegan)" }, "desc": { "de": "2 Stück ausgebackene Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen", "en": "2 pieces of deep-fried pastry pockets filled with spiced potatoes and peas" }, "price": "6,90", "isVegan": true },
-                        { "name": { "de": "Papadam (Vegan)", "en": "Papadam (Vegan)" }, "desc": { "de": "2 Stück hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys", "en": "2 pieces of thin, spiced and baked lentil flour wafers with three different chutneys" }, "price": "3,50", "isVegan": true },
-                        { "name": { "de": "Murg - Tikka", "en": "Murgh Tikka" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen", "en": "Boneless, marinated and grilled chicken thighs" }, "price": "8,50" },
-                        { "name": { "de": "Grillplatte (Fleisch)", "en": "Grill Platter (Meat)" }, "desc": { "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam, serviert mit Chutneys", "en": "Murgh Tikka, Achari Tikka, Malai Tikka and Papadam, served with chutneys" }, "price": "39,90" }
-                    ]
-                },
-                {
                     "id": "soups",
                     "name": { "de": "Suppen", "en": "Soups" },
                     "items": [
                         { "name": { "de": "Dal-Soup (Vegan)", "en": "Dal Soup (Vegan)" }, "desc": { "de": "Würzige Linsensuppe", "en": "Spiced lentil soup" }, "price": "6,90", "isVegan": true },
                         { "name": { "de": "Tamatar-Soup", "en": "Tamatar Soup" }, "desc": { "de": "Fruchtige Tomatensuppe mit frischem Koriander", "en": "Fruity tomato soup with fresh coriander" }, "price": "6,90" }
+                    ]
+                },
+                {
+                    "id": "starters",
+                    "name": { "de": "Vorspeisen", "en": "Starters" },
+                    "items": [
+                        { "name": { "de": "Vorspeisenplatte (Vegetarisch, für 2 Personen)", "en": "Starter Platter (Vegetarian, for 2)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert with three different chutneys", "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys" }, "price": "21,90" },
+                        { "name": { "de": "Sabzee Pakora (Vegan)", "en": "Sabzee Pakora (Vegan)" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen-Teigmantel ausgebacken", "en": "Fresh vegetables deep-fried in a chickpea batter" }, "price": "6,90", "isVegan": true },
+                        { "name": { "de": "Aloo-Samosa (Vegan)", "en": "Aloo Samosa (Vegan)" }, "desc": { "de": "2 Stück ausgebackene Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen", "en": "2 pieces of deep-fried pastry pockets filled with spiced potatoes and peas" }, "price": "6,90", "isVegan": true },
+                        { "name": { "de": "Papadam (Vegan)", "en": "Papadam (Vegan)" }, "desc": { "de": "2 Stück hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys", "en": "2 pieces of thin, spiced and baked lentil flour wafers with three different chutneys" }, "price": "3,50", "isVegan": true },
+                        { "name": { "de": "Murg - Tikka", "en": "Murgh Tikka" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen", "en": "Boneless, marinated and grilled chicken thighs" }, "price": "8,50" },
+                        { "name": { "de": "Grillplatte (Fleisch)", "en": "Grill Platter (Meat)" }, "desc": { "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam, serviert mit Chutneys", "en": "Murgh Tikka, Achari Tikka, Malai Tikka and Papadam, served with chutneys" }, "price": "39,90" }
                     ]
                 },
                 {
@@ -611,6 +611,13 @@
                         { "name": { "de": "Chana-Goasht", "en": "Chana Gosht" }, "desc": { "de": "Zartes Lammfleisch und Kichererbsen mit Tomatensauce", "en": "Tender lamb and chickpeas with tomato sauce" }, "price": "17,90" },
                         { "name": { "de": "Kashmiri-Roganjosh", "en": "Kashmiri Roganjosh" }, "desc": { "de": "Zartes Lammfleisch in einer würzigen Tomaten-Curry-Sauce", "en": "Tender lamb in a spiced tomato curry sauce" }, "price": "17,90" },
                         { "name": { "de": "Sabzee-Goascht", "en": "Sabzee Gosht" }, "desc": { "de": "Zartes Lammfleisch und Gemüse mit Currysauce", "en": "Tender lamb and vegetables with curry sauce" }, "price": "17,90" }
+                    ]
+                },
+                {
+                    "id": "beilagen",
+                    "name": { "de": "Beilagen", "en": "Sides" },
+                    "items": [
+                        { "name": { "de": "Portion Reis", "en": "Portion of rice" }, "price": "2,9" }
                     ]
                 }
             ]
