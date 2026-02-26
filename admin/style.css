@@ -250,7 +250,17 @@ body {
 
     .header-actions {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+
+    .header-actions .btn {
+        flex: 1;
+        padding: 0.5rem 0.2rem;
+        font-size: 0.7rem;
+        text-align: center;
+        white-space: nowrap;
     }
 }
 
@@ -408,24 +418,35 @@ body {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 1000;
+    overflow-y: auto;
+    /* Allow scrolling on the overlay itself */
+    padding: 2rem 1rem;
+    /* Safe padding from edges */
 }
 
 .modal-content {
-    width: 90%;
+    background: rgba(26, 26, 26, 0.95);
+    /* Ensure solid background */
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border);
+    width: 100%;
     max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
+    margin: 2rem auto;
+    /* Center horizontally and add top/bottom margin */
     padding: 2.5rem;
     border-radius: var(--radius-lg);
+    position: relative;
+    /* Keep context for children */
 }
 
 @media(max-width: 580px) {
+    .modal-overlay {
+        padding: 1rem 0.5rem;
+    }
+
     .modal-content {
-        max-height: 80vh;
+        margin: 1rem auto;
         padding: 1.5rem;
     }
 }
@@ -553,4 +574,10 @@ body {
     width: 16px;
     height: 16px;
     margin: 0;
+}
+
+@media(max-width: 580px) {
+    .allergen-grid .check-label {
+        font-size: 0.61rem;
+    }
 }
