@@ -376,8 +376,11 @@
         .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
+            /* Allow multiline text alignment */
             width: 100%;
+            gap: 1rem;
+            /* Ensure space between name and price */
         }
 
         .item-dots {
@@ -404,6 +407,12 @@
             text-transform: uppercase;
             color: var(--text-primary);
             font-weight: 600;
+            flex: 1;
+            /* Take up available space */
+            min-width: 0;
+            /* Allow word wrap to function inside flex container */
+            display: block;
+            /* Better block formatting context */
         }
 
         .item-allergens {
@@ -440,6 +449,8 @@
             font-weight: 600;
             color: var(--text-primary);
             white-space: nowrap;
+            flex-shrink: 0;
+            /* Prevent price from shrinking */
         }
 
         /* ── Section Divider (Ornamental) ── */
