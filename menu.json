@@ -97,6 +97,22 @@
             "G",
             "H"
           ]
+        },
+        {
+          "name": {
+            "de": "Test123",
+            "en": "https://fatdesign.github.io/namaste/admin/"
+          },
+          "price": "77.99",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "3",
+          "allergens": [
+            "E",
+            "F",
+            "L",
+            "O"
+          ]
         }
       ]
     },
