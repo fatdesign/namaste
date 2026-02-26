@@ -13,9 +13,9 @@
             "en": "STARTER PLATTER (for 2 persons)"
           },
           "price": "21,90",
-          "isSoldOut": false,
+          "isSoldOut": true,
           "isVegan": false,
-          "spiciness": "",
+          "spiciness": "3",
           "allergens": [
             "A",
             "G"
