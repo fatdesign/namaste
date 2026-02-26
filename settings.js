@@ -14,12 +14,12 @@ const SETTINGS = {
     // 2. DESIGN TOKENS (Namaste Indian Palette)
     theme: {
         colors: {
-            background: "#401201",
-            header: "#5c1a01",
+            background: "#FFFCF5",
+            header: "#FDF6E3",
             accent: "#BF6E0B",
-            saffron: "#A6330A",
-            text: "#F2BF80",
-            gray: "#8C5637"
+            saffron: "#E67E22",
+            text: "#401201",
+            gray: "#A68A64"
         },
         accent: "accent",
         fontHeading: "'Cormorant Garamond', serif",

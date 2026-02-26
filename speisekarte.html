@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Italiana&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Tenor+Sans&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -37,7 +37,8 @@
         }
 
         .hero-logo {
-            max-width: 180px;
+            max-width: 240px;
+            /* Increased from 180px */
             height: auto;
             margin: 0 auto;
             display: block;
@@ -164,7 +165,8 @@
             letter-spacing: 0.25em;
             text-transform: uppercase;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(64, 18, 1, 0.4);
+            /* Deep Earth for inactive states */
             display: block;
             padding: 1rem;
             transition: color 0.4s;
@@ -238,9 +240,9 @@
             font-size: 0.7rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.5);
+            background: rgba(64, 18, 1, 0.05);
+            border: 1px solid rgba(64, 18, 1, 0.1);
+            color: rgba(64, 18, 1, 0.5);
             cursor: pointer;
             padding: 0.4rem 1rem;
             border-radius: 50px;
@@ -249,16 +251,17 @@
 
         .lang-btn.active {
             background: var(--accent);
-            color: var(--color-bg-dark);
+            color: white;
+            /* Contrast on Gold */
             border-color: var(--accent);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 15px rgba(191, 110, 11, 0.2);
         }
 
         .lang-btn:hover:not(.active) {
-            border-color: rgba(255, 255, 255, 0.6);
-            color: rgba(255, 255, 255, 0.9);
-            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(191, 110, 11, 0.08);
         }
 
         /* ── Menu Sections ── */
@@ -279,14 +282,14 @@
             gap: 1.5rem;
             margin-bottom: 2rem;
             padding-bottom: 1.25rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(64, 18, 1, 0.1);
         }
 
         .cat-number {
             font-family: var(--font-body);
             font-weight: 300;
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(64, 18, 1, 0.3);
             margin-top: 0.5rem;
         }
 
@@ -323,7 +326,7 @@
             flex-direction: column;
             gap: 0.1rem;
             padding: 1.1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(64, 18, 1, 0.05);
             opacity: 0;
             transform: translateY(12px);
             transition: opacity 0.5s, transform 0.5s;
@@ -523,7 +526,46 @@
 
     <!-- ── Inline Menu Fallback (works on file://) ── -->
     <script>
-        const MENU_INLINE = { "categories": [{ "id": "starters", "name": { "de": "Vorspeisen", "en": "Appetizers" }, "description": { "de": "Traditionelle indische Vorspeisen", "en": "Traditional Indian starters" }, "items": [{ "name": { "de": "Samosa", "en": "Samosa" }, "desc": { "de": "Zwei hausgemachte Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen", "en": "Two homemade pastry pockets filled with spiced potatoes and peas" }, "price": "6,9" }] }] };
+        const MENU_INLINE = {
+            "categories": [
+                {
+                    "id": "starters",
+                    "name": { "de": "Vorspeisen", "en": "Starters" },
+                    "items": [
+                        { "name": { "de": "Vorspeisenplatte (Vegetarisch, für 2 Personen)", "en": "Starter Platter (Vegetarian, for 2)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys" }, "price": "21,90" },
+                        { "name": { "de": "Sabzee Pakora (Vegan)", "en": "Sabzee Pakora (Vegan)" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen-Teigmantel ausgebacken" }, "price": "6,90" },
+                        { "name": { "de": "Aloo-Samosa (Vegan)", "en": "Aloo Samosa (Vegan)" }, "desc": { "de": "2 Stück ausgebackene Teigtaschen gefüllt mit würzigen Kartoffeln und Erbsen" }, "price": "6,90" },
+                        { "name": { "de": "Papadam (Vegan)", "en": "Papadam (Vegan)" }, "desc": { "de": "2 Stück hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys" }, "price": "3,50" },
+                        { "name": { "de": "Murg - Tikka", "en": "Murgh Tikka" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen" }, "price": "8,50" },
+                        { "name": { "de": "Grillplatte (Fleisch)", "en": "Grill Platter (Meat)" }, "desc": { "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam, serviert mit Chutneys" }, "price": "39,90" }
+                    ]
+                },
+                {
+                    "id": "soups",
+                    "name": { "de": "Suppen", "en": "Soups" },
+                    "items": [
+                        { "name": { "de": "Dal-Soup (Vegan)", "en": "Dal Soup (Vegan)" }, "desc": { "de": "Würzige Linsensuppe" }, "price": "6,90" },
+                        { "name": { "de": "Tamatar-Soup", "en": "Tamatar Soup" }, "desc": { "de": "Fruchtige Tomatensuppe mit frischem Koriander" }, "price": "6,90" }
+                    ]
+                },
+                {
+                    "id": "lamb",
+                    "name": { "de": "Lamm", "en": "Lamb" },
+                    "description": { "de": "Alle Lammgerichte werden mit Basmatireis serviert." },
+                    "items": [
+                        { "name": { "de": "Rajasthani-Achari Goscht", "en": "Rajasthani Achari Gosht" }, "desc": { "de": "Zartes Lammfleisch mit Gewürzen in einer kräftigen und scharfen Sauce" }, "price": "17,90" },
+                        { "name": { "de": "Lamm-Vindaloo (Scharf)", "en": "Lamb Vindaloo (Scharf)" }, "desc": { "de": "Zartes Lammfleisch mit Kartoffeln in einer scharfen Currysauce" }, "price": "17,90" },
+                        { "name": { "de": "Pahari-Lamm (Scharf)", "en": "Pahari-Lamm (Scharf)" }, "desc": { "de": "Zartes Lammfleisch mit scharfer Tomaten-Knoblauch-Kokoscurrysauce" }, "price": "17,90" },
+                        { "name": { "de": "Palak-Goasht", "en": "Palak-Goasht" }, "desc": { "de": "Zartes Lammfleisch mit würzigem Blattspinat" }, "price": "17,90" },
+                        { "name": { "de": "Mutton-Korma", "en": "Mutton-Korma" }, "desc": { "de": "Zartes Lammfleisch in einer Safran-Mandelsauce" }, "price": "18,50" },
+                        { "name": { "de": "Karahi-Goasht", "en": "Karahi-Goasht" }, "desc": { "de": "Zartes Lammfleisch mit Paprika, Zwiebeln und Tomatensauce" }, "price": "17,90" },
+                        { "name": { "de": "Chana-Goasht", "en": "Chana-Goasht" }, "desc": { "de": "Zartes Lammfleisch und Kichererbsen mit Tomatensauce" }, "price": "17,90" },
+                        { "name": { "de": "Kashmiri-Roganjosh", "en": "Kashmiri-Roganjosh" }, "desc": { "de": "Zartes Lammfleisch in einer würzigen Tomaten-Curry-Sauce" }, "price": "17,90" },
+                        { "name": { "de": "Sabzee-Goascht", "en": "Sabzee-Goascht" }, "desc": { "de": "Zartes Lammfleisch und Gemüse mit Currysauce" }, "price": "17,90" }
+                    ]
+                }
+            ]
+        };
     </script>
 
     <script>
@@ -574,11 +616,11 @@
                 // Divider between sections
                 let divider = '';
                 if (idx > 0) divider = `
-                    <div class="section-divider">
-                        <span class="line"></span>
-                        <span class="icon">${ICONS[idx % ICONS.length]}</span>
-                        <span class="line"></span>
-                    </div>`;
+        <div class="section-divider">
+            <span class="line"></span>
+            <span class="icon">${ICONS[idx % ICONS.length]}</span>
+            <span class="line"></span>
+        </div>`;
 
                 let itemsHtml = '';
                 cat.items.forEach((item, i) => {
@@ -605,24 +647,24 @@
                     }
 
                     itemsHtml += `
-                        <div class="menu-item ${soldOut ? 'is-sold-out' : ''}" style="transition-delay:${i * 60}ms">
-                            <div class="item-header">
-                                <span class="item-name">${name}${chiliHtml}${veganHtml}${allergenHtml}</span>
-                                <span class="item-price">${item.price}</span>
-                            </div>
-                            ${desc ? `<p class="item-desc">${desc}</p>` : ''}
-                        </div>`;
+        <div class="menu-item ${soldOut ? 'is-sold-out' : ''}" style="transition-delay:${i * 60}ms">
+            <div class="item-header">
+                <span class="item-name">${name}${chiliHtml}${veganHtml}${allergenHtml}</span>
+                <span class="item-price">${item.price}</span>
+            </div>
+            ${desc ? `<p class="item-desc">${desc}</p>` : ''}
+        </div>`;
                 });
 
                 const numStr = String(idx + 1).padStart(2, '0');
                 section.innerHTML = `
-                    ${divider}
-                    <div class="menu-section-header">
-                        <span class="cat-number">${numStr}</span>
-                        <h2>${catName}</h2>
-                    </div>
-                    ${catDesc ? `<p class="cat-description">${catDesc}</p>` : ''}
-                    <div class="items-grid">${itemsHtml}</div>`;
+        ${divider}
+        <div class="menu-section-header">
+            <span class="cat-number">${numStr}</span>
+            <h2>${catName}</h2>
+        </div>
+        ${catDesc ? `<p class="cat-description">${catDesc}</p>` : ''}
+        <div class="items-grid">${itemsHtml}</div>`;
 
                 menuApp.appendChild(section);
 

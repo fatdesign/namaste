@@ -1,11 +1,11 @@
 :root {
-    --bg: #401201;
-    --bg-card: #5c1a01;
+    --bg: #FFFCF5;
+    --bg-card: #ffffff;
     --gold: #BF6E0B;
-    --gold-soft: rgba(191, 110, 11, 0.15);
-    --text: #F2BF80;
-    --text-muted: #8C5637;
-    --border: rgba(191, 110, 11, 0.2);
+    --gold-soft: rgba(191, 110, 11, 0.1);
+    --text: #401201;
+    --text-muted: #A68A64;
+    --border: rgba(191, 110, 11, 0.15);
     --danger: #732002;
     --radius: 8px;
     --radius-lg: 12px;

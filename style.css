@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 @font-face {
     font-family: 'Stylish Classy Font';
@@ -9,18 +9,19 @@
 
 :root {
     /* Namaste Theme - Indian Luxury Refined */
-    --color-white: #F2BF80;
-    --color-bg-dark: #401201;
-    /* Deep Earth */
-    --color-bg-accent: #5c1a01;
-    /* Warm Earth */
-    --color-text-primary: #F2BF80;
+    --color-white: #ffffff;
+    --color-bg-dark: #FFFCF5;
+    /* Ivory Light */
+    --color-bg-accent: #FDF6E3;
+    /* Soft Cream */
+    --color-text-primary: #401201;
+    /* Deep Earth for Text */
     --color-accent-gold: #BF6E0B;
     /* Mustard Gold */
-    --color-accent-saffron: #A6330A;
-    /* Sienna Spice */
-    --color-gray: #8C5637;
-    /* Clay Brown */
+    --color-accent-saffron: #E67E22;
+    /* Vibrant Saffron */
+    --color-gray: #A68A64;
+    /* Warm Sand */
 
     /* Palette mapping */
     --bg-primary: var(--color-bg-dark);
@@ -32,8 +33,8 @@
     /* Typography - Premium Choices */
     --font-heading: 'Playfair Display', serif;
     /* Cinematic Serif */
-    --font-nav: 'Italiana', serif;
-    /* Bespoke Heritage */
+    --font-nav: 'Tenor Sans', sans-serif;
+    /* Clean Architectural */
     --font-body: 'Outfit', sans-serif;
     /* Modern & Clean */
     --font-accent: 'Cormorant Garamond', serif;
@@ -184,8 +185,8 @@ a {
 .btn-luxury {
     display: inline-block;
     padding: 1.1rem 2.8rem;
-    border: 1px solid var(--color-black);
-    background: var(--color-black);
+    border: 1px solid var(--color-text-primary);
+    background: var(--color-text-primary);
     color: var(--color-white);
     font-family: var(--font-accent);
     font-size: 0.85rem;
@@ -246,7 +247,8 @@ a {
     position: absolute;
     font-family: var(--font-heading);
     font-size: clamp(8rem, 20vw, 25rem);
-    color: #000;
+    color: var(--color-text-primary);
+    opacity: 0.03;
     opacity: 0.05;
     pointer-events: none;
     z-index: 0;
@@ -388,9 +390,10 @@ nav {
 }
 
 .nav-container {
-    background: rgba(18, 10, 10, 0.6);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(197, 160, 89, 0.15);
+    background: rgba(255, 252, 245, 0.85);
+    /* Lighter Base for Light Theme */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(191, 110, 11, 0.2);
     padding: 0.6rem 2.5rem;
     border-radius: 100px;
     display: flex;
@@ -401,13 +404,24 @@ nav {
 }
 
 nav.scrolled .nav-container {
-    background: rgba(18, 10, 10, 0.9);
+    background: rgba(64, 18, 1, 0.98);
+    /* Deep Earth for Scrolled Background */
     padding: 0.4rem 2rem;
     transform: scale(0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+nav.scrolled .nav-link-boss {
+    color: #ffffff;
+}
+
+nav.scrolled .burger-line {
+    background: #ffffff;
 }
 
 .logo img {
-    height: 40px;
+    height: 65px;
+    /* Increased from 40px */
     width: auto;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -425,7 +439,7 @@ nav.scrolled .nav-container {
 .nav-link-boss {
     position: relative;
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-text-primary);
     font-family: var(--font-nav);
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -481,8 +495,8 @@ nav.scrolled .nav-container {
 
 .btn-reserve:hover {
     background: transparent !important;
-    color: var(--color-white) !important;
-    border-color: var(--color-white) !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-text-primary) !important;
 }
 
 /* Marquee Gallery Base */
@@ -540,7 +554,7 @@ nav.scrolled .nav-container {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--color-black);
+    background: var(--color-text-primary);
     transition: var(--transition-medium);
 }
 
@@ -577,7 +591,7 @@ nav.scrolled .nav-container {
 .burger-line {
     width: 30px;
     height: 2px;
-    background: var(--color-white);
+    background: var(--color-text-primary);
     transition: var(--transition-medium);
     transform-origin: 1px;
 }
@@ -1036,12 +1050,12 @@ nav.scrolled .nav-container {
 .nav-btn-luxury svg {
     width: 30px;
     height: 30px;
-    fill: var(--color-black);
+    fill: var(--color-text-primary);
     transition: var(--transition-medium);
 }
 
 .nav-btn-luxury:hover {
-    background: var(--color-black);
+    background: rgba(191, 110, 11, 0.1);
 }
 
 .nav-btn-luxury:hover svg {
@@ -1053,12 +1067,12 @@ nav.scrolled .nav-container {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--color-white);
+    color: var(--color-text-primary);
     font-family: var(--font-accent);
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-size: 0.7rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     padding: 0.5rem 1rem;
     backdrop-filter: blur(5px);
     pointer-events: none;
@@ -1122,7 +1136,8 @@ nav.scrolled .nav-container {
 }
 
 .transition-logo {
-    height: 120px;
+    height: 200px;
+    /* Increased from 120px */
     width: auto;
     z-index: 2;
     opacity: 0;
@@ -1152,7 +1167,7 @@ nav.scrolled .nav-container {
     position: relative;
     padding: 10rem 0;
     overflow: hidden;
-    background: #000;
+    background: var(--color-bg-dark);
 }
 
 .philosophy-creative .text-bg-luxury {
@@ -1160,7 +1175,7 @@ nav.scrolled .nav-container {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25vw;
-    opacity: 0.03;
+    opacity: 0.05;
     writing-mode: unset;
 }
 
