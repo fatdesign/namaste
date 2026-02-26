@@ -15,7 +15,7 @@
           "price": "21,90",
           "isSoldOut": false,
           "isVegan": false,
-          "spiciness": "1",
+          "spiciness": "",
           "allergens": [
             "A",
             "G"
@@ -45,10 +45,10 @@
             "de": "ALOO-SAMOSA",
             "en": "ALOO-SAMOSA"
           },
-          "price": "116,90",
+          "price": "6,90",
           "isSoldOut": false,
           "isVegan": true,
-          "spiciness": "3",
+          "spiciness": "2",
           "allergens": [
             "A"
           ],
@@ -96,6 +96,22 @@
           "allergens": [
             "G",
             "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "Test123",
+            "en": "https://fatdesign.github.io/namaste/admin/"
+          },
+          "price": "77.99",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "3",
+          "allergens": [
+            "E",
+            "F",
+            "L",
+            "O"
           ]
         }
       ]
