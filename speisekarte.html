@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* ── Speisekarte Page ── */
+        html,
+        body {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
         .menu-page-hero {
             background: var(--bg-primary);
             padding: 9rem 0 4.5rem;
@@ -404,11 +410,15 @@
 
         .item-name {
             font-family: var(--font-accent);
-            font-size: 0.82rem;
+            font-size: 0.82rem !important;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--text-primary);
             font-weight: 600;
+            flex: 1;
+            /* Take up available space */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .item-allergens {
@@ -438,8 +448,8 @@
             line-height: 1.4;
             font-style: italic;
             margin-top: 0.2rem;
-            max-width: 85%;
-            /* Don't crowd the price area */
+            max-width: 90%;
+            /* Allow slightly more room */
         }
 
         .item-price {
@@ -448,6 +458,10 @@
             font-weight: 600;
             color: var(--text-primary);
             white-space: nowrap;
+            flex-shrink: 0;
+            /* Protect the price from being squashed */
+            text-align: right;
+            margin-left: auto;
         }
 
         /* ── Section Divider (Ornamental) ── */

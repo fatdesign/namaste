@@ -99,6 +99,12 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--bg-primary);
@@ -106,7 +112,6 @@ body {
     line-height: 1.8;
     overflow-x: hidden;
     font-weight: 300;
-    -webkit-text-size-adjust: 100%;
 }
 
 /* Decorative Ornaments */
