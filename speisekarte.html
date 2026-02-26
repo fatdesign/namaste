@@ -119,8 +119,16 @@
         }
 
         .legend-icon {
-            height: 20px;
+            height: 18px;
             width: auto;
+            vertical-align: middle;
+        }
+
+        .chili-icon,
+        .vegan-icon {
+            height: 14px;
+            width: auto;
+            margin-left: 4px;
             vertical-align: middle;
         }
 
@@ -244,15 +252,15 @@
             }
 
             .cat-wheel-item {
-                width: 140px;
+                width: 120px;
             }
 
             .cat-wheel-item.prev1 {
-                transform: translateX(-100px) translateZ(0) rotateY(25deg);
+                transform: translateX(-80px) translateZ(0) rotateY(25deg);
             }
 
             .cat-wheel-item.next1 {
-                transform: translateX(100px) translateZ(0) rotateY(-25deg);
+                transform: translateX(80px) translateZ(0) rotateY(-25deg);
             }
 
             .cat-wheel-item.prev2,
@@ -310,6 +318,13 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 2rem 8rem;
+            overflow-x: hidden;
+        }
+
+        @media(max-width: 768px) {
+            .menu-wrapper {
+                padding: 3rem 1.2rem 8rem;
+            }
         }
 
         .menu-section {
@@ -413,6 +428,9 @@
             /* Allow word wrap to function inside flex container */
             display: block;
             /* Better block formatting context */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
         }
 
         .item-allergens {
@@ -441,6 +459,7 @@
             line-height: 1.5;
             font-style: italic;
             margin-top: 0.2rem;
+            overflow-wrap: break-word;
         }
 
         .item-price {
