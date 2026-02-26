@@ -119,16 +119,8 @@
         }
 
         .legend-icon {
-            height: 18px;
+            height: 20px;
             width: auto;
-            vertical-align: middle;
-        }
-
-        .chili-icon,
-        .vegan-icon {
-            height: 14px;
-            width: auto;
-            margin-left: 4px;
             vertical-align: middle;
         }
 
@@ -252,15 +244,15 @@
             }
 
             .cat-wheel-item {
-                width: 120px;
+                width: 140px;
             }
 
             .cat-wheel-item.prev1 {
-                transform: translateX(-80px) translateZ(0) rotateY(25deg);
+                transform: translateX(-100px) translateZ(0) rotateY(25deg);
             }
 
             .cat-wheel-item.next1 {
-                transform: translateX(80px) translateZ(0) rotateY(-25deg);
+                transform: translateX(100px) translateZ(0) rotateY(-25deg);
             }
 
             .cat-wheel-item.prev2,
@@ -318,13 +310,6 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 2rem 8rem;
-            overflow-x: hidden;
-        }
-
-        @media(max-width: 768px) {
-            .menu-wrapper {
-                padding: 3rem 1.2rem 8rem;
-            }
         }
 
         .menu-section {
@@ -391,11 +376,8 @@
         .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            /* Allow multiline text alignment */
+            align-items: baseline;
             width: 100%;
-            gap: 1rem;
-            /* Ensure space between name and price */
         }
 
         .item-dots {
@@ -422,15 +404,6 @@
             text-transform: uppercase;
             color: var(--text-primary);
             font-weight: 600;
-            flex: 1;
-            /* Take up available space */
-            min-width: 0;
-            /* Allow word wrap to function inside flex container */
-            display: block;
-            /* Better block formatting context */
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
         }
 
         .item-allergens {
@@ -459,7 +432,6 @@
             line-height: 1.5;
             font-style: italic;
             margin-top: 0.2rem;
-            overflow-wrap: break-word;
         }
 
         .item-price {
@@ -468,8 +440,6 @@
             font-weight: 600;
             color: var(--text-primary);
             white-space: nowrap;
-            flex-shrink: 0;
-            /* Prevent price from shrinking */
         }
 
         /* ── Section Divider (Ornamental) ── */
