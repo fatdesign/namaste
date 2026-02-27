@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -410,7 +411,8 @@
 
         .item-name {
             font-family: var(--font-accent);
-            font-size: 0.82rem !important;
+            font-size: 14px !important;
+            /* Absolute size for language parity */
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--text-primary);
@@ -419,6 +421,7 @@
             /* Take up available space */
             word-wrap: break-word;
             overflow-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
         }
 
         .item-allergens {
@@ -442,14 +445,16 @@
         }
 
         .item-desc {
-            font-size: 0.78rem !important;
-            /* Force consistency across languages */
+            font-family: var(--font-body) !important;
+            font-size: 12.5px !important;
+            /* Absolute size for language parity */
             color: var(--text-secondary);
             line-height: 1.4;
             font-style: italic;
             margin-top: 0.2rem;
             max-width: 90%;
             /* Allow slightly more room */
+            -webkit-font-smoothing: antialiased;
         }
 
         .item-price {
@@ -585,7 +590,7 @@
 
     <!-- Menu App -->
     <main>
-        <div id="menu-app" class="menu-wrapper">
+        <div id="menu-app" class="menu-wrapper notranslate">
             <p style="text-align:center;padding:4rem;color:#aaa;">Speisekarte wird geladen…</p>
         </div>
     </main>
@@ -684,6 +689,9 @@
         const ICONS = ['◈', '◇', '◈', '◇', '◈', '◇', '◈', '◇', '◈'];
 
         async function init() {
+            // Sync HTML language attribute
+            document.documentElement.lang = currentLang;
+
             // Try fetch first (works when hosted on a server)
             // Falls back instantly to the inline data (works on file://)
             try {
@@ -896,6 +904,7 @@
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 currentLang = btn.dataset.lang;
+                document.documentElement.lang = currentLang; // Sync with browser translator
                 localStorage.setItem(storageKey, currentLang);
                 renderMenu(currentLang);
             });
