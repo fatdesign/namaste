@@ -48,7 +48,7 @@
             "en": "ALOO-SAMOSA"
           },
           "price": "6,90",
-          "isSoldOut": false,
+          "isSoldOut": true,
           "isVegan": true,
           "spiciness": "2",
           "allergens": [
