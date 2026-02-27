@@ -245,13 +245,48 @@
 
         @media(max-width: 768px) {
             .cat-wheel-wrap {
-                top: 30px;
-                /* Balanced offset for floating nav */
-                height: 130px;
-                /* Adjusted height */
-                padding-top: 54px;
-                /* Refined spacer */
+                position: fixed;
+                top: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 55%;
+                /* Fit between logo and burger */
+                height: 45px;
+                /* Match mobile nav height roughly */
+                padding: 0;
+                background: transparent;
+                border: none;
+                z-index: 2600;
+                /* Above nav (2500) */
+                pointer-events: none;
+                /* Let touches fall through where wheel is empty */
             }
+
+            .cat-wheel-wrap.scrolled {
+                top: 1rem;
+                /* No background needed since it sits over the navbar */
+            }
+
+            /* Make sure the clickable area is active */
+            .cat-wheel-item {
+                pointer-events: auto;
+                width: 120px;
+            }
+
+            .cat-wheel-item a {
+                padding: 0.5rem;
+                font-size: 0.65rem;
+                letter-spacing: 0.15em;
+            }
+
+            .cat-wheel-wrap.scrolled .cat-wheel-item a {
+                color: rgba(255, 255, 255, 0.4);
+            }
+
+            .cat-wheel-wrap.scrolled .cat-wheel-item.active a {
+                color: var(--accent);
+            }
+
 
             .cat-wheel-item {
                 width: 140px;
@@ -271,7 +306,7 @@
             }
 
             .lang-bar {
-                padding-top: 5rem;
+                padding-top: 6rem;
                 /* Push below floating nav */
             }
         }
@@ -969,8 +1004,13 @@
 
         // ── Navbar scroll colour swap ──────────────────────────────
         const navbar = document.getElementById('navbar');
+        const wheelWrap = document.querySelector('.cat-wheel-wrap');
         window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            const isScrolled = window.scrollY > 50;
+            navbar.classList.toggle('scrolled', isScrolled);
+            if (wheelWrap) {
+                wheelWrap.classList.toggle('scrolled', isScrolled);
+            }
         });
 
         // ── Mobile Menu Toggle ────────────────────────────────────
