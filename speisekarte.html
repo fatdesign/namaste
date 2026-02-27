@@ -837,9 +837,32 @@
     }
 
     .wishlist-footer {
-      padding: 2rem;
+      padding: 1.5rem 2rem 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       background: rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+
+    .clear-wishlist-btn {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.5);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-family: var(--font-accent);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .clear-wishlist-btn:hover {
+      border-color: #e53e3e;
+      color: #e53e3e;
+      background: rgba(229, 62, 62, 0.05);
     }
 
     .wishlist-empty {
@@ -2663,6 +2686,7 @@
                     </div>
                     <div class="wishlist-items"></div>
                     <div class="wishlist-footer">
+                        <button class="clear-wishlist-btn" id="clear-wishlist">Liste leeren</button>
                         <p style="font-size:0.75rem; text-align:center; opacity:0.6; margin:0;">
                             Diese Liste hilft Ihnen dabei, dem Kellner die Bestellung einfach mitzuteilen.
                         </p>
@@ -2670,6 +2694,7 @@
                 `;
         document.body.appendChild(this.drawer);
         this.drawer.querySelector('.close-drawer').onclick = () => this.toggleDrawer(false);
+        this.drawer.querySelector('#clear-wishlist').onclick = () => this.clear();
       }
 
       add(encodedName, price) {
@@ -2682,7 +2707,15 @@
         }
         this.save();
         this.updateUI();
-        this.toggleDrawer(true);
+        // Removed auto-open drawer: this.toggleDrawer(true);
+      }
+
+      clear() {
+        if (confirm('Möchten Sie die gesamte Merkliste leeren?')) {
+          this.items = [];
+          this.save();
+          this.updateUI();
+        }
       }
 
       updateQuantity(name, delta) {
@@ -2717,9 +2750,13 @@
 
         // Render items in drawer
         const container = this.drawer.querySelector('.wishlist-items');
+        const clearBtn = this.drawer.querySelector('#clear-wishlist');
+
         if (this.items.length === 0) {
           container.innerHTML = `<div class="wishlist-empty">Ihre Merkliste ist noch leer.</div>`;
+          if (clearBtn) clearBtn.style.display = 'none';
         } else {
+          if (clearBtn) clearBtn.style.display = 'inline-block';
           container.innerHTML = this.items.map(item => `
                         <div class="wishlist-item">
                             <div class="w-item-info">
