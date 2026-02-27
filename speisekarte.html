@@ -269,8 +269,8 @@
 
             /* Make sure the clickable area is active */
             .cat-wheel-item {
-                pointer-events: auto;
-                width: 120px;
+                pointer-events: none;
+                width: 160px;
             }
 
             .cat-wheel-item a {
@@ -289,15 +289,26 @@
 
 
             .cat-wheel-item {
-                width: 140px;
+                width: 160px;
+                /* Slightly wider for longer names */
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            .cat-wheel-item.active {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateZ(0) translateY(0);
             }
 
             .cat-wheel-item.prev1 {
-                transform: translateX(-100px) translateZ(0) rotateY(25deg);
+                opacity: 0;
+                transform: translateY(-20px);
             }
 
             .cat-wheel-item.next1 {
-                transform: translateX(100px) translateZ(0) rotateY(-25deg);
+                opacity: 0;
+                transform: translateY(20px);
             }
 
             .cat-wheel-item.prev2,
