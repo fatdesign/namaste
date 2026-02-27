@@ -119,6 +119,17 @@
             "L",
             "O"
           ]
+        },
+        {
+          "name": {
+            "de": "Testtest",
+            "en": "Testtest"
+          },
+          "price": "88.11",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "",
+          "allergens": []
         }
       ]
     },
