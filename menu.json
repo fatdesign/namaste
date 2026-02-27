@@ -193,8 +193,8 @@
     {
       "id": "vegetarian",
       "name": {
-        "de": "VEGAN & VEGETARISCH",
-        "en": "VEGAN & VEGETERIAN"
+        "de": "VEGETARISCH",
+        "en": "VEGETARIAN"
       },
       "items": [
         {
@@ -732,8 +732,8 @@
     {
       "id": "biryani",
       "name": {
-        "de": "REIS GERICHTE / BIRYANI",
-        "en": "RICE DISHES / BIRYANI"
+        "de": "BIRYANI",
+        "en": "BIRYANI"
       },
       "items": [
         {
@@ -867,8 +867,8 @@
     {
       "id": "thalis",
       "name": {
-        "de": "PLATTE (THALIS)",
-        "en": "PLATTE (THALIS)"
+        "de": "THALIS",
+        "en": "THALIS"
       },
       "items": [
         {
@@ -920,8 +920,8 @@
     {
       "id": "breads",
       "name": {
-        "de": "BROTE/BREADS",
-        "en": "BROTE/BREADS"
+        "de": "BROTE",
+        "en": "BREADS"
       },
       "items": [
         {
@@ -992,8 +992,8 @@
     {
       "id": "sides",
       "name": {
-        "de": "BEILAGEN / Side Dishes",
-        "en": "BEILAGEN / Side Dishes"
+        "de": "BEILAGEN",
+        "en": "SIDE DISHES"
       },
       "items": [
         {
