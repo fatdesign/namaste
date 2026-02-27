@@ -106,13 +106,14 @@
         {
           "name": {
             "de": "Test123",
-            "en": "https://fatdesign.github.io/namaste/admin/"
+            "en": "Test123"
           },
           "price": "77.99",
           "isSoldOut": false,
           "isVegan": true,
           "spiciness": "3",
           "allergens": [
+            "C",
             "E",
             "F",
             "L",
