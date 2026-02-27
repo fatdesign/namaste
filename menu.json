@@ -30,15 +30,17 @@
             "de": "SABZEE PAKORA",
             "en": "SABZEE PAKORA"
           },
+          "price": "6,90",
+          "isSoldOut": true,
+          "isVegan": true,
+          "spiciness": "",
+          "allergens": [
+            "A"
+          ],
           "desc": {
             "de": "Frisches Gemüse in einem Kichererbsen Teigmantel ausgebacken",
             "en": "Fresh vegetables fried in a chickpea dough coating"
-          },
-          "price": "6,90",
-          "isVegan": true,
-          "allergens": [
-            "A"
-          ]
+          }
         },
         {
           "name": {
