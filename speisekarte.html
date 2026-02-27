@@ -354,6 +354,30 @@
             opacity: 0.8;
         }
 
+        .menu-section {
+            background: var(--bg-primary);
+            padding: 4.5rem 2rem 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .menu-section span.section-desc {
+            display: block;
+            text-align: center;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            margin-top: -1.5rem;
+            font-style: italic;
+            opacity: 0.8;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
         .menu-section h2 {
             font-family: var(--font-heading);
             font-size: 1.1rem;
@@ -370,6 +394,9 @@
             grid-template-columns: 1fr;
             /* Single column 1:1 to PDF */
             gap: 0.25rem;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .menu-item {
@@ -381,6 +408,11 @@
             opacity: 0;
             transform: translateY(12px);
             transition: opacity 0.5s, transform 0.5s;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            /* Failsafe */
         }
 
         .item-header {
@@ -390,6 +422,8 @@
             /* Better for multiline names */
             gap: 1rem;
             width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .item-dots {
@@ -417,10 +451,13 @@
             text-transform: uppercase;
             color: var(--text-primary);
             font-weight: 600;
-            flex: 1;
+            flex: 1 1 auto;
+            min-width: 0;
+            /* CRITICAL FOR FLEX WRAP */
             /* Take up available space */
             word-wrap: break-word;
-            overflow-wrap: break-word;
+            overflow-wrap: anywhere;
+            word-break: break-all;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -452,9 +489,15 @@
             line-height: 1.4;
             font-style: italic;
             margin-top: 0.2rem;
-            max-width: 90%;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 2rem;
             /* Allow slightly more room */
             -webkit-font-smoothing: antialiased;
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+            word-break: break-all;
         }
 
         .item-price {
