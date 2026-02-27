@@ -724,73 +724,1646 @@
     <!-- ── Inline Menu Fallback (works on file://) ── -->
     <script>
         const MENU_INLINE = {
-            "categories": [
-                {
-                    "id": "starters",
-                    "name": { "de": "VORSPEISEN", "en": "STARTERS" },
-                    "items": [
-                        { "name": { "de": "VORSPEISENPLATTE (für 2 Personen)", "en": "STARTER PLATTER (for 2 persons)" }, "desc": { "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys", "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys" }, "price": "21,90", "allergens": ["A", "G"] },
-                        { "name": { "de": "SABZEE PAKORA", "en": "SABZEE PAKORA" }, "desc": { "de": "Frisches Gemüse in einem Kichererbsen Teigmantel ausgebacken", "en": "Fresh vegetables fried in a chickpea dough coating" }, "price": "6,90", "isVegan": true, "allergens": ["A"] },
-                        { "name": { "de": "ALOO-SAMOSA", "en": "ALOO-SAMOSA" }, "desc": { "de": "2 Stk ausgebackene Teigtaschen mit würzigen Kartoffeln und Erbsen gefüllt", "en": "2 pieces of baked dumplings filled with spicy potatoes and peas" }, "price": "6,90", "isVegan": true, "allergens": ["A"] },
-                        { "name": { "de": "PAPADAM", "en": "PAPADAM" }, "desc": { "de": "2 Stk hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys", "en": "2 pieces of thin, seasoned and baked lentil flour flatbread with three different chutneys" }, "price": "3,50", "isVegan": true },
-                        { "name": { "de": "MURG - TIKKA", "en": "MURG - TIKKA" }, "desc": { "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen", "en": "Marinated and grilled boneless chicken thighs" }, "price": "8,50", "allergens": ["G"] }
-                    ]
-                },
-                {
-                    "id": "soups",
-                    "name": { "de": "SUPPEN", "en": "SOUPS" },
-                    "items": [
-                        { "name": { "de": "DAL-SOUP", "en": "DAL-SOUP" }, "desc": { "de": "Würzige Linsensuppe", "en": "Spiced yellow lentil soup" }, "price": "6,90", "isVegan": true },
-                        { "name": { "de": "TAMATAR-SOUP", "en": "TAMATAR-SOUP" }, "desc": { "de": "Fruchtige Tomatensuppe mit frischem Koriander", "en": "Fruity tomato soup with fresh coriander" }, "price": "6,90" }
-                    ]
-                },
-                {
-                    "id": "vegetarian",
-                    "name": { "de": "VEGETARISCH", "en": "VEGETARIAN" },
-                    "items": [
-                        { "name": { "de": "DELHI-ALOO-CHOLLE", "en": "DELHI-ALOO-CHOLLE" }, "desc": { "de": "Kartoffeln und Kichererbsen in einer Zwiebel-Tomatensauce (Scharf & Vegan)", "en": "Potatoes and chickpeas in an onion and tomato sauce (Spicy & Vegan)" }, "price": "13,50", "isVegan": true, "spiciness": "1" },
-                        { "name": { "de": "DAL-PALAK", "en": "DAL-PALAK" }, "desc": { "de": "Linsen mit Blattspinat (Vegan)", "en": "Lentils with leaf spinach (Vegan)" }, "price": "13,50", "isVegan": true },
-                        { "name": { "de": "PUNJABI-CHANA MASALA", "en": "PUNJABI-CHANA MASALA" }, "desc": { "de": "Kichererbsen mit Tomaten Currysauce (Vegan)", "en": "Chickpeas with tomato curry sauce (Vegan)" }, "price": "13,90", "isVegan": true },
-                        { "name": { "de": "PANEER-MAKHNI", "en": "PANEER-MAKHNI" }, "desc": { "de": "Hausgemachter Frischkäse mit pikanter Tomatensauce zubereitet", "en": "Homemade cheese with Tomato sauce" }, "price": "14,90", "allergens": ["G"] },
-                        { "name": { "de": "PALAK-PANEER", "en": "PALAK-PANEER" }, "desc": { "de": "Hausgemachter frischer Käse mit Cremespinat zubereitet", "en": "Homemade fresh cheese with creamed spinach" }, "price": "14,90", "allergens": ["G"] }
-                    ]
-                },
-                {
-                    "id": "chicken",
-                    "name": { "de": "HUHN & PUTE", "en": "CHICKEN & TURKEY" },
-                    "items": [
-                        { "name": { "de": "CHICKEN-TIKKA-MASALA", "en": "CHICKEN-TIKKA-MASALA" }, "desc": { "de": "Ausgelöste gegrillte Hühnerkeulen mit Zwiebeln und Tomaten in einer Currysauce", "en": "Roasted grilled chicken thighs with onions and tomatoes in a curry sauce" }, "price": "15,90", "allergens": ["G", "H"] },
-                        { "name": { "de": "MANGO-CHICKEN", "en": "MANGO-CHICKEN" }, "desc": { "de": "Gegrillte ausgelöste Hühnerkeulen in einer Mango-Currysauce", "en": "Grilled chicken thighs in a mango curry sauce" }, "price": "15,90", "allergens": ["G"] },
-                        { "name": { "de": "BUTTER-CHICKEN", "en": "BUTTER-CHICKEN" }, "desc": { "de": "Ausgelöste gegrillte Hühnerkeulen in einer süßsauren Tomatenrahmsauce", "en": "Roasted grilled chicken thighs in a sweet saur Tomato cream sauce" }, "price": "15,90", "allergens": ["G", "H"] }
-                    ]
-                },
-                {
-                    "id": "lamb",
-                    "name": { "de": "LAMM", "en": "LAMB" },
-                    "items": [
-                        { "name": { "de": "RAJASTHANI-ACHARI GOSCHT", "en": "RAJASTHANI-ACHARI GOSHT" }, "desc": { "de": "Ausgelöstes zartes Lammfleisch mit Gewürzen in einer kräftigen und scharfen Sauce", "en": "Roasted tender lamb with spices in a strong and spicy sauce" }, "price": "17,90", "allergens": ["G"] },
-                        { "name": { "de": "LAMM-VINDALOO", "en": "LAMM-VINDALOO" }, "desc": { "de": "Ausgelöstes zartes Lammfleisch mit Kartoffeln in einer scharfen Currysauce (Scharf)", "en": "Roasted tender lamb with potatoes in a spicy curry sauce (Spicy)" }, "price": "17,90", "spiciness": "1", "allergens": ["G"] },
-                        { "name": { "de": "KASHMIRI-ROGANJOSH", "en": "KASHMIRI-ROGANJOSH" }, "desc": { "de": "Ausgelöstes zartes Lammfleisch in einer würzigen Tomaten Sauce", "en": "Roasted tender lamb in a Tomatocurry sauce" }, "price": "17,90" }
-                    ]
-                },
-                {
-                    "id": "breads",
-                    "name": { "de": "BROTE", "en": "BREADS" },
-                    "items": [
-                        { "name": { "de": "NAAN", "en": "NAAN" }, "desc": { "de": "Fladenbrot aus Weizenmehl", "en": "Flatbread made from wheat flour" }, "price": "3,10", "allergens": ["A", "C", "G"] },
-                        { "name": { "de": "GARLIC-NAAN", "en": "GARLIC-NAAN" }, "desc": { "de": "Fladenbrot aus Weizenmehl mit Knoblauch", "en": "Flatbread made from wheat flour with garlic" }, "price": "3,50", "allergens": ["A", "C", "G"] }
-                    ]
-                },
-                {
-                    "id": "desserts",
-                    "name": { "de": "DESSERT", "en": "DESSERT" },
-                    "items": [
-                        { "name": { "de": "FIRNI", "en": "FIRNI" }, "desc": { "de": "Milchreispudding mit Kardamom, Pistazien und Safran", "en": "Rice pudding with cardamom, pistachios & saffron" }, "price": "5,50", "allergens": ["G", "H"] },
-                        { "name": { "de": "GULAB-JAMUN", "en": "GULAB-JAMUN" }, "desc": { "de": "Aromatisierte Milchmehlteigbällchen in Zuckersirup", "en": "Flavored milkdough balls in a sugar syrup" }, "price": "6,50", "allergens": ["G", "H", "A"] }
-                    ]
-                }
-            ]
-        };
+  "categories": [
+    {
+      "id": "starters",
+      "name": {
+        "de": "VORSPEISEN",
+        "en": "STARTERS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "VORSPEISENPLATTE (für 2 Personen)",
+            "en": "STARTER PLATTER (for 2 persons)"
+          },
+          "price": "21,90",
+          "isSoldOut": true,
+          "isVegan": false,
+          "spiciness": "3",
+          "allergens": [
+            "A",
+            "G"
+          ],
+          "desc": {
+            "de": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, serviert mit drei verschiedenen Chutneys",
+            "en": "Samosa, Sabzee Pakora, Murg Tikka & Papadam, served with three different chutneys"
+          }
+        },
+        {
+          "name": {
+            "de": "SABZEE PAKORA",
+            "en": "SABZEE PAKORA"
+          },
+          "price": "6,90",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "",
+          "allergens": [
+            "A"
+          ],
+          "desc": {
+            "de": "Frisches Gemüse in einem Kichererbsen Teigmantel ausgebacken",
+            "en": "Fresh vegetables fried in a chickpea dough coating"
+          }
+        },
+        {
+          "name": {
+            "de": "ALOO-SAMOSA",
+            "en": "ALOO-SAMOSA"
+          },
+          "price": "6,90",
+          "isSoldOut": true,
+          "isVegan": true,
+          "spiciness": "2",
+          "allergens": [
+            "A"
+          ],
+          "desc": {
+            "de": "2 Stk ausgebackene Teigtaschen mit würzigen Kartoffeln und Erbsen gefüllt",
+            "en": "2 pieces of baked dumplings filled with spicy potatoes and peas"
+          }
+        },
+        {
+          "name": {
+            "de": "PAPADAM",
+            "en": "PAPADAM"
+          },
+          "desc": {
+            "de": "2 Stk hauchdünne, gewürzte und gebackene Linsenmehlfladen mit drei verschiedenen Chutneys",
+            "en": "2 pieces of thin, seasoned and baked lentil flour flatbread with three different chutneys"
+          },
+          "price": "3,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "MURG - TIKKA",
+            "en": "MURG - TIKKA"
+          },
+          "price": "8,50",
+          "isSoldOut": true,
+          "isVegan": false,
+          "spiciness": "",
+          "allergens": [
+            "G"
+          ],
+          "desc": {
+            "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen",
+            "en": "Marinated and grilled boneless chicken thighs"
+          }
+        },
+        {
+          "name": {
+            "de": "GRILLPLATTE",
+            "en": "GRILL PLATTER"
+          },
+          "desc": {
+            "de": "Murgh Tikka, Achari Tikka, Malai Tikka und Papadam serviert mit Chutneys",
+            "en": "Murgh Tikka, Achari Tikka, Malai Tikka and Papadam served with chutneys"
+          },
+          "price": "39,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "Test123",
+            "en": "Test123"
+          },
+          "price": "77.99",
+          "isSoldOut": false,
+          "isVegan": true,
+          "spiciness": "3",
+          "allergens": [
+            "C",
+            "E",
+            "F",
+            "L",
+            "O"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": {
+        "de": "SUPPEN",
+        "en": "SOUPS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "DAL-SOUP",
+            "en": "DAL-SOUP"
+          },
+          "desc": {
+            "de": "Würzige Linsensuppe",
+            "en": "Spiced yellow lentil soup"
+          },
+          "price": "6,90",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "TAMATAR-SOUP",
+            "en": "TAMATAR-SOUP"
+          },
+          "desc": {
+            "de": "Fruchtige Tomatensuppe mit frischem Koriander",
+            "en": "Fruity tomato soup with fresh coriander"
+          },
+          "price": "6,90"
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": {
+        "de": "SALATE",
+        "en": "SALADS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "GEMISCHTER SALAT",
+            "en": "MIXED SALAD"
+          },
+          "desc": {
+            "de": "mit Balsamico oder Joghurtdressing",
+            "en": "with balsamic vinegar or yogurt dressing"
+          },
+          "price": "6,50",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "NAMASTESALAT",
+            "en": "NAMASTE SALAD"
+          },
+          "desc": {
+            "de": "Gemischer-Salat mit Hausdressing mit ausgelösten marinierten und gegrillten Hühnerkeulen",
+            "en": "Marinated grilled boneless chickenleg salad with yogurt dressing"
+          },
+          "price": "13,80",
+          "allergens": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vegetarian",
+      "name": {
+        "de": "VEGETARISCH",
+        "en": "VEGETARIAN"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "DELHI-ALOO-CHOLLE",
+            "en": "DELHI-ALOO-CHOLLE"
+          },
+          "desc": {
+            "de": "Kartoffeln und Kichererbsen in einer Zwiebel-Tomatensauce (Scharf & Vegan)",
+            "en": "Potatoes and chickpeas in an onion and tomato sauce (Spicy & Vegan)"
+          },
+          "price": "13,50",
+          "isVegan": true,
+          "spiciness": "1"
+        },
+        {
+          "name": {
+            "de": "DAL-PALAK",
+            "en": "DAL-PALAK"
+          },
+          "desc": {
+            "de": "Linsen mit Blattspinat (Vegan)",
+            "en": "Lentils with leaf spinach (Vegan)"
+          },
+          "price": "13,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "MATAR-ALOO",
+            "en": "MATAR-ALOO"
+          },
+          "desc": {
+            "de": "Kartoffeln und Erbsen in einer Tomaten-Zwiebelsauce (Vegan)",
+            "en": "Potatoes and peas in a tomato and onion sauce (Vegan)"
+          },
+          "price": "13,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "PUNJABI-CHANA MASALA",
+            "en": "PUNJABI-CHANA MASALA"
+          },
+          "desc": {
+            "de": "Kichererbsen mit Tomaten Currysauce (Vegan)",
+            "en": "Chickpeas with tomato curry sauce (Vegan)"
+          },
+          "price": "13,90",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "HIMACHALI-MIX-SABZEE",
+            "en": "HIMACHALI-MIX-SABZEE"
+          },
+          "desc": {
+            "de": "Frisches Marktgemüse in einer Zwiebel-Tomatensauce nach Nord-Indischer Art (Vegan)",
+            "en": "Fresh market vegetables prepared in a North Indian style (Vegan)"
+          },
+          "price": "13,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "ALOO-PALAK",
+            "en": "ALOO-PALAK"
+          },
+          "desc": {
+            "de": "Kartoffeln mit Blattspinat (Vegan)",
+            "en": "Potatoes with leaf spinach (Vegan)"
+          },
+          "price": "12,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "DAL-TADKA",
+            "en": "DAL-TADKA"
+          },
+          "desc": {
+            "de": "Gelbe Linsen mit Kümmel, Zwiebel, Ingwer, frischem Koriander und Tomaten (Vegan)",
+            "en": "Yellow lentils with caraway, onion, ginger, fresh coriander and tomatoes (Vegan)"
+          },
+          "price": "13,50",
+          "isVegan": true
+        },
+        {
+          "name": {
+            "de": "NAVRATAN-KORMA",
+            "en": "NAVRATAN-KORMA"
+          },
+          "desc": {
+            "de": "Frisches Marktgemüse und Nüsse in einer Cashew-Mandelrahmsauce zubereitet",
+            "en": "Fresh market vegetables and nuts prepared in a cashew almonds sauce"
+          },
+          "price": "13,50",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "PANEER-MAKHNI",
+            "en": "PANEER-MAKHNI"
+          },
+          "desc": {
+            "de": "Hausgemachter Frischkäse mit pikanter Tomatensauce zubereitet",
+            "en": "Homemade cheese with Tomato sauce"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "KADAHI-PANEER",
+            "en": "KADAHI-PANEER"
+          },
+          "desc": {
+            "de": "Hausgemachter Frischkäse mit Paprika, Zwiebel & Tomaten in einer würzigen Sauce",
+            "en": "Homemade cheese with Bellpapers and Onions sauce"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "MALAI-KOFTA",
+            "en": "MALAI-KOFTA"
+          },
+          "desc": {
+            "de": "Bällchen aus hausgemachtem Käse, Gemüse und Rosinen in einer feinen Nuss-Currysauce",
+            "en": "Homemade vegetables, Cheese and raisins balls in a fine nut curry sauce"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "MATAR-PANEER",
+            "en": "MATAR-PANEER"
+          },
+          "desc": {
+            "de": "Hausgemachter frischer Käse mit Erbsen zubereitet in einer Zwiebel-Tomatencurrysauce",
+            "en": "Homemade fresh cheese with peas prepared in an onion and tomato sauce"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "PALAK-PANEER",
+            "en": "PALAK-PANEER"
+          },
+          "desc": {
+            "de": "Hausgemachter frischer Käse mit Cremespinat zubereitet",
+            "en": "Homemade fresh cheese with creamed spinach"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "PANEER-BUTTER-MASALA",
+            "en": "PANEER-BUTTER-MASALA"
+          },
+          "desc": {
+            "de": "Hausgemachter indischer Frischkäse in buttriger Tomatenrahmsauce",
+            "en": "Homemade cream cheese with onions, tomatoes and creamysauce"
+          },
+          "price": "14,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "MANGO-SABZEE",
+            "en": "MANGO-SABZEE"
+          },
+          "desc": {
+            "de": "Frisches Marktgemüse in einer Mangocurrysauce zubereitet",
+            "en": "Fresh market vegetables prepared in a Mangocurrysauce"
+          },
+          "price": "14,00",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "DAL-MAKHNI",
+            "en": "DAL-MAKHNI"
+          },
+          "desc": {
+            "de": "Schwarze Indische Linsen mit feiner Tomatenrahmsauce",
+            "en": "Black lentils with cream and fein Toamtosauce"
+          },
+          "price": "14,00",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "name": {
+        "de": "HUHN & PUTE",
+        "en": "CHICKEN & TURKEY"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "CHICKEN-PAHARI",
+            "en": "CHICKEN-PAHARI"
+          },
+          "desc": {
+            "de": "Gegrillte ausgelöste Hühnerkeulen in einer Tomaten-Knoblauch-Kokoscurrysauce (Scharf)",
+            "en": "Grilled chicken thighs in a tomato-garlic-coconut curry sauce (Spicy)"
+          },
+          "price": "15,90",
+          "spiciness": "1",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "MURG-VINDALOO",
+            "en": "MURG-VINDALOO"
+          },
+          "desc": {
+            "de": "Ausgelöste gegrillte Hühnerkeulen mit Kartoffeln in einer scharfen Currysauce (Scharf)",
+            "en": "Roasted grilled chicken thighs with potatoes in a spicy curry sauce (Spicy)"
+          },
+          "price": "15,90",
+          "spiciness": "1",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "BOMBAY-BATAK",
+            "en": "BOMBAY-BATAK"
+          },
+          "desc": {
+            "de": "Putenbrustfilet in einer Tomaten-Knoblauch-Kokoscurry Sauce (Scharf)",
+            "en": "Turkey Filet in a Tomato-Garlic-Coconut curry sauce (Spicy)"
+          },
+          "price": "17,90",
+          "spiciness": "1",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "KARAHI-CHICKEN",
+            "en": "KARAHI-CHICKEN"
+          },
+          "desc": {
+            "de": "Ausgelöste gegrillte Hühnerkeulen mit Paprika, Zwiebeln und Tomaten in einer würzigen Sauce",
+            "en": "Roasted grilled chicken thighs with peppers, onions and tomatoes in a spicy sauce"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "PALAK-CHICKEN",
+            "en": "PALAK-CHICKEN"
+          },
+          "desc": {
+            "de": "Ausgelöste gegrillte Hühnerkeulen mit Blattspinat",
+            "en": "Roasted grilled chicken thighs with leaf spinach"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "CHICKEN-TIKKA-MASALA",
+            "en": "CHICKEN-TIKKA-MASALA"
+          },
+          "desc": {
+            "de": "Ausgelöste gegrillte Hühnerkeulen mit Zwiebeln und Tomaten in einer Currysauce",
+            "en": "Roasted grilled chicken thighs with onions and tomatoes in a curry sauce"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "MANGO-CHICKEN",
+            "en": "MANGO-CHICKEN"
+          },
+          "desc": {
+            "de": "Gegrillte ausgelöste Hühnerkeulen in einer Mango-Currysauce",
+            "en": "Grilled chicken thighs in a mango curry sauce"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "SHAHI-KORMA",
+            "en": "SHAHI-KORMA"
+          },
+          "desc": {
+            "de": "Hühnerbrustfilet in einer Sauce aus Zwiebeln, Tomaten, Safran, gemahlenen Mandeln und Cashewnüssen",
+            "en": "Chickenbreast fillet in a sauce made from onions, tomatoes, saffron, ground almonds and cashews"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "DAHI-MURG",
+            "en": "DAHI-MURG"
+          },
+          "desc": {
+            "de": "Hühnerbrustfilet in einer cremigen Joghurt-Currysauce",
+            "en": "Marinated chicken fillets in a creamy yogurt curry sauce"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "BUTTER-CHICKEN",
+            "en": "BUTTER-CHICKEN"
+          },
+          "desc": {
+            "de": "Ausgelöste gegrillte Hühnerkeulen in einer süßsauren Tomatenrahmsauce",
+            "en": "Roasted grilled chicken thighs in a sweet saur Tomato cream sauce"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lamb",
+      "name": {
+        "de": "LAMM",
+        "en": "LAMB"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "RAJASTHANI-ACHARI GOSCHT",
+            "en": "RAJASTHANI-ACHARI GOSHT"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch mit Gewürzen in einer kräftigen und scharfen Sauce",
+            "en": "Roasted tender lamb with spices in a strong and spicy sauce"
+          },
+          "price": "17,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "LAMM-VINDALOO",
+            "en": "LAMM-VINDALOO"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch mit Kartoffeln in einer scharfen Currysauce (Scharf)",
+            "en": "Roasted tender lamb with potatoes in a spicy curry sauce (Spicy)"
+          },
+          "price": "17,90",
+          "spiciness": "1",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "PAHARI-LAMM",
+            "en": "PAHARI-LAMM"
+          },
+          "desc": {
+            "de": "Zartes Lammfleisch mit scharfer Tomaten-Knoblauch-Kokoscurrysauce (Scharf)",
+            "en": "Roasted tender lamb with spicy Tomato, Garlic coconutcurrysauce (Spicy)"
+          },
+          "price": "17,90",
+          "spiciness": "1"
+        },
+        {
+          "name": {
+            "de": "PALAK-GOASHT",
+            "en": "PALAK-GOASHT"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch mit würzigem Blattspinat",
+            "en": "Roasted tender lamb with spiced leaf spinach"
+          },
+          "price": "17,90"
+        },
+        {
+          "name": {
+            "de": "MUTTON-KORMA",
+            "en": "MUTTON-KORMA"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch in einer Safran-Mandelsauce",
+            "en": "Roasted tender lamb in a saffron-almond sauce"
+          },
+          "price": "18,50",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "KARAHI-GOASHT",
+            "en": "KARAHI-GOASHT"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch mit Paprika, Zwiebeln und Tomatensauce",
+            "en": "Roasted tender Lamb with Peppers, Onions and Tomatosauce"
+          },
+          "price": "17,90"
+        },
+        {
+          "name": {
+            "de": "CHANA-GOASHT",
+            "en": "CHANA-GOASHT"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch und Kichererbsen mit Tomatensauce zubereitet",
+            "en": "Roasted lamb and chickpeasprepared with tomatosacue"
+          },
+          "price": "17,90"
+        },
+        {
+          "name": {
+            "de": "KASHMIRI-ROGANJOSH",
+            "en": "KASHMIRI-ROGANJOSH"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch in einer würzigen Tomaten Sauce",
+            "en": "Roasted tender lamb in a Tomatocurry sauce"
+          },
+          "price": "17,90"
+        },
+        {
+          "name": {
+            "de": "SABZEE-GOASCHT",
+            "en": "SABZEE-GOASHT"
+          },
+          "desc": {
+            "de": "Ausgelöstes zartes Lammfleisch und Gemüse mit Currysauce zubereitet",
+            "en": "Roasted tender lamb and vegetables with currysauce"
+          },
+          "price": "17,90"
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "name": {
+        "de": "FISCH & GARNELEN",
+        "en": "FISH & SHRIMPS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "GOA-FISCH",
+            "en": "GOA-FISH"
+          },
+          "desc": {
+            "de": "Gebratenes Zanderfilet in einer Kokoscurryrahmsauce",
+            "en": "Fried Pikeperchfillet in a Coconutcurry sauce"
+          },
+          "price": "18,50",
+          "allergens": [
+            "D",
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "JHINGA-BOMBAY",
+            "en": "JHINGA-BOMBAY"
+          },
+          "desc": {
+            "de": "Garnelen in einer scharfer Tomaten-Knoblauch-Kokoscurry Sauce (Scharf)",
+            "en": "Shrimp in a Tomato Garlic Coconutcurry sauce (Spicy)"
+          },
+          "price": "18,50",
+          "spiciness": "1",
+          "allergens": [
+            "D",
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biryani",
+      "name": {
+        "de": "BIRYANI",
+        "en": "BIRYANI"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "MURG-BIRYANI",
+            "en": "MURG-BIRYANI"
+          },
+          "desc": {
+            "de": "Exotisch gekochter gewürzter Reis mit ausgelösten Hühnerkeulen",
+            "en": "Exotically spiced rice with roasted chicken thighs"
+          },
+          "price": "15,90",
+          "allergens": [
+            "H",
+            "E",
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "LAMM-BIRYANI",
+            "en": "LAMM-BIRYANI"
+          },
+          "desc": {
+            "de": "Exotisch gekochter gewürzter Reis mit zartem Lammfleisch",
+            "en": "Exotically cooked spiced rice with tender lamb"
+          },
+          "price": "18,50",
+          "allergens": [
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "VEG-BIRYANI",
+            "en": "VEG-BIRYANI"
+          },
+          "desc": {
+            "de": "Exotisch gekochter gewürzter Reis mit Gemüse und Raita",
+            "en": "Exotically cooked spiced rice with vegetables and Raita"
+          },
+          "price": "13,90",
+          "allergens": [
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "JHINGA-BIRYANI",
+            "en": "JHINGA-BIRYANI"
+          },
+          "desc": {
+            "de": "Exotisch gekochter gewürzter Reis mit Garnelen, Nüssen und Rosinen",
+            "en": "Exotically cooked spiced Rice with Shrimps and Raisins"
+          },
+          "price": "18,50",
+          "allergens": [
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "NAVRATAN-BIRYANI",
+            "en": "NAVRATAN-BIRYANI"
+          },
+          "desc": {
+            "de": "Exotisch gekochter gewürzter Reis mit verschiedenem frischem Gemüse, Nüssen und Rosinen",
+            "en": "Exotically cooked spiced rice with various fresh vegetables, nuts and raisins"
+          },
+          "price": "14,90",
+          "allergens": [
+            "D",
+            "H",
+            "E"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grill",
+      "name": {
+        "de": "GRILL-SPEZIALITÄTEN",
+        "en": "GRILL-SPECIALITIES"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "TANDOORI-MURG",
+            "en": "TANDOORI-MURG"
+          },
+          "desc": {
+            "de": "Halbes Hähnchen mariniert und gegrillt mit Naanbrot serviert",
+            "en": "Half grilled Chicken marinated and roasted with Naanbread served"
+          },
+          "price": "16,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "ACHARI-TIKKA",
+            "en": "ACHARI-TIKKA"
+          },
+          "desc": {
+            "de": "Ausgelöstes Mariniertes und gegrilltes Lammfleisch serviert mit Naanbrot",
+            "en": "boneless lamb marinated and grilled served with Naanbread"
+          },
+          "price": "18,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "MALAI-TIKKA",
+            "en": "MALAI-TIKKA"
+          },
+          "desc": {
+            "de": "Mariniertes und gegrilltes Hühnerbrustfilet in einer Cashew-Rahm-Joghurt-Marinade serviert mit Naanbrot",
+            "en": "Boneless chicken breast marinated in cashew cream and joghurt and grilled mit Naanbred served"
+          },
+          "price": "15,90",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thalis",
+      "name": {
+        "de": "THALIS",
+        "en": "THALIS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "1. HIMACHALI-THALI (VEGETARISCH)",
+            "en": "1. HIMACHALI-THALI (VEGETARIAN)"
+          },
+          "desc": {
+            "de": "Palak Paneer, Dal Tadka und Mix Sabzee mit Naan, Reis, Salat, Raita, Pickel und Papadam serviert (für 1 Person)",
+            "en": "Palak Paneer, Dal Tadka and Mix Sabzee with Naanbread, Rice, Salad, Raita, Pickel and Papadam served (for 1 person)"
+          },
+          "price": "25,50"
+        },
+        {
+          "name": {
+            "de": "2. DELHI-THALI- (FLEISCH)",
+            "en": "2. DELHI-THALI- (MEAT)"
+          },
+          "desc": {
+            "de": "Chicken Tikka Masala, Roganjosh und Dal Makhni mit Naan, Reis, Salat, Raita, Pickel und Papadam serviert (für 1 Person)",
+            "en": "Chicken Tikka Masala, Roganjosh and Dal Makhni with naan, rice, Salad,Raita, Pickel and papadum served (for 1 person)"
+          },
+          "price": "28,50"
+        },
+        {
+          "name": {
+            "de": "3. NAMASTE-PLATTE (VEGETARISCH)",
+            "en": "3. NAMASTE-PLATTE (VEGETARIAN)"
+          },
+          "desc": {
+            "de": "Vorspeisen: Sabzee Pakora & Papadam, Hauptspeisen: Palak Paneer, Dal Makhni, Malai Kofta, Reis, Naan, und Gulab Jamun (für 2 Personen)",
+            "en": "Starters: Sabzee Pakora & Papadam, Maincourse: Palak Paneer, Dal Makhni, Malai Kofta, Rice & Naan, Gulab Jamun (for 2 persons)"
+          },
+          "price": "53,90"
+        },
+        {
+          "name": {
+            "de": "4. NAMASTE-PLATTE (FLEISCH)",
+            "en": "4. NAMASTE-PLATTE (MEAT)"
+          },
+          "desc": {
+            "de": "Vorspeisen: Murg Tikka & Papadam, Hauptspeisen: Murg Tikka Masala, Rogan Josh, Paneer Butter Masala, Reis, Naan und Gulab Jamun (für 2 Personen)",
+            "en": "Starters: Murg Tikka & Papadam. Maincourse: Murg Tikka Masala, Rogan Josh, Paneer butter masala, Rice, Naan und Gulab Jamun (for 2 persons)"
+          },
+          "price": "58,90"
+        }
+      ]
+    },
+    {
+      "id": "breads",
+      "name": {
+        "de": "BROTE",
+        "en": "BREADS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "NAAN",
+            "en": "NAAN"
+          },
+          "desc": {
+            "de": "Fladenbrot aus Weizenmehl",
+            "en": "Flatbread made from wheat flour"
+          },
+          "price": "3,10",
+          "allergens": [
+            "A",
+            "C",
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "GARLIC-NAAN",
+            "en": "GARLIC-NAAN"
+          },
+          "desc": {
+            "de": "Fladenbrot aus Weizenmehl mit Knoblauch",
+            "en": "Flatbread made from wheat flour with garlic"
+          },
+          "price": "3,50",
+          "allergens": [
+            "A",
+            "C",
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "CHILI-NAAN",
+            "en": "CHILI-NAAN"
+          },
+          "desc": {
+            "de": "Fladenbrot aus Weizenmehl mit grünen Chilies (SEHR SCHARF)",
+            "en": "Flatbread with green chillies (VERY SPICY)"
+          },
+          "price": "4,50",
+          "spiciness": "2",
+          "allergens": [
+            "A",
+            "C",
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "ROTI",
+            "en": "ROTI"
+          },
+          "desc": {
+            "de": "Brot aus Vollkornmehl",
+            "en": "Wheatflour bread"
+          },
+          "price": "2,50",
+          "allergens": [
+            "A"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": {
+        "de": "BEILAGEN",
+        "en": "SIDE DISHES"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "MIX RAITA",
+            "en": "MIX RAITA"
+          },
+          "desc": {
+            "de": "Würziges Joghurt mit Zwiebeln, Tomaten und Gurken",
+            "en": "Spiced Yoghurt with Tomatoes, Cucumbers and Onions"
+          },
+          "price": "4,90",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "Portion Joghurt",
+            "en": "Portion Yoghurt"
+          },
+          "price": "4,00",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": {
+            "de": "Portion Reis",
+            "en": "Portion Rice"
+          },
+          "price": "4,00"
+        },
+        {
+          "name": {
+            "de": "Portion Zeera Rice",
+            "en": "Portion Zeera Rice"
+          },
+          "price": "5,00"
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": {
+        "de": "DESSERT",
+        "en": "DESSERT"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "FIRNI",
+            "en": "FIRNI"
+          },
+          "desc": {
+            "de": "Milchreispudding mit Kardamom, Pistazien und Safran",
+            "en": "Rice pudding with cardamom, pistachios & saffron"
+          },
+          "price": "5,50",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "GULAB-JAMUN",
+            "en": "GULAB-JAMUN"
+          },
+          "desc": {
+            "de": "Aromatisierte Milchmehlteigbällchen in Zuckersirup",
+            "en": "Flavored milkdough balls in a sugar syrup"
+          },
+          "price": "6,50",
+          "allergens": [
+            "G",
+            "H",
+            "A"
+          ]
+        },
+        {
+          "name": {
+            "de": "GAZAR-HALWA",
+            "en": "GAZAR-HALWA"
+          },
+          "desc": {
+            "de": "Klassisches, indisches Dessert aus Karotten, Nüssen, Milch, Zucker und brauner Butter",
+            "en": "Made with carrots, Nuts, milk, sugar & brown butter"
+          },
+          "price": "7,40",
+          "allergens": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "name": {
+            "de": "EISBECHER (3 KUGELN VANILLE EIS)",
+            "en": "ICECREAM CUP (3 SCOOPS VANILLA)"
+          },
+          "price": "4,90",
+          "allergens": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "non-alcoholic",
+      "name": {
+        "de": "ALKOHOLFREI",
+        "en": "NON-ALCOHOLIC"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Coca/Fanta/Sprite 0,5l",
+            "en": "Coca/Fanta/Sprite 0.5l"
+          },
+          "price": "4,70"
+        },
+        {
+          "name": {
+            "de": "Cola/Fanta/Sprite 0,3l",
+            "en": "Coca/Fanta/Sprite 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Cola Zero 0,33l (Flasche)",
+            "en": "Cola Zero 0.33l (Bottle)"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Almdudler 0,5l",
+            "en": "Almdudler 0.5l"
+          },
+          "price": "4,70"
+        },
+        {
+          "name": {
+            "de": "Almdudler 0,3l",
+            "en": "Almdudler 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Spezi 0,5l",
+            "en": "Spezi 0.5l"
+          },
+          "price": "4,70"
+        },
+        {
+          "name": {
+            "de": "Spezi 0,3l",
+            "en": "Spezi 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "RAUCH Eistee 0,5l",
+            "en": "RAUCH Iced Tea 0.5l"
+          },
+          "price": "4,70"
+        },
+        {
+          "name": {
+            "de": "RAUCH Eistee 0,3l",
+            "en": "RAUCH Iced Tea 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Soda Zitrone 0,5l",
+            "en": "Soda Lemon 0.5l"
+          },
+          "price": "2,90"
+        },
+        {
+          "name": {
+            "de": "Soda Zitrone 0,3l",
+            "en": "Soda Lemon 0.3l"
+          },
+          "price": "2,40"
+        },
+        {
+          "name": {
+            "de": "Zitrone Leitung 0,5l",
+            "en": "Lemon Tap Water 0.5l"
+          },
+          "price": "1,50"
+        },
+        {
+          "name": {
+            "de": "Zitrone Leitung 0,3l",
+            "en": "Lemon Tap Water 0.3l"
+          },
+          "price": "1,00"
+        },
+        {
+          "name": {
+            "de": "Saft PUR 0,5l",
+            "en": "Juice PUR 0.5l"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Saft PUR 0,3l",
+            "en": "Juice PUR 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Saft Soda 0,5l",
+            "en": "Juice Soda 0.5l"
+          },
+          "price": "4,60"
+        },
+        {
+          "name": {
+            "de": "Saft Soda 0,3l",
+            "en": "Juice Soda 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Saft Leitung 0,5l",
+            "en": "Juice Tap 0.5l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Saft Leitung 0,3l",
+            "en": "Juice Tap 0.3l"
+          },
+          "price": "2,90"
+        },
+        {
+          "name": {
+            "de": "Römerquelle 0,75l",
+            "en": "Römerquelle 0.75l"
+          },
+          "price": "7,50"
+        },
+        {
+          "name": {
+            "de": "Römerquelle 0,33l",
+            "en": "Römerquelle 0.33l"
+          },
+          "price": "3,50"
+        }
+      ]
+    },
+    {
+      "id": "lassi",
+      "name": {
+        "de": "LASSI",
+        "en": "LASSI"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Mango Lassi",
+            "en": "Mango Lassi"
+          },
+          "price": "4,00"
+        },
+        {
+          "name": {
+            "de": "Kokosnuss Lassi",
+            "en": "Coconut Lassi"
+          },
+          "price": "4,00"
+        },
+        {
+          "name": {
+            "de": "Lassi: neutral/salzig/süß",
+            "en": "Lassi: neutral/salty/sweet"
+          },
+          "price": "3,50"
+        }
+      ]
+    },
+    {
+      "id": "hot-drinks",
+      "name": {
+        "de": "HEISSE GETRÄNKE",
+        "en": "HOT DRINKS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Ristretto",
+            "en": "Ristretto"
+          },
+          "price": "2,30"
+        },
+        {
+          "name": {
+            "de": "Espresso",
+            "en": "Espresso"
+          },
+          "price": "2,70"
+        },
+        {
+          "name": {
+            "de": "Espresso Macchiato",
+            "en": "Espresso Macchiato"
+          },
+          "price": "2,90"
+        },
+        {
+          "name": {
+            "de": "Cappuccino",
+            "en": "Cappuccino"
+          },
+          "price": "3,70"
+        },
+        {
+          "name": {
+            "de": "Verlängerter",
+            "en": "Americano"
+          },
+          "price": "3,40"
+        },
+        {
+          "name": {
+            "de": "Großer Brauner",
+            "en": "Large Brown"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Café Latte",
+            "en": "Café Latte"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Heiße Schokolade",
+            "en": "Hot Chocolate"
+          },
+          "price": "4,00"
+        },
+        {
+          "name": {
+            "de": "HEISSE ZITRONE",
+            "en": "HOT LEMON"
+          },
+          "price": "2,50"
+        },
+        {
+          "name": {
+            "de": "TEE MIT RUM",
+            "en": "TEA WITH RUM"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Irisch Kaffee",
+            "en": "Irish Coffee"
+          },
+          "price": "7,90"
+        },
+        {
+          "name": {
+            "de": "Masala Chai Indisch",
+            "en": "Masala Chai Indian"
+          },
+          "price": "4,50"
+        },
+        {
+          "name": {
+            "de": "Tee diverse Sorten",
+            "en": "Tea various sorts"
+          },
+          "price": "3,50"
+        },
+        {
+          "name": {
+            "de": "GLÜHWEIN (SAISONAL)",
+            "en": "MULLED WINE (SEASONAL)"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "ORANGEN PUNSCH (SAISONAL)",
+            "en": "ORANGE PUNCH (SEASONAL)"
+          },
+          "price": "5,90"
+        }
+      ]
+    },
+    {
+      "id": "beer",
+      "name": {
+        "de": "BIER",
+        "en": "BEER"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Kaiser Märzen vom Fass 0,5l",
+            "en": "Kaiser Märzen on tap 0.5l"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Kaiser Märzen vom Fass 0,3l",
+            "en": "Kaiser Märzen on tap 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Radler 0,5l",
+            "en": "Radler 0.5l"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Radler 0,3l",
+            "en": "Radler 0.3l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Weißbier dunkel/hell/AF/Flasche",
+            "en": "Wheat beer dark/light/AF/Bottle"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Schwechater Zwickl, Flasche 0,5l",
+            "en": "Schwechater Zwickl, Bottle 0.5l"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Alkoholfreies Gösser, Flasche 0,5l",
+            "en": "Alcohol-free Gösser, Bottle 0.5l"
+          },
+          "price": "4,90"
+        },
+        {
+          "name": {
+            "de": "Kingfisher (Indisch), Flasche 0,33l",
+            "en": "Kingfisher (Indian), Bottle 0.33l"
+          },
+          "price": "4,80"
+        }
+      ]
+    },
+    {
+      "id": "wine",
+      "name": {
+        "de": "WEINE & APERITIFS",
+        "en": "WINE & APERITIFS"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Schankweißwein Gr. Veltliner 1/8l",
+            "en": "House White Wine 1/8l"
+          },
+          "price": "3,30"
+        },
+        {
+          "name": {
+            "de": "Schankweißwein Gr. Veltliner 1/4l",
+            "en": "House White Wine 1/4l"
+          },
+          "price": "6,60"
+        },
+        {
+          "name": {
+            "de": "Schankrotwein Zweigelt 1/8l",
+            "en": "House Red Wine 1/8l"
+          },
+          "price": "3,30"
+        },
+        {
+          "name": {
+            "de": "Schankrotwein Zweigelt 1/4l",
+            "en": "House Red Wine 1/4l"
+          },
+          "price": "6,60"
+        },
+        {
+          "name": {
+            "de": "Wein Spritzer Weiß/Rot 1/4l",
+            "en": "Wine Spritzer White/Red 1/4l"
+          },
+          "price": "3,50"
+        },
+        {
+          "name": {
+            "de": "Wein Spritzer Weiß/Rot 1/2l",
+            "en": "Wine Spritzer White/Red 1/2l"
+          },
+          "price": "7,00"
+        },
+        {
+          "name": {
+            "de": "Sommerspritzer 1/4l",
+            "en": "Summer Spritzer 1/4l"
+          },
+          "price": "2,90"
+        },
+        {
+          "name": {
+            "de": "Sommerspritzer 1/2l",
+            "en": "Summer Spritzer 1/2l"
+          },
+          "price": "5,80"
+        },
+        {
+          "name": {
+            "de": "Moscato Spumante 0,1l",
+            "en": "Moscato Spumante 0.1l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Moscato Spumante 0,75l",
+            "en": "Moscato Spumante 0.75l"
+          },
+          "price": "26,00"
+        },
+        {
+          "name": {
+            "de": "Rose Spumante 0,1l",
+            "en": "Rose Spumante 0.1l"
+          },
+          "price": "3,90"
+        },
+        {
+          "name": {
+            "de": "Rose Spumante 0,75l",
+            "en": "Rose Spumante 0.75l"
+          },
+          "price": "26,00"
+        },
+        {
+          "name": {
+            "de": "Glas Sekt/Prosecco 0,1l",
+            "en": "Glass Sekt/Prosecco 0.1l"
+          },
+          "price": "3,00"
+        },
+        {
+          "name": {
+            "de": "Aperol Spritz",
+            "en": "Aperol Spritz"
+          },
+          "price": "5,50"
+        },
+        {
+          "name": {
+            "de": "Hugo",
+            "en": "Hugo"
+          },
+          "price": "5,50"
+        },
+        {
+          "name": {
+            "de": "Campari Orange",
+            "en": "Campari Orange"
+          },
+          "price": "5,30"
+        },
+        {
+          "name": {
+            "de": "Campari Soda",
+            "en": "Campari Soda"
+          },
+          "price": "4,10"
+        },
+        {
+          "name": {
+            "de": "Gelber Muskateller 0,75l",
+            "en": "Gelber Muskateller 0.75l"
+          },
+          "price": "23,00"
+        },
+        {
+          "name": {
+            "de": "Spätlese Cuvee 0,75l",
+            "en": "Spätlese Cuvee 0.75l"
+          },
+          "price": "25,00"
+        },
+        {
+          "name": {
+            "de": "Traminer Lovely 0,75l",
+            "en": "Traminer Lovely 0.75l"
+          },
+          "price": "26,00"
+        },
+        {
+          "name": {
+            "de": "Rose Klassik Zweigelt 0,75l",
+            "en": "Rose Classic Zweigelt 0.75l"
+          },
+          "price": "25,00"
+        },
+        {
+          "name": {
+            "de": "Cuvee Winzenz 0,75l",
+            "en": "Cuvee Winzenz 0.75l"
+          },
+          "price": "23,00"
+        },
+        {
+          "name": {
+            "de": "Merlot Lovely 0,75l",
+            "en": "Merlot Lovely 0.75l"
+          },
+          "price": "26,00"
+        }
+      ]
+    }
+  ]
+};
     </script>
 
     <script>
