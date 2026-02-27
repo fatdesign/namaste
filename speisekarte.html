@@ -278,6 +278,8 @@
                 font-size: 0.75rem;
                 /* ~15% larger */
                 letter-spacing: 0.15em;
+                white-space: nowrap;
+                /* Force 1 line */
             }
 
             .cat-wheel-wrap.scrolled .cat-wheel-item a {
@@ -300,8 +302,8 @@
 
 
             .cat-wheel-item {
-                width: 160px;
-                /* Slightly wider for longer names */
+                width: 250px;
+                /* Significantly wider for longer names like CHICKEN & TURKEY or VEGAN & VEGETERIAN */
                 pointer-events: none;
                 opacity: 0;
             }
