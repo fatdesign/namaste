@@ -632,20 +632,23 @@
       background: rgba(191, 110, 11, 0.1);
       border: 1px solid var(--accent);
       color: var(--accent);
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: 1;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       margin-left: 10px;
       flex-shrink: 0;
       padding: 0;
-      padding-bottom: 2px;
+      padding-bottom: 3px;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .add-to-list-btn:hover {
@@ -691,14 +694,15 @@
     .wishlist-count {
       background: white;
       color: var(--accent);
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 0.7rem;
+      font-weight: 800;
+      font-size: 0.8rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     }
 
     /* Wishlist Drawer */
