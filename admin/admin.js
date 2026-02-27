@@ -130,6 +130,10 @@ async function loadMenu() {
             currentFileSha = fileData.sha;
             const decoded = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
             menuData = JSON.parse(decoded);
+
+            // Ensure settings object exists
+            if (!menuData.settings) menuData.settings = {};
+
             categoriesContainer.innerHTML = '';
             renderDashboard();
             return;
@@ -167,6 +171,17 @@ function renderDashboard() {
     const notice = categoriesContainer.querySelector('.config-notice');
     categoriesContainer.innerHTML = '';
     if (notice) categoriesContainer.appendChild(notice);
+
+    // Sync settings
+    const merklisteToggle = document.getElementById('setting-merkliste');
+    if (merklisteToggle) {
+        merklisteToggle.checked = menuData.settings?.enableMerkliste === true;
+        merklisteToggle.onchange = (e) => {
+            if (!menuData.settings) menuData.settings = {};
+            menuData.settings.enableMerkliste = e.target.checked;
+            showSaveHint();
+        };
+    }
 
     menuData.categories.forEach((cat, catIdx) => {
         const block = document.createElement('div');

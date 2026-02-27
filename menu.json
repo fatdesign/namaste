@@ -1,4 +1,7 @@
 {
+  "settings": {
+    "enableMerkliste": true
+  },
   "categories": [
     {
       "id": "starters",
