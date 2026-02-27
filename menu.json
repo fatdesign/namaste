@@ -1636,30 +1636,6 @@
           "price": "26,00"
         }
       ]
-    },
-    {
-      "id": "test777",
-      "name": {
-        "de": "Test777",
-        "en": "Test888"
-      },
-      "items": [
-        {
-          "name": {
-            "de": "Test999",
-            "en": "Test444"
-          },
-          "price": "99.00",
-          "isSoldOut": false,
-          "isVegan": false,
-          "spiciness": "",
-          "allergens": [
-            "A",
-            "L",
-            "N"
-          ]
-        }
-      ]
     }
   ]
 }
