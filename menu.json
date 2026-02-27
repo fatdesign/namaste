@@ -76,14 +76,17 @@
             "de": "MURG - TIKKA",
             "en": "MURG - TIKKA"
           },
+          "price": "8,50",
+          "isSoldOut": true,
+          "isVegan": false,
+          "spiciness": "",
+          "allergens": [
+            "G"
+          ],
           "desc": {
             "de": "Ausgelöste, marinierte und gegrillte Hühnerkeulen",
             "en": "Marinated and grilled boneless chicken thighs"
-          },
-          "price": "8,50",
-          "allergens": [
-            "G"
-          ]
+          }
         },
         {
           "name": {
