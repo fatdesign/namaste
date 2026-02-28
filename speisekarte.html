@@ -883,6 +883,95 @@
       transform: scale(1.1);
     }
 
+    /* Review Reminder Modal */
+    .review-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .review-modal-overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .review-modal-content {
+      background: var(--bg-primary);
+      width: 90%;
+      max-width: 400px;
+      padding: 2.5rem;
+      border-radius: 2rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(191, 110, 11, 0.2);
+      transform: translateY(20px);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .review-modal-overlay.visible .review-modal-content {
+      transform: translateY(0);
+    }
+
+    .review-modal-ikon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .review-modal-content h3 {
+      font-family: var(--font-heading);
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-modal-content p {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .review-modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .btn-review-now {
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-review-now:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-review-later {
+      background: transparent;
+      border: none;
+      color: var(--gray);
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
     /* Floating Badge */
     .wishlist-tab {
       position: fixed;
@@ -2996,10 +3085,16 @@
         const name = decodeURIComponent(escape(atob(encodedName)));
         const existing = this.items.find(i => i.name === name);
         if (existing) {
-          existing.quantity++;
+          existing.quantity += 1;
         } else {
           this.items.push({ name, price, quantity: 1 });
         }
+
+        // Start Review Timer if not already running
+        if (!localStorage.getItem('namaste_wishlist_started')) {
+          localStorage.setItem('namaste_wishlist_started', Date.now().toString());
+        }
+
         this.save();
         this.updateUI();
 
@@ -3014,6 +3109,7 @@
       clear() {
         if (confirm('Möchten Sie die gesamte Merkliste leeren?')) {
           this.items = [];
+          localStorage.removeItem('namaste_wishlist_started'); // Clear timer on full clear
           this.save();
           this.updateUI();
         }
@@ -3026,6 +3122,9 @@
         this.items[idx].quantity += delta;
         if (this.items[idx].quantity <= 0) {
           this.items.splice(idx, 1);
+          if (this.items.length === 0) {
+            localStorage.removeItem('namaste_wishlist_started'); // Clear timer if last item removed
+          }
         }
         this.save();
         this.updateUI();
@@ -3073,6 +3172,16 @@
                     `).join('');
         }
       }
+
+      openReminder() {
+        if (localStorage.getItem('namaste_reminder_shown')) return;
+
+        const modal = document.getElementById('review-reminder-modal');
+        if (modal) {
+          modal.classList.add('visible');
+          localStorage.setItem('namaste_reminder_shown', 'true');
+        }
+      }
     }
 
     let wishlist;
@@ -3096,6 +3205,10 @@
 
       // Initialize Wishlist after menu data is loaded
       wishlist = new Wishlist();
+
+      // Periodically check for reminder (every 5 mins)
+      checkReviewReminder();
+      setInterval(checkReviewReminder, 1000 * 60 * 5);
 
       // ── Search & Filter Logic ──────────────────────────────
       const searchInput = document.getElementById('menu-search');
@@ -3429,6 +3542,29 @@
       }
     }
 
+    // ── Review Reminder Logic ─────────────────────────────────
+    function checkReviewReminder() {
+      const startTime = localStorage.getItem('namaste_wishlist_started');
+      const shown = localStorage.getItem('namaste_reminder_shown');
+
+      if (!startTime || shown) return;
+
+      const hoursElapsed = (Date.now() - parseInt(startTime)) / (1000 * 60 * 60);
+      const threshold = (typeof SETTINGS !== 'undefined' && SETTINGS.reviewTimerHours) || 2;
+
+      if (hoursElapsed >= threshold) {
+        if (wishlist) wishlist.openReminder();
+      }
+    }
+
+    // Modal Events
+    document.getElementById('btn-review-later')?.addEventListener('click', () => {
+      document.getElementById('review-reminder-modal').classList.remove('visible');
+    });
+    document.getElementById('btn-review-now')?.addEventListener('click', () => {
+      document.getElementById('review-reminder-modal').classList.remove('visible');
+    });
+
     // ── Hydration ─────────────────────────────────────────────
     function hydrateSettings() {
       if (typeof SETTINGS !== 'undefined') {
@@ -3445,6 +3581,21 @@
     // ── Init ──────────────────────────────────────────────────
     init();
   </script>
+  <!-- Review Reminder Modal -->
+  <div id="review-reminder-modal" class="review-modal-overlay">
+    <div class="review-modal-content">
+      <span class="review-modal-ikon">🙏</span>
+      <h3>Hat es Ihnen geschmeckt?</h3>
+      <p>Wir hoffen, Sie hatten einen wundervollen Aufenthalt im Namaste. Wir würden uns riesig freuen, wenn Sie uns
+        kurz auf Google bewerten!</p>
+      <div class="review-modal-actions">
+        <a href="#" target="_blank" data-hydrate="googleReviewLink" class="btn-review-now" id="btn-review-now">Jetzt
+          bewerten</a>
+        <button class="btn-review-later" id="btn-review-later">Später vielleicht</button>
+      </div>
+    </div>
+  </div>
+
   <script src="transition.js"></script>
 </body>
 

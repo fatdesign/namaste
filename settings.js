@@ -11,6 +11,7 @@ const SETTINGS = {
     metaDescription: "Herzlich Willkommen im Namaste – Ihr Restaurant für authentische indische Spezialitäten in Hallein.",
     footerText: "2026 Namaste · Hallein",
     googleReviewLink: "https://search.google.com/local/writereview?placeid=ChIJBwf39QmVdkcR4-8C2bNJ7oE",
+    reviewTimerHours: 2,
 
     // 2. DESIGN TOKENS (Namaste Indian Palette)
     theme: {
