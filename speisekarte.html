@@ -910,13 +910,32 @@
       background: var(--bg-primary);
       width: 90%;
       max-width: 400px;
-      padding: 2.5rem;
+      padding: 3rem 2rem 2.5rem;
       border-radius: 2rem;
       text-align: center;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(191, 110, 11, 0.2);
       transform: translateY(20px);
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .review-modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray);
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .review-modal-close:hover {
+      color: var(--accent);
     }
 
     .review-modal-overlay.visible .review-modal-content {
@@ -961,15 +980,6 @@
 
     .btn-review-now:hover {
       transform: scale(1.05);
-    }
-
-    .btn-review-later {
-      background: transparent;
-      border: none;
-      color: var(--gray);
-      font-size: 0.9rem;
-      cursor: pointer;
-      padding: 0.5rem;
     }
 
     /* Floating Badge */
@@ -3093,6 +3103,10 @@
         // Start Review Timer if not already running
         if (!localStorage.getItem('namaste_wishlist_started')) {
           localStorage.setItem('namaste_wishlist_started', Date.now().toString());
+          // Request notification permission on first item
+          if ('Notification' in window && Notification.permission === 'default') {
+            Notification.requestPermission();
+          }
         }
 
         this.save();
@@ -3180,6 +3194,20 @@
         if (modal) {
           modal.classList.add('visible');
           localStorage.setItem('namaste_reminder_shown', 'true');
+
+          // Trigger browser notification if possible
+          if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification('Hat es Ihnen geschmeckt?', {
+              body: 'Tippen Sie hier, um uns auf Google zu bewerten!',
+              icon: 'image/namaste-logo.png'
+            }).onclick = () => {
+              const link = document.getElementById('btn-review-now');
+              if (link && link.href && link.href !== '#') {
+                window.open(link.href, '_blank');
+              }
+              modal.classList.remove('visible');
+            };
+          }
         }
       }
     }
@@ -3558,10 +3586,17 @@
     }
 
     // Modal Events
-    document.getElementById('btn-review-later')?.addEventListener('click', () => {
+    document.getElementById('btn-review-close')?.addEventListener('click', () => {
       document.getElementById('review-reminder-modal').classList.remove('visible');
     });
-    document.getElementById('btn-review-now')?.addEventListener('click', () => {
+    document.getElementById('btn-review-now')?.addEventListener('click', (e) => {
+      // Direct link should work, but let's ensure it's hydrated
+      const link = e.currentTarget;
+      if (link.href === '#' || !link.href) {
+        if (typeof SETTINGS !== 'undefined' && SETTINGS.googleReviewLink) {
+          link.href = SETTINGS.googleReviewLink;
+        }
+      }
       document.getElementById('review-reminder-modal').classList.remove('visible');
     });
 
@@ -3584,6 +3619,7 @@
   <!-- Review Reminder Modal -->
   <div id="review-reminder-modal" class="review-modal-overlay">
     <div class="review-modal-content">
+      <button class="review-modal-close" id="btn-review-close">✕</button>
       <span class="review-modal-ikon">🙏</span>
       <h3>Hat es Ihnen geschmeckt?</h3>
       <p>Wir hoffen, Sie hatten einen wundervollen Aufenthalt im Namaste. Wir würden uns riesig freuen, wenn Sie uns
@@ -3591,7 +3627,6 @@
       <div class="review-modal-actions">
         <a href="#" target="_blank" data-hydrate="googleReviewLink" class="btn-review-now" id="btn-review-now">Jetzt
           bewerten</a>
-        <button class="btn-review-later" id="btn-review-later">Später vielleicht</button>
       </div>
     </div>
   </div>
