@@ -3502,12 +3502,12 @@
       const items = document.querySelectorAll('.cat-wheel-item');
       if (!wheelContainer || items.length === 0) return;
 
-      // 1. Mouse Wheel on Ribbon
+      // 1. Mouse Wheel on Ribbon (Throttled)
       wheelContainer.addEventListener('wheel', (e) => {
-        if (wheelContainer.classList.contains('expanded')) return; // Don't wheel scroll if expanded
+        if (wheelContainer.classList.contains('expanded')) return;
         e.preventDefault();
         const now = Date.now();
-        if (now - lastWheelTime < 150) return; // Throttling
+        if (now - lastWheelTime < 150) return;
         lastWheelTime = now;
 
         const active = document.querySelector('.cat-wheel-item.active');
@@ -3523,27 +3523,33 @@
         }
       }, { passive: false });
 
-      // 2. Click on side items
+      // 2. Click Handling (Unified for Mobile Expansion & Desktop Nav)
       items.forEach(item => {
         item.onclick = (e) => {
           e.preventDefault();
-          e.stopPropagation(); // Prevent bubbling to container
-          const targetId = item.querySelector('a').getAttribute('href').substring(1);
-          navigateToCategory(targetId);
+          const isMobile = window.innerWidth <= 768;
+          const isExpanded = wheelContainer.classList.contains('expanded');
 
-          // Close expansion if open
-          if (wheelContainer.classList.contains('expanded')) {
-            toggleWheelExpansion(false);
+          if (isMobile && !isExpanded) {
+            // If mobile and NOT expanded, any click on the wheel area should expand it
+            toggleWheelExpansion(true);
+          } else {
+            // Otherwise (desktop or mobile-expanded), perform navigation
+            const targetId = item.querySelector('a').getAttribute('href').substring(1);
+            navigateToCategory(targetId);
+            if (isExpanded) toggleWheelExpansion(false);
           }
         };
       });
 
-      // 3. Mobile Toggle Expansion
+      // 3. Container Click (Fallback for tapping the empty space/hint)
       wheelContainer.addEventListener('click', (e) => {
+        // Only trigger if we didn't click an item (which is handled above)
+        if (e.target.closest('.cat-wheel-item')) return;
+
         const isMobile = window.innerWidth <= 768;
         if (!isMobile) return;
 
-        // If clicking the container itself (or the close hint), toggle
         const isExpanded = wheelContainer.classList.contains('expanded');
         toggleWheelExpansion(!isExpanded);
       });
