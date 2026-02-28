@@ -3202,9 +3202,9 @@
               body: 'Tippen Sie hier, um uns auf Google zu bewerten!',
               icon: 'image/namaste-logo.png'
             }).onclick = () => {
-              const link = document.getElementById('btn-review-now');
-              if (link && link.href && link.href !== '#') {
-                window.open(link.href, '_blank');
+              const url = (typeof SETTINGS !== 'undefined' && SETTINGS.googleReviewLink) ? SETTINGS.googleReviewLink : '';
+              if (url && url !== '#' && !url.endsWith('#')) {
+                window.open(url, '_blank');
               }
               modal.classList.remove('visible');
             };
@@ -3591,12 +3591,11 @@
       document.getElementById('review-reminder-modal').classList.remove('visible');
     });
     document.getElementById('btn-review-now')?.addEventListener('click', (e) => {
-      // Direct link should work, but let's ensure it's hydrated
-      const link = e.currentTarget;
-      if (link.href === '#' || !link.href) {
-        if (typeof SETTINGS !== 'undefined' && SETTINGS.googleReviewLink) {
-          link.href = SETTINGS.googleReviewLink;
-        }
+      e.preventDefault();
+      const url = (typeof SETTINGS !== 'undefined' && SETTINGS.googleReviewLink) ? SETTINGS.googleReviewLink : e.currentTarget.href;
+
+      if (url && url !== '#' && !url.endsWith('#')) {
+        window.open(url, '_blank');
       }
       document.getElementById('review-reminder-modal').classList.remove('visible');
     });
