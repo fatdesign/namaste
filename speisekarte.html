@@ -710,23 +710,6 @@
       line-height: 1;
     }
 
-    /* Animation for adding items */
-    @keyframes wishlistPulse {
-      0% {
-        transform: scale(1) translateX(-50%);
-      }
-
-      30% {
-        transform: scale(1.15) translateX(-45%);
-        border-color: white;
-        box-shadow: 0 15px 40px rgba(191, 110, 11, 0.6);
-      }
-
-      100% {
-        transform: scale(1) translateX(-50%);
-      }
-    }
-
     /* Animation on desktop where it's not centered */
     @keyframes wishlistPulseDesktop {
       0% {
@@ -745,12 +728,6 @@
 
     .wishlist-tab.pulse {
       animation: wishlistPulseDesktop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @media (max-width: 768px) {
-      .wishlist-tab.pulse {
-        animation: wishlistPulse 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
     }
 
     /* Wishlist Drawer */
