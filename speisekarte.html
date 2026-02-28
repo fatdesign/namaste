@@ -557,144 +557,223 @@
         /* Push below floating nav */
       }
 
-      /* ── 3D Drum Picker Expansion (iOS Style) ── */
-      .cat-wheel-wrap.expanded {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        background: radial-gradient(circle at center, rgba(30, 20, 10, 0.98) 0%, rgba(10, 8, 5, 1) 100%) !important;
-        backdrop-filter: blur(30px) !important;
-        -webkit-backdrop-filter: blur(30px) !important;
-        z-index: 9999 !important;
-        transform: none !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        pointer-events: auto !important;
-        padding: 0 !important;
-        perspective: 1500px !important;
-        overflow: hidden !important;
+      /* ── Drum Picker Overlay ── */
+      .drum-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 9, 11, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 9000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      /* Vignette overlays for the drum edge */
-      .cat-wheel-wrap.expanded::before,
-      .cat-wheel-wrap.expanded::after {
+      .drum-overlay.visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .drum-sheet {
+        width: 100%;
+        background: #1a1712;
+        border-radius: 24px 24px 0 0;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        transform: translateY(100%);
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      .drum-overlay.visible .drum-sheet {
+        transform: translateY(0);
+      }
+
+      .drum-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 1.6rem 0.6rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .drum-title {
+        font-family: var(--font-accent);
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      .drum-close-btn {
+        background: rgba(255, 255, 255, 0.08);
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .drum-close-btn:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      /* The actual drum / cylinder */
+      .drum-viewport {
+        position: relative;
+        height: 270px;
+        /* 5 items × 54px */
+        overflow: hidden;
+        touch-action: none;
+        cursor: grab;
+      }
+
+      .drum-viewport:active {
+        cursor: grabbing;
+      }
+
+      /* Gold selection lines */
+      .drum-viewport::before,
+      .drum-viewport::after {
         content: '';
         position: absolute;
         left: 0;
-        width: 100%;
-        height: 35%;
-        z-index: 10;
+        right: 0;
+        z-index: 2;
+        pointer-events: none;
+        border: none;
+      }
+
+      .drum-viewport::before {
+        top: calc(50% - 27px);
+        height: 1px;
+        background: linear-gradient(90deg,
+            transparent 0%,
+            var(--accent) 20%,
+            var(--accent) 80%,
+            transparent 100%);
+        opacity: 0.8;
+      }
+
+      .drum-viewport::after {
+        top: calc(50% + 27px);
+        height: 1px;
+        background: linear-gradient(90deg,
+            transparent 0%,
+            var(--accent) 20%,
+            var(--accent) 80%,
+            transparent 100%);
+        opacity: 0.8;
+      }
+
+      /* Top & bottom fade-out (glass cylinder effect) */
+      .drum-fade-top,
+      .drum-fade-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 108px;
+        /* 2 items */
+        z-index: 1;
         pointer-events: none;
       }
 
-      .cat-wheel-wrap.expanded::before {
+      .drum-fade-top {
         top: 0;
-        background: linear-gradient(to bottom, rgba(10, 8, 5, 1) 0%, transparent 100%);
+        background: linear-gradient(to bottom,
+            #1a1712 0%,
+            rgba(26, 23, 18, 0.9) 40%,
+            transparent 100%);
       }
 
-      .cat-wheel-wrap.expanded::after {
+      .drum-fade-bottom {
         bottom: 0;
-        background: linear-gradient(to top, rgba(10, 8, 5, 1) 0%, transparent 100%);
+        background: linear-gradient(to top,
+            #1a1712 0%,
+            rgba(26, 23, 18, 0.9) 40%,
+            transparent 100%);
       }
 
-      .cat-wheel-wrap.expanded .cat-wheel {
-        display: flex !important;
-        flex-direction: column !important;
-        transform-style: preserve-3d !important;
-        height: 400px !important;
-        width: 100% !important;
-        position: relative !important;
-        transform: translateZ(-300px) !important;
-        /* Pull back to see the curve */
-        transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-
-      .cat-wheel-wrap.expanded .cat-wheel-item {
-        position: absolute !important;
-        left: 0 !important;
-        top: 50% !important;
-        width: 100% !important;
-        margin-top: -25px !important;
-        /* Half item height */
-        opacity: 0 !important;
-        pointer-events: auto !important;
-        transform-origin: center center !important;
-        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        backface-visibility: hidden !important;
-      }
-
-      /* Item Styling in Drum */
-      .cat-wheel-wrap.expanded .cat-wheel-item a {
-        font-family: var(--font-accent) !important;
-        font-size: 1.2rem !important;
-        color: rgba(255, 255, 255, 0.3) !important;
-        letter-spacing: 0.15em !important;
-        text-transform: uppercase !important;
-        padding: 15px 0 !important;
-        display: block !important;
-        text-shadow: none !important;
-        transition: color 0.4s, transform 0.4s !important;
-      }
-
-      /* The curved positioning is handled via JS setting --index-offset */
-      .cat-wheel-wrap.expanded .cat-wheel-item.visible-in-drum {
-        opacity: 1 !important;
-        /* Rotate around X axis to form the cylinder */
-        transform: rotateX(calc(var(--index-offset) * 22deg)) translateZ(320px) !important;
-      }
-
-      .cat-wheel-wrap.expanded .cat-wheel-item.visible-in-drum a {
-        /* Fade out as it moves away */
-        opacity: calc(1 - (var(--index-offset-abs) * 0.25)) !important;
-        filter: blur(calc(var(--index-offset-abs) * 1px)) !important;
-      }
-
-      /* Active (Centered) Item */
-      .cat-wheel-wrap.expanded .cat-wheel-item.active a {
-        color: var(--accent) !important;
-        font-size: 1.5rem !important;
-        font-weight: 600 !important;
-        opacity: 1 !important;
-        filter: none !important;
-      }
-
-      /* Selection Glow */
-      .cat-wheel-wrap.expanded::after {
-        content: '';
-        /* Reuse the ::after pseudo for a selection bar if desired, but let's keep it clean */
-      }
-
-      .cat-wheel-wrap.expanded .selection-bar {
+      /* The scrollable list */
+      .drum-list {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 60px;
-        border-top: 1px solid rgba(191, 110, 11, 0.3);
-        border-bottom: 1px solid rgba(191, 110, 11, 0.3);
-        pointer-events: none;
-        z-index: 5;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        will-change: transform;
+        user-select: none;
+        -webkit-user-select: none;
       }
 
-      /* Close Hint (Re-styled) */
-      .cat-wheel-wrap.expanded .close-hint {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 1.5rem;
-        z-index: 20;
-        font-family: var(--font-body);
-        text-transform: uppercase;
+      .drum-item {
+        flex-shrink: 0;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-family: var(--font-accent);
+        font-size: 1.15rem;
         letter-spacing: 0.2em;
-        font-size: 0.7rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.38);
+        transition: color 0.2s, font-size 0.2s;
+        pointer-events: none;
+      }
+
+      .drum-item.drum-selected {
+        color: #ffffff;
+        font-size: 1.25rem;
+        letter-spacing: 0.25em;
+      }
+
+      /* Accent dot below selected item name */
+      .drum-item.drum-selected::after {
+        content: '·';
+        margin-left: 0.4em;
+        color: var(--accent);
+        font-size: 1.5rem;
+        line-height: 0;
+        vertical-align: middle;
+      }
+
+      /* Confirm tap area */
+      .drum-confirm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.6rem 1.4rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .drum-confirm-btn {
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--accent);
+        border: none;
+        border-radius: 14px;
+        font-family: var(--font-accent);
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+
+      .drum-confirm-btn:active {
+        opacity: 0.75;
       }
     }
 
@@ -3558,22 +3637,8 @@
       const items = document.querySelectorAll('.cat-wheel-item');
       if (!wheelContainer || items.length === 0) return;
 
-      // Add UI elements for the drum if they don't exist
-      if (!wheelContainer.querySelector('.selection-bar')) {
-        const bar = document.createElement('div');
-        bar.className = 'selection-bar';
-        wheelContainer.appendChild(bar);
-      }
-      if (!wheelContainer.querySelector('.close-hint')) {
-        const hint = document.createElement('div');
-        hint.className = 'close-hint';
-        hint.textContent = 'Schließen';
-        wheelContainer.appendChild(hint);
-      }
-
-      // 1. Mouse Wheel on Ribbon (Throttled)
+      // 1. Desktop: Mouse Wheel on Ribbon (Throttled)
       wheelContainer.addEventListener('wheel', (e) => {
-        if (wheelContainer.classList.contains('expanded')) return;
         e.preventDefault();
         const now = Date.now();
         if (now - lastWheelTime < 150) return;
@@ -3581,81 +3646,206 @@
 
         const active = document.querySelector('.cat-wheel-item.active');
         if (!active) return;
-
         let targetIdx = parseInt(active.dataset.index);
         if (e.deltaY > 0) targetIdx++;
         else targetIdx--;
-
         if (targetIdx >= 0 && targetIdx < items.length) {
-          const targetId = items[targetIdx].querySelector('a').getAttribute('href').substring(1);
-          navigateToCategory(targetId);
+          navigateToCategory(items[targetIdx].querySelector('a').getAttribute('href').substring(1));
         }
       }, { passive: false });
 
-      // 2. Click Handling (Unified for Mobile Expansion & Desktop Nav)
+      // 2. Desktop: Click on side items to navigate
       items.forEach(item => {
         item.onclick = (e) => {
           e.preventDefault();
           const isMobile = window.innerWidth <= 768;
-          const isExpanded = wheelContainer.classList.contains('expanded');
-
-          if (isMobile && !isExpanded) {
-            // If mobile and NOT expanded, any click on the wheel area should expand it
-            toggleWheelExpansion(true);
+          if (isMobile) {
+            openDrumPicker();
           } else {
-            // Otherwise (desktop or mobile-expanded), perform navigation
-            const targetId = item.querySelector('a').getAttribute('href').substring(1);
-            navigateToCategory(targetId);
-            if (isExpanded) toggleWheelExpansion(false);
+            navigateToCategory(item.querySelector('a').getAttribute('href').substring(1));
           }
         };
       });
 
-      // 3. Container Click (Fallback for tapping the empty space/hint)
+      // 3. Mobile: Whole container click opens drum picker
       wheelContainer.addEventListener('click', (e) => {
-        // Only trigger if we didn't click an item (which is handled above)
-        if (e.target.closest('.cat-wheel-item')) return;
-
-        const isMobile = window.innerWidth <= 768;
-        if (!isMobile) return;
-
-        const isExpanded = wheelContainer.classList.contains('expanded');
-        toggleWheelExpansion(!isExpanded);
+        if (window.innerWidth > 768) return;
+        openDrumPicker();
       });
 
       // 4. Page Scroll Tracking (Observer)
       attachRibbonTracking();
     }
 
-    function toggleWheelExpansion(isExpanded) {
-      const wheelContainer = document.querySelector('.cat-wheel-wrap');
-      if (!wheelContainer) return;
+    // ── iOS Drum Picker ───────────────────────────────────────────
+    let drumOverlay = null;
 
-      wheelContainer.classList.toggle('expanded', isExpanded);
-      document.body.style.overflow = isExpanded ? 'hidden' : '';
+    function openDrumPicker() {
+      if (drumOverlay) return; // already open
 
-      // Force update of internal drum state if expanding
-      if (isExpanded) {
-        const active = document.querySelector('.cat-wheel-item.active');
-        if (active) {
-          const targetId = active.querySelector('a').getAttribute('href').substring(1);
-          updateWheelClasses(targetId);
-        }
+      const ITEM_H = 54;
+      const categories = menuData.categories;
+      const activeItem = document.querySelector('.cat-wheel-item.active');
+      const currentIdx = activeItem ? parseInt(activeItem.dataset.index) : 0;
+
+      // Build overlay DOM
+      drumOverlay = document.createElement('div');
+      drumOverlay.className = 'drum-overlay';
+      drumOverlay.innerHTML = `
+        <div class="drum-sheet">
+          <div class="drum-header">
+            <span class="drum-title">Kategorie wählen</span>
+            <button class="drum-close-btn" aria-label="Schließen">×</button>
+          </div>
+          <div class="drum-viewport">
+            <div class="drum-fade-top"></div>
+            <div class="drum-list"></div>
+            <div class="drum-fade-bottom"></div>
+          </div>
+          <div class="drum-confirm">
+            <button class="drum-confirm-btn">Auswählen</button>
+          </div>
+        </div>`;
+      document.body.appendChild(drumOverlay);
+      document.body.style.overflow = 'hidden';
+
+      const list = drumOverlay.querySelector('.drum-list');
+      const viewport = drumOverlay.querySelector('.drum-viewport');
+      const confirmBtn = drumOverlay.querySelector('.drum-confirm-btn');
+      const closeBtn = drumOverlay.querySelector('.drum-close-btn');
+
+      // Add padding items so first & last can centre
+      const pad = 2; // 2 blank items top & bottom
+      for (let p = 0; p < pad; p++) {
+        const blank = document.createElement('div');
+        blank.className = 'drum-item';
+        list.appendChild(blank);
+      }
+      categories.forEach((cat, idx) => {
+        const el = document.createElement('div');
+        el.className = 'drum-item' + (idx === currentIdx ? ' drum-selected' : '');
+        el.dataset.idx = idx;
+        el.dataset.id = cat.id;
+        el.textContent = cat.name[currentLang] || cat.name.de;
+        list.appendChild(el);
+      });
+      for (let p = 0; p < pad; p++) {
+        const blank = document.createElement('div');
+        blank.className = 'drum-item';
+        list.appendChild(blank);
       }
 
-      // If closing, ensure we sync the wheel to the current section
-      if (!isExpanded) {
-        // Find current section in view
-        const sections = document.querySelectorAll('.menu-section');
-        let currentSectionId = '';
-        sections.forEach(sec => {
-          const rect = sec.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            currentSectionId = sec.id;
-          }
+      // Initial offset so currentIdx is centred
+      let offset = -(currentIdx * ITEM_H);
+      list.style.transform = `translateY(${offset}px)`;
+      list.style.transition = 'none';
+
+      // Track selected index
+      let selectedIdx = currentIdx;
+
+      function updateSelected() {
+        const centreOffset = Math.round(-offset / ITEM_H);
+        selectedIdx = Math.max(0, Math.min(categories.length - 1, centreOffset));
+        list.querySelectorAll('.drum-item[data-idx]').forEach(el => {
+          el.classList.toggle('drum-selected', parseInt(el.dataset.idx) === selectedIdx);
         });
-        if (currentSectionId) updateWheelClasses(currentSectionId);
       }
+
+      // ── Touch physics ────────────────────────────────────────────
+      let startY = 0;
+      let startOffset = 0;
+      let lastY = 0;
+      let lastT = 0;
+      let velocity = 0;
+      let rafId = null;
+      const minOffset = -((categories.length - 1) * ITEM_H);
+      const maxOffset = 0;
+
+      function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+      function snapTo(idx) {
+        selectedIdx = clamp(idx, 0, categories.length - 1);
+        offset = -(selectedIdx * ITEM_H);
+        list.style.transition = 'transform 0.35s cubic-bezier(0.23, 1, 0.32, 1)';
+        list.style.transform = `translateY(${offset}px)`;
+        updateSelected();
+      }
+
+      function momentumAnimateTo(targetOffset) {
+        list.style.transition = 'none';
+        const snapIdx = Math.round(-targetOffset / ITEM_H);
+        snapTo(snapIdx);
+      }
+
+      viewport.addEventListener('touchstart', (e) => {
+        if (rafId) cancelAnimationFrame(rafId);
+        list.style.transition = 'none';
+        startY = e.touches[0].clientY;
+        startOffset = offset;
+        lastY = startY;
+        lastT = Date.now();
+        velocity = 0;
+        e.preventDefault();
+      }, { passive: false });
+
+      viewport.addEventListener('touchmove', (e) => {
+        const y = e.touches[0].clientY;
+        const dy = y - startY;
+        const raw = startOffset + dy;
+
+        // Rubber-band when beyond limits
+        if (raw > maxOffset) {
+          offset = maxOffset + (raw - maxOffset) * 0.25;
+        } else if (raw < minOffset) {
+          offset = minOffset + (raw - minOffset) * 0.25;
+        } else {
+          offset = raw;
+        }
+
+        const now = Date.now();
+        const dt = now - lastT || 1;
+        velocity = (y - lastY) / dt;
+        lastY = y;
+        lastT = now;
+
+        list.style.transform = `translateY(${offset}px)`;
+        updateSelected();
+        e.preventDefault();
+      }, { passive: false });
+
+      viewport.addEventListener('touchend', () => {
+        // Apply momentum
+        const momentum = velocity * 80;
+        const projected = clamp(offset + momentum, minOffset, maxOffset);
+        momentumAnimateTo(projected);
+      });
+
+      // Confirm
+      confirmBtn.addEventListener('click', () => {
+        const cat = categories[selectedIdx];
+        closeDrumPicker();
+        navigateToCategory(cat.id);
+      });
+
+      // Close
+      closeBtn.addEventListener('click', closeDrumPicker);
+      drumOverlay.addEventListener('click', (e) => {
+        if (e.target === drumOverlay) closeDrumPicker();
+      });
+
+      // Animate in
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => { drumOverlay.classList.add('visible'); });
+      });
+    }
+
+    function closeDrumPicker() {
+      if (!drumOverlay) return;
+      drumOverlay.classList.remove('visible');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (drumOverlay) { drumOverlay.remove(); drumOverlay = null; }
+      }, 450);
     }
 
     function navigateToCategory(id) {
@@ -3676,41 +3866,21 @@
 
     function updateWheelClasses(activeId) {
       const items = document.querySelectorAll('.cat-wheel-item');
-      const wheelContainer = document.querySelector('.cat-wheel-wrap');
-      const isExpanded = wheelContainer && wheelContainer.classList.contains('expanded');
       let activeIdx = -1;
 
       items.forEach((item, idx) => {
         const href = item.querySelector('a').getAttribute('href').substring(1);
         if (href === activeId) activeIdx = idx;
-        // Clean up classes
-        item.classList.remove('active', 'prev1', 'next1', 'prev2', 'next2', 'visible-in-drum');
-        item.style.removeProperty('--index-offset');
-        item.style.removeProperty('--index-offset-abs');
+        item.className = 'cat-wheel-item'; // Reset
       });
 
       if (activeIdx === -1) return;
 
       items[activeIdx].classList.add('active');
-
-      if (isExpanded) {
-        // Drum Picker Logic
-        items.forEach((item, idx) => {
-          const offset = idx - activeIdx;
-          // Show items within a range for the drum curve
-          if (Math.abs(offset) <= 6) {
-            item.classList.add('visible-in-drum');
-            item.style.setProperty('--index-offset', offset);
-            item.style.setProperty('--index-offset-abs', Math.abs(offset));
-          }
-        });
-      } else {
-        // Standard Ribbon Logic
-        if (items[activeIdx - 1]) items[activeIdx - 1].classList.add('prev1');
-        if (items[activeIdx + 1]) items[activeIdx + 1].classList.add('next1');
-        if (items[activeIdx - 2]) items[activeIdx - 2].classList.add('prev2');
-        if (items[activeIdx + 2]) items[activeIdx + 2].classList.add('next2');
-      }
+      if (items[activeIdx - 1]) items[activeIdx - 1].classList.add('prev1');
+      if (items[activeIdx + 1]) items[activeIdx + 1].classList.add('next1');
+      if (items[activeIdx - 2]) items[activeIdx - 2].classList.add('prev2');
+      if (items[activeIdx + 2]) items[activeIdx + 2].classList.add('next2');
     }
 
     function attachScrollReveal() {
