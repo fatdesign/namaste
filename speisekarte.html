@@ -537,6 +537,29 @@
         transform: translateZ(0) translateY(0);
       }
 
+      /* Pulse hint — only while not yet discovered */
+      @keyframes drumPulse {
+        0% {
+          transform: translateZ(0) translateY(0) scale(1);
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        50% {
+          transform: translateZ(0) translateY(0) scale(1.12);
+          text-shadow: 0 0 18px rgba(191, 110, 11, 0.9);
+        }
+
+        100% {
+          transform: translateZ(0) translateY(0) scale(1);
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .cat-wheel-wrap:not(.drum-discovered) .cat-wheel-item.active {
+        animation: drumPulse 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        animation-delay: 1.5s;
+      }
+
       .cat-wheel-item.prev1 {
         opacity: 0;
         transform: translateY(-20px);
@@ -3680,8 +3703,24 @@
     // ── iOS Drum Picker ───────────────────────────────────────────
     let drumOverlay = null;
 
+    // Restore discovered state across page loads
+    if (localStorage.getItem('namaste_drum_discovered')) {
+      document.addEventListener('DOMContentLoaded', () => {
+        const wc = document.querySelector('.cat-wheel-wrap');
+        if (wc) wc.classList.add('drum-discovered');
+      });
+      // Also set immediately in case DOM is already ready
+      const wc = document.querySelector('.cat-wheel-wrap');
+      if (wc) wc.classList.add('drum-discovered');
+    }
+
     function openDrumPicker() {
       if (drumOverlay) return; // already open
+
+      // Mark as discovered — stop the pulse forever
+      const wc = document.querySelector('.cat-wheel-wrap');
+      if (wc) wc.classList.add('drum-discovered');
+      localStorage.setItem('namaste_drum_discovered', '1');
 
       const ITEM_H = 54;
       const categories = menuData.categories;
