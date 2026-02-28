@@ -242,9 +242,19 @@
       color: var(--accent);
     }
 
-    .filter-btn i {
-      font-style: normal;
-      font-size: 1.1rem;
+    .filter-icon {
+      height: 1.1rem;
+      width: auto;
+      vertical-align: middle;
+      transition: filter 0.3s, transform 0.3s;
+    }
+
+    .filter-btn:hover .filter-icon {
+      transform: scale(1.1);
+    }
+
+    .filter-btn.active .filter-icon {
+      filter: brightness(0) invert(1);
     }
 
     /* No Results state */
@@ -1577,8 +1587,10 @@
         <input type="text" class="search-input" id="menu-search" placeholder="Speise suchen..." autocomplete="off">
       </div>
       <div class="filter-toggles">
-        <button class="filter-btn" data-filter="vegan"><i>🌱</i> Vegan</button>
-        <button class="filter-btn" data-filter="spicy"><i>🌶️</i> Scharf</button>
+        <button class="filter-btn" data-filter="vegan"><img src="image/vegan-icon.PNG" class="filter-icon" alt="Vegan">
+          Vegan</button>
+        <button class="filter-btn" data-filter="spicy"><img src="image/chili-icon.png" class="filter-icon" alt="Scharf">
+          Scharf</button>
       </div>
     </div>
   </div>
